@@ -1,0 +1,67 @@
+{
+  "module": "desbaneo",
+  "page": "garantia",
+  "route": "/desbaneo/garantia",
+
+  "seo": {
+    "title": "Garantía de Desbaneo — Devolución del 100% | DesbanWA",
+    "description": "Si no recuperamos tu número de WhatsApp, devolvemos el 100% de tu dinero. Sin preguntas. Sin formularios. Garantía real en planes Pro, Premium y Business.",
+    "keywords": [
+      "garantia desbaneo whatsapp",
+      "devolucion desbaneo whatsapp",
+      "garantia recuperar numero whatsapp",
+      "desbaneo whatsapp sin riesgo",
+      "garantia reembolso whatsapp"
+    ],
+    "canonical": "https://desbanwa.com/desbaneo/garantia",
+    "robots": "index, follow"
+  },
+
+  "og": {
+    "title": "Garantía de Desbaneo — 100% de devolución | DesbanWA",
+    "description": "Si no recuperamos tu número, devolvemos el 100%. Sin preguntas. Proceso automático.",
+    "image": "/modules/shared/assets/images/og/og-desbaneo.png",
+    "type": "website",
+    "url": "https://desbanwa.com/desbaneo/garantia"
+  },
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Garantía de Desbaneo DesbanWA",
+    "description": "Garantía de devolución del 100% si no recuperamos el número de WhatsApp en el plazo acordado.",
+    "provider": {
+      "@type": "Organization",
+      "name": "DesbanWA",
+      "url": "https://desbanwa.com"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Planes con garantía",
+      "itemListElement": [
+        { "@type": "Offer", "name": "Plan Pro",         "price": "39", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Plan Premium",     "price": "59", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Plan Business Pro","price": "99", "priceCurrency": "USD" }
+      ]
+    }
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio",   "url": "/" },
+    { "label": "Desbaneo", "url": "/desbaneo" },
+    { "label": "Garantía", "url": "/desbaneo/garantia" }
+  ],
+
+  "analytics": {
+    "page_name": "desbaneo_garantia",
+    "page_category": "desbaneo",
+    "conversion_goal": "solicitud_desbaneo",
+    "content_type": "trust_page"
+  },
+
+  "settings": {
+    "show_whatsapp_btn": true,
+    "theme": "green",
+    "last_updated": "2025-01-01"
+  }
+}

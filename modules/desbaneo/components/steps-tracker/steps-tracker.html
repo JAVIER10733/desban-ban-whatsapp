@@ -1,0 +1,157 @@
+<!-- steps-tracker.html -->
+ <link rel="stylesheet" href="steps-tracker.css">
+<div class="steps-tracker" role="progressbar" aria-label="Progreso del formulario" aria-valuenow="2" aria-valuemin="1" aria-valuemax="4">
+  
+  <!-- Steps -->
+  <div class="steps-container">
+    
+    <!-- Step 1 -->
+    <div class="step-item completed" data-step="1">
+      <div class="step-marker" tabindex="0" role="button" aria-label="Paso 1: Información del número completado">
+        <span class="marker-number">1</span>
+        <svg class="marker-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="step-info">
+        <span class="step-title">Información</span>
+        <span class="step-desc">Número</span>
+      </div>
+      <div class="step-connector" aria-hidden="true"></div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-item active" data-step="2">
+      <div class="step-marker" tabindex="0" role="button" aria-label="Paso 2: Tus datos - paso actual">
+        <span class="marker-number">2</span>
+        <svg class="marker-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="step-info">
+        <span class="step-title">Tus Datos</span>
+        <span class="step-desc">Información personal</span>
+      </div>
+      <div class="step-connector" aria-hidden="true"></div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-item" data-step="3">
+      <div class="step-marker" tabindex="0" role="button" aria-label="Paso 3: Selecciona tu plan">
+        <span class="marker-number">3</span>
+        <svg class="marker-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="step-info">
+        <span class="step-title">Plan</span>
+        <span class="step-desc">Selecciona plan</span>
+      </div>
+      <div class="step-connector" aria-hidden="true"></div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step-item" data-step="4">
+      <div class="step-marker" tabindex="0" role="button" aria-label="Paso 4: Confirmación y pago">
+        <span class="marker-number">4</span>
+        <svg class="marker-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="step-info">
+        <span class="step-title">Confirmar</span>
+        <span class="step-desc">Revisar y pagar</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" aria-hidden="true">
+    <div class="progress-fill" style="width: 50%"></div>
+  </div>
+
+  <!-- Step Tooltip (opcional) -->
+  <div class="step-tooltip" id="step-tooltip" role="tooltip" hidden>
+    <div class="tooltip-content"></div>
+    <div class="tooltip-arrow" aria-hidden="true"></div>
+  </div>
+
+</div>
+
+<!-- Variante Compacta -->
+<div class="steps-tracker steps-tracker-compact" data-steps="4" data-current="2">
+  <div class="steps-compact-container">
+    <div class="step-compact completed" data-step="1" title="Información completada"></div>
+    <div class="step-compact active" data-step="2" title="Tus datos - paso actual"></div>
+    <div class="step-compact" data-step="3" title="Selecciona plan"></div>
+    <div class="step-compact" data-step="4" title="Confirmar"></div>
+  </div>
+  <div class="progress-compact">
+    <div class="progress-compact-fill" style="width: 50%"></div>
+  </div>
+</div>
+
+<!-- Variante Vertical -->
+<div class="steps-tracker steps-tracker-vertical" role="progressbar" aria-label="Proceso vertical">
+  <div class="steps-vertical-container">
+    
+    <div class="step-vertical completed" data-step="1">
+      <div class="step-vertical-marker">
+        <span class="vertical-number">1</span>
+        <svg class="vertical-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="step-vertical-content">
+        <h4 class="vertical-title">Información del número</h4>
+        <p class="vertical-desc">Ingresa el número de WhatsApp con código de país</p>
+        <span class="vertical-time">2 min</span>
+      </div>
+    </div>
+
+    <div class="step-vertical active" data-step="2">
+      <div class="step-vertical-marker">
+        <span class="vertical-number">2</span>
+        <svg class="vertical-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="step-vertical-content">
+        <h4 class="vertical-title">Tus datos</h4>
+        <p class="vertical-desc">Proporciona tu información de contacto</p>
+        <span class="vertical-time">3 min</span>
+      </div>
+    </div>
+
+    <div class="step-vertical" data-step="3">
+      <div class="step-vertical-marker">
+        <span class="vertical-number">3</span>
+        <svg class="vertical-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="step-vertical-content">
+        <h4 class="vertical-title">Selecciona plan</h4>
+        <p class="vertical-desc">Elige el plan que mejor se adapte a ti</p>
+        <span class="vertical-time">2 min</span>
+      </div>
+    </div>
+
+    <div class="step-vertical" data-step="4">
+      <div class="step-vertical-marker">
+        <span class="vertical-number">4</span>
+        <svg class="vertical-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3"/>
+        </svg>
+      </div>
+      <div class="step-vertical-content">
+        <h4 class="vertical-title">Confirmación</h4>
+        <p class="vertical-desc">Revisa y completa el pago</p>
+        <span class="vertical-time">5 min</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="steps-tracker.js"></script>

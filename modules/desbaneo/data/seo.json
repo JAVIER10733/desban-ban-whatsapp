@@ -1,0 +1,208 @@
+{
+  "global": {
+    "site_name": "DesbanWA",
+    "site_url": "https://desbanwa.com",
+    "default_locale": "es_EC",
+    "author": "DesbanWA Team",
+    "publisher": "DesbanWA",
+    "robots": "index, follow",
+    "google_site_verification": "",
+    "bing_site_verification": ""
+  },
+  "paginas": {
+    "landing": {
+      "title": "Desbaneo de WhatsApp Profesional | Recuperación en 24h | DesbanWA",
+      "description": "Recupera tu número de WhatsApp baneado en menos de 24 horas. Servicio profesional con garantía de devolución 100%. Más de 5,000 casos exitosos. ¡Diagnóstico gratuito!",
+      "keywords": [
+        "desbaneo whatsapp",
+        "recuperar whatsapp baneado",
+        "desbanear numero whatsapp",
+        "whatsapp suspendido",
+        "recuperar cuenta whatsapp",
+        "desbaneo profesional",
+        "whatsapp baneado solucion"
+      ],
+      "canonical": "/modules/desbaneo/pages/landing/",
+      "og": {
+        "type": "website",
+        "title": "Desbaneo de WhatsApp Profesional | Recuperación en 24h",
+        "description": "Recupera tu número de WhatsApp baneado en menos de 24 horas. Garantía 100%. ¡Diagnóstico gratuito!",
+        "image": "/modules/shared/assets/images/og/og-desbaneo.png"
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Desbaneo de WhatsApp Profesional | Recuperación en 24h",
+        "description": "Recupera tu número de WhatsApp baneado en menos de 24 horas. Garantía 100%.",
+        "image": "/modules/shared/assets/images/og/og-desbaneo.png"
+      },
+      "structured_data": {
+        "@type": "Service",
+        "serviceType": "Recuperación de WhatsApp",
+        "provider": {
+          "@type": "Organization",
+          "name": "DesbanWA",
+          "url": "https://desbanwa.com"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Ecuador"
+        },
+        "availableLanguage": ["Spanish", "English"]
+      }
+    },
+    "solicitud": {
+      "title": "Solicitar Desbaneo de WhatsApp | Formulario | DesbanWA",
+      "description": "Solicita el desbaneo de tu número de WhatsApp. Completa el formulario y te contactaremos en menos de 2 horas. Diagnóstico gratuito y sin compromiso.",
+      "keywords": [
+        "solicitar desbaneo",
+        "formulario desbaneo whatsapp",
+        "recuperar whatsapp ahora",
+        "servicio desbaneo"
+      ],
+      "canonical": "/modules/desbaneo/pages/solicitud/",
+      "robots": "noindex, follow",
+      "og": {
+        "type": "website",
+        "title": "Solicitar Desbaneo de WhatsApp",
+        "description": "Completa el formulario y recupera tu WhatsApp en horas.",
+        "image": "/modules/shared/assets/images/og/og-desbaneo.png"
+      }
+    },
+    "planes": {
+      "title": "Planes y Precios de Desbaneo | Desde $39 | DesbanWA",
+      "description": "Elige el plan perfecto para recuperar tu WhatsApp. Desde $39 con garantía de devolución. Compara características: Pro, Premium, Business y Enterprise.",
+      "keywords": [
+        "planes desbaneo whatsapp",
+        "precios desbaneo",
+        "costo recuperar whatsapp",
+        "desbaneo barato",
+        "planes y precios whatsapp"
+      ],
+      "canonical": "/modules/desbaneo/pages/planes/",
+      "og": {
+        "type": "website",
+        "title": "Planes y Precios de Desbaneo | Desde $39",
+        "description": "Elige el plan perfecto. Desde $39 con garantía 100%.",
+        "image": "/modules/shared/assets/images/og/og-desbaneo.png"
+      },
+      "structured_data": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuánto cuesta el desbaneo de WhatsApp?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nuestros planes van desde $39 USD (Pro) hasta $199 USD (Enterprise). Todos incluyen garantía de devolución del 100%."
+            }
+          }
+        ]
+      }
+    },
+    "proceso": {
+      "title": "¿Cómo Funciona el Desbaneo? | Proceso Paso a Paso | DesbanWA",
+      "description": "Conoce el proceso de desbaneo de WhatsApp paso a paso. Diagnóstico gratuito, recuperación en horas y garantía total. Simple, rápido y seguro.",
+      "keywords": [
+        "como funciona desbaneo",
+        "proceso desbaneo whatsapp",
+        "pasos recuperar whatsapp",
+        "metodo desbaneo"
+      ],
+      "canonical": "/modules/desbaneo/pages/proceso/",
+      "og": {
+        "type": "website",
+        "title": "¿Cómo Funciona el Desbaneo?",
+        "description": "Proceso simple y rápido. Recuperación en horas con garantía.",
+        "image": "/modules/shared/assets/images/og/og-desbaneo.png"
+      }
+    },
+    "tipos-baneo": {
+      "title": "Tipos de Baneo de WhatsApp | Identifica tu Caso | DesbanWA",
+      "description": "Identifica qué tipo de baneo tiene tu WhatsApp: temporal, permanente, por spam o actividad sospechosa. Soluciones específicas para cada caso.",
+      "keywords": [
+        "tipos de baneo whatsapp",
+        "baneo temporal whatsapp",
+        "baneo permanente whatsapp",
+        "suspension whatsapp",
+        "tipos suspension whatsapp"
+      ],
+      "canonical": "/modules/desbaneo/pages/tipos-baneo/",
+      "og": {
+        "type": "website",
+        "title": "Tipos de Baneo de WhatsApp",
+        "description": "Identifica tu caso: temporal, permanente, spam o suspensión.",
+        "image": "/modules/shared/assets/images/og/og-desbaneo.png"
+      }
+    },
+    "garantia": {
+      "title": "Garantía de Desbaneo | Devolución 100% | DesbanWA",
+      "description": "Garantía real de desbaneo: si no recuperamos tu número en el plazo acordado, te devolvemos el 100% automáticamente. Sin preguntas. Sin complicaciones.",
+      "keywords": [
+        "garantia desbaneo",
+        "devolucion desbaneo",
+        "garantia recuperar whatsapp",
+        "reembolso desbaneo"
+      ],
+      "canonical": "/modules/desbaneo/pages/garantia/",
+      "og": {
+        "type": "website",
+        "title": "Garantía de Desbaneo | Devolución 100%",
+        "description": "Si no lo logramos, te devolvemos el 100%. Garantía real.",
+        "image": "/modules/shared/assets/images/og/og-desbaneo.png"
+      }
+    }
+  },
+  "schema_markup": {
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DesbanWA",
+      "url": "https://desbanwa.com",
+      "logo": "https://desbanwa.com/modules/shared/assets/icons/logo.svg",
+      "description": "Servicio profesional de desbaneo y recuperación de WhatsApp",
+      "founder": {
+        "@type": "Person",
+        "name": "DesbanWA Team"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+593-99-123-4567",
+        "contactType": "customer service",
+        "availableLanguage": ["Spanish", "English"]
+      },
+      "sameAs": [
+        "https://facebook.com/desbanwa",
+        "https://twitter.com/desbanwa",
+        "https://instagram.com/desbanwa"
+      ]
+    },
+    "local_business": {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "DesbanWA",
+      "image": "https://desbanwa.com/modules/shared/assets/images/og/og-home.png",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "EC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.831239,
+        "longitude": -78.183494
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+  },
+  "metadata": {
+    "ultima_actualizacion": "2025-01-15",
+    "version": "1.0",
+    "idioma_principal": "es",
+    "idiomas_soportados": ["es", "en"]
+  }
+}

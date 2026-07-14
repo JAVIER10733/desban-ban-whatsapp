@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planes y Precios de Desbaneo | DesbanWA</title>
+  <meta name="description" content="Elige el plan perfecto para recuperar tu WhatsApp. Desde $19 con garantía de devolución.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="planes.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="../../../../index.html" class="nav-logo">
+      DESBAN<span class="g">W</span><span class="r">A</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../landing/index.html">Desbaneo</a></li>
+      <li><a href="../proceso/index.html">Cómo funciona</a></li>
+      <li><a href="../tipos-baneo/index.html">Tipos de baneo</a></li>
+      <li><a href="../../../../modules/shared/pages/faq/index.html">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="../../../../modules/baneo/pages/landing/index.html" class="btn-nav-ghost">Banear número</a>
+      <a href="../solicitud/index.html" class="btn-nav-primary">Recuperar mi número →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="planes-hero">
+    <div class="planes-hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Sin costos ocultos · Pago único
+      </div>
+      
+      <h1 class="hero-title">
+        PLANES DE<br>
+        <span class="text-green">DESBANEO</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Elige el plan que se adapta a tu caso. Si no recuperamos tu número, 
+        devolvemos el 100% de tu pago.
+      </p>
+      
+      <!-- Toggle Personal / Business -->
+      <div class="billing-toggle">
+        <button class="toggle-btn active" data-type="personal">
+          Personal
+        </button>
+        <button class="toggle-btn" data-type="business">
+          Business / API
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES GRID -->
+  <section class="planes-section">
+    <div class="planes-container">
+      
+      <!-- PLAN 1: BÁSICO -->
+      <article class="plan-card" data-plan="basico" data-type="personal">
+        <div class="plan-header">
+          <h3 class="plan-name">BÁSICO</h3>
+          <div class="plan-price">
+            <span class="price-amount">$19</span>
+            <span class="price-currency">USD</span>
+          </div>
+          <p class="plan-desc">Para baneos temporales recientes.</p>
+        </div>
+        
+        <ul class="plan-features">
+          <li class="feature">✓ Diagnóstico básico</li>
+          <li class="feature">✓ 1 número WhatsApp</li>
+          <li class="feature">✓ Respuesta en 48h</li>
+          <li class="feature">✓ Soporte email</li>
+          <li class="feature muted">— Sin garantía</li>
+        </ul>
+        
+        <a href="../solicitud/?plan=basico" class="plan-cta">
+          Elegir Básico →
+        </a>
+      </article>
+
+      <!-- PLAN 2: PRO (POPULAR) -->
+      <article class="plan-card popular" data-plan="pro" data-type="personal">
+        <div class="popular-badge">Más elegido</div>
+        <div class="plan-header">
+          <h3 class="plan-name">PRO</h3>
+          <div class="plan-price">
+            <span class="price-amount">$39</span>
+            <span class="price-currency">USD</span>
+          </div>
+          <p class="plan-desc">Para baneos temporales o permanentes.</p>
+        </div>
+        
+        <ul class="plan-features">
+          <li class="feature">✓ Garantía 100% devolución</li>
+          <li class="feature">✓ Respuesta en 24h</li>
+          <li class="feature">✓ 1 número WhatsApp</li>
+          <li class="feature">✓ Especialista dedicado</li>
+          <li class="feature">✓ 1 reintento incluido</li>
+          <li class="feature">✓ Soporte WhatsApp</li>
+        </ul>
+        
+        <a href="../solicitud/?plan=pro" class="plan-cta primary">
+          Elegir Pro →
+        </a>
+      </article>
+
+      <!-- PLAN 3: PREMIUM -->
+      <article class="plan-card" data-plan="premium" data-type="personal">
+        <div class="plan-header">
+          <h3 class="plan-name">PREMIUM</h3>
+          <div class="plan-price">
+            <span class="price-amount">$59</span>
+            <span class="price-currency">USD</span>
+          </div>
+          <p class="plan-desc">Para casos complejos o urgentes.</p>
+        </div>
+        
+        <ul class="plan-features">
+          <li class="feature">✓ Todo del plan Pro</li>
+          <li class="feature">✓ Respuesta en 12h</li>
+          <li class="feature">✓ Prioridad máxima</li>
+          <li class="feature">✓ 3 reintentos</li>
+          <li class="feature">✓ Soporte 24/7</li>
+          <li class="feature">✓ Guía anti-baneo</li>
+        </ul>
+        
+        <a href="../solicitud/?plan=premium" class="plan-cta">
+          Elegir Premium →
+        </a>
+      </article>
+
+      <!-- PLAN 4: BUSINESS -->
+      <article class="plan-card business" data-plan="business" data-type="business" style="display: none;">
+        <div class="plan-header">
+          <h3 class="plan-name">BUSINESS</h3>
+          <div class="plan-price">
+            <span class="price-amount">$99</span>
+            <span class="price-currency">USD</span>
+          </div>
+          <p class="plan-desc">Para empresas y múltiples números.</p>
+        </div>
+        
+        <ul class="plan-features">
+          <li class="feature">✓ Hasta 3 números</li>
+          <li class="feature">✓ Asesor dedicado 24/7</li>
+          <li class="feature">✓ Respuesta en 6h</li>
+          <li class="feature">✓ Reintentos ilimitados</li>
+          <li class="feature">✓ Soporte telefónico</li>
+          <li class="feature">✓ API acceso básico</li>
+          <li class="feature">✓ Facturación empresarial</li>
+        </ul>
+        
+        <a href="../solicitud/?plan=business" class="plan-cta">
+          Elegir Business →
+        </a>
+      </article>
+
+      <!-- PLAN 5: ENTERPRISE -->
+      <article class="plan-card enterprise" data-plan="enterprise" data-type="business" style="display: none;">
+        <div class="plan-header">
+          <h3 class="plan-name">ENTERPRISE</h3>
+          <div class="plan-price">
+            <span class="price-amount">$199</span>
+            <span class="price-currency">USD</span>
+          </div>
+          <p class="plan-desc">Solución corporativa completa.</p>
+        </div>
+        
+        <ul class="plan-features">
+          <li class="feature">✓ Hasta 10 números</li>
+          <li class="feature">✓ Gerente de cuenta</li>
+          <li class="feature">✓ Respuesta en 2h</li>
+          <li class="feature">✓ SLA 99.9%</li>
+          <li class="feature">✓ API completa</li>
+          <li class="feature">✓ Dashboard empresarial</li>
+          <li class="feature">✓ Consultoría mensual</li>
+        </ul>
+        
+        <a href="../solicitud/?plan=enterprise" class="plan-cta enterprise">
+          Contactar Ventas →
+        </a>
+      </article>
+
+      <!-- PLAN 6: API -->
+      <article class="plan-card api" data-plan="api" data-type="business" style="display: none;">
+        <div class="plan-header">
+          <h3 class="plan-name">API</h3>
+          <div class="plan-price">
+            <span class="price-amount">$299</span>
+            <span class="price-currency">USD</span>
+          </div>
+          <p class="plan-desc">Integración completa para agencias.</p>
+        </div>
+        
+        <ul class="plan-features">
+          <li class="feature">✓ Números ilimitados</li>
+          <li class="feature">✓ API REST completa</li>
+          <li class="feature">✓ Webhooks personalizados</li>
+          <li class="feature">✓ White label</li>
+          <li class="feature">✓ Soporte dedicado</li>
+          <li class="feature">✓ Documentación completa</li>
+          <li class="feature">✓ SLA garantizado</li>
+        </ul>
+        
+        <a href="../solicitud/?plan=api" class="plan-cta enterprise">
+          Contactar Ventas →
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- GARANTÍA BANNER -->
+  <section class="guarantee-banner">
+    <div class="guarantee-content">
+      <div class="guarantee-icon">🛡</div>
+      <div class="guarantee-text">
+        <h3>Garantía de Satisfacción Total</h3>
+        <p>Si no recuperamos tu número en el plazo acordado, te devolvemos el 100% de tu dinero. Sin preguntas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <div class="section-header">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            ¿Cuál plan me recomiendan?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Para la mayoría de usuarios, el plan <strong>Pro ($39)</strong> es la mejor opción. Si necesitas rapidez, elige Premium. Para empresas, Business o Enterprise.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            ¿Cómo funciona la garantía?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Si no recuperamos tu número en el plazo acordado, te devolvemos el 100% automáticamente en 24-48 horas. Sin preguntas.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            ¿Puedo cambiar de plan después?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" hidden>
+            <p>Sí, puedes hacer upgrade pagando la diferencia. El downgrade no está disponible una vez iniciado el servicio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>¿Listo para recuperar tu número?</h2>
+      <p>Únete a miles de clientes satisfechos. Diagnóstico gratuito.</p>
+      <a href="../solicitud/" class="btn-primary btn-large">
+        Comenzar ahora →
+      </a>
+    </div>
+  </section>
+
+  <!-- WHATSAPP FLOATING -->
+  <a href="https://wa.me/593991234567" class="whatsapp-float" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        DESBAN<span class="g">W</span><span class="r">A</span>
+      </div>
+      <p>Servicio profesional de desbaneo y baneo de WhatsApp.</p>
+      <p class="footer-legal">Servicio independiente. No afiliado a Meta ni WhatsApp.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 DesbanWA</span>
+    </div>
+  </footer>
+
+  <script src="planes.js"></script>
+</body>
+</html>

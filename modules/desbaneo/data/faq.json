@@ -1,0 +1,102 @@
+{
+  "faq": [
+    {
+      "id": 1,
+      "categoria": "general",
+      "pregunta": "¿Qué es el desbaneo de WhatsApp?",
+      "respuesta": "El desbaneo es el proceso de recuperación de una cuenta de WhatsApp que ha sido suspendida o baneada. Utilizamos métodos legítimos de apelación ante Meta/WhatsApp para restaurar tu acceso.",
+      "tags": ["general", "definicion"]
+    },
+    {
+      "id": 2,
+      "categoria": "tiempo",
+      "pregunta": "¿Cuánto tiempo tarda en recuperarse mi número?",
+      "respuesta": "Depende del tipo de baneo y del plan que elijas:\n• Plan Pro: 24-48 horas\n• Plan Premium: 12-24 horas\n• Plan Business: 6-12 horas\n\nLos casos complejos pueden tomar hasta 72 horas.",
+      "tags": ["tiempo", "duracion"]
+    },
+    {
+      "id": 3,
+      "categoria": "garantia",
+      "pregunta": "¿Qué pasa si no logran recuperar mi número?",
+      "respuesta": "Todos nuestros planes incluyen garantía de devolución del 100%. Si no recuperamos tu número en el plazo acordado, te reembolsamos todo tu dinero automáticamente en menos de 48 horas. Sin preguntas ni complicaciones.",
+      "tags": ["garantia", "reembolso"]
+    },
+    {
+      "id": 4,
+      "categoria": "metodo-pago",
+      "pregunta": "¿Qué métodos de pago aceptan?",
+      "respuesta": "Aceptamos:\n• Tarjetas de crédito/débito (Visa, Mastercard, Amex)\n• PayPal\n• Transferencia bancaria\n• Criptomonedas (Bitcoin, USDT)\n• Métodos locales (Yape, Plin, MercadoPago)\n\nTodos los pagos son procesados de forma segura con encriptación SSL.",
+      "tags": ["pago", "metodos"]
+    },
+    {
+      "id": 5,
+      "categoria": "seguridad",
+      "pregunta": "¿Es seguro usar su servicio?",
+      "respuesta": "Absolutamente. Tu información está protegida con:\n• Encriptación SSL de 256-bit\n• Cumplimiento GDPR\n• No almacenamos tus mensajes\n• Política de privacidad estricta\n• Más de 5,000 casos exitosos sin incidentes",
+      "tags": ["seguridad", "privacidad"]
+    },
+    {
+      "id": 6,
+      "categoria": "proceso",
+      "pregunta": "¿Qué información necesitan para empezar?",
+      "respuesta": "Solo necesitamos:\n1. Tu número de WhatsApp con código de país\n2. Tu nombre completo\n3. Correo electrónico de contacto\n4. Tipo de baneo que experimentas\n5. Captura del mensaje de error (opcional pero recomendado)",
+      "tags": ["proceso", "informacion"]
+    },
+    {
+      "id": 7,
+      "categoria": "baneo",
+      "pregunta": "¿Por qué banean las cuentas de WhatsApp?",
+      "respuesta": "Las razones más comunes son:\n• Envío masivo de mensajes no solicitados\n• Uso de aplicaciones no oficiales (WhatsApp Plus, GBWhatsApp)\n• Múltiples reportes de otros usuarios\n• Actividad sospechosa o inusual\n• Violación de términos de servicio\n• Spam o contenido inapropiado",
+      "tags": ["baneo", "razones"]
+    },
+    {
+      "id": 8,
+      "categoria": "prevencion",
+      "pregunta": "¿Cómo evito que vuelvan a banear mi número?",
+      "respuesta": "Recomendaciones:\n• Usa solo WhatsApp oficial\n• No envíes mensajes masivos a desconocidos\n• No uses listas de difusión muy grandes\n• Evita grupos sospechosos\n• No compartas tu código de verificación\n• Activa la verificación en dos pasos\n• Respeta las políticas de WhatsApp",
+      "tags": ["prevencion", "consejos"]
+    },
+    {
+      "id": 9,
+      "categoria": "planes",
+      "pregunta": "¿Cuál plan me recomiendan?",
+      "respuesta": "Depende de tu urgencia:\n• **Pro ($39)**: Si no es urgente, recuperación estándar\n• **Premium ($59)**: El más popular, mejor relación costo-beneficio\n• **Business ($99)**: Si necesitas 3 números o atención prioritaria\n\nPara la mayoría de usuarios, Premium es la mejor opción.",
+      "tags": ["planes", "recomendacion"]
+    },
+    {
+      "id": 10,
+      "categoria": "soporte",
+      "pregunta": "¿Cómo puedo contactar soporte?",
+      "respuesta": "Estamos disponibles 24/7:\n• WhatsApp: +593 99 123 4567\n• Email: soporte@desbanwa.com\n• Chat en vivo en nuestra web\n• Tiempo de respuesta: < 2 horas en planes Premium+\n\nTu caso tendrá un especialista dedicado.",
+      "tags": ["soporte", "contacto"]
+    },
+    {
+      "id": 11,
+      "categoria": "legal",
+      "pregunta": "¿Este servicio es legal?",
+      "respuesta": "Sí, completamente legal. Solo utilizamos los canales oficiales de apelación que Meta/WhatsApp pone a disposición de los usuarios. No hackeamos, no usamos métodos ilegales. Es similar a cuando apelas una suspensión en redes sociales.",
+      "tags": ["legal", "legitimidad"]
+    },
+    {
+      "id": 12,
+      "categoria": "datos",
+      "pregunta": "¿Tendré acceso a mis chats antiguos?",
+      "respuesta": "Depende:\n• **Baneo temporal**: Sí, conservas todo\n• **Baneo permanente**: Solo si recuperas antes de 120 días\n• **Importante**: WhatsApp NO guarda tus chats en sus servidores. Si tienes backup en Google Drive/iCloud, podrás restaurarlo al recuperar la cuenta.",
+      "tags": ["datos", "chats", "backup"]
+    }
+  ],
+  "categorias": [
+    { "id": "general", "nombre": "General", "icono": "ℹ️" },
+    { "id": "tiempo", "nombre": "Tiempos", "icono": "⏱️" },
+    { "id": "garantia", "nombre": "Garantía", "icono": "🛡️" },
+    { "id": "pago", "nombre": "Pagos", "icono": "💳" },
+    { "id": "proceso", "nombre": "Proceso", "icono": "📋" },
+    { "id": "soporte", "nombre": "Soporte", "icono": "💬" }
+  ],
+  "metadata": {
+    "ultima_actualizacion": "2025-01-15",
+    "total_preguntas": 12,
+    "idioma": "es",
+    "version": "1.0"
+  }
+}

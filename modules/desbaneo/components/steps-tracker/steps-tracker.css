@@ -1,0 +1,559 @@
+/* steps-tracker.css */
+:root {
+  --steps-green: #25D366;
+  --steps-green-light: rgba(37, 211, 102, 0.2);
+  --steps-gray: #333;
+  --steps-gray-light: rgba(255, 255, 255, 0.1);
+  --steps-text: #f5f5f5;
+  --steps-text-muted: #777;
+  --steps-bg: #111;
+}
+
+/* ============================================
+   STEPS TRACKER - HORIZONTAL
+============================================ */
+.steps-tracker {
+  position: relative;
+  padding: 2rem 1rem;
+  background: var(--steps-bg);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+/* Step Marker */
+.step-marker {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--steps-gray);
+  border: 2px solid var(--steps-gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.step-marker:focus {
+  box-shadow: 0 0 0 3px var(--steps-green-light);
+}
+
+.marker-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  color: var(--steps-text-muted);
+  transition: all 0.3s ease;
+}
+
+.marker-check {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: #000;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+/* Step Info */
+.step-info {
+  text-align: center;
+  margin-top: 0.8rem;
+  padding: 0 0.5rem;
+}
+
+.step-title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--steps-text-muted);
+  margin-bottom: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.step-desc {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--steps-text-muted);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Connector */
+.step-connector {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--steps-gray-light);
+  z-index: -1;
+  transform: translateX(-50%);
+}
+
+.step-item:last-child .step-connector {
+  display: none;
+}
+
+/* Completed State */
+.step-item.completed .step-marker {
+  background: var(--steps-green);
+  border-color: var(--steps-green);
+  animation: completePulse 0.5s ease;
+}
+
+.step-item.completed .marker-number {
+  display: none;
+}
+
+.step-item.completed .marker-check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.step-item.completed .step-title,
+.step-item.completed .step-desc {
+  color: var(--steps-green);
+}
+
+.step-item.completed .step-connector {
+  background: var(--steps-green);
+}
+
+@keyframes completePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Active State */
+.step-item.active .step-marker {
+  background: var(--steps-bg);
+  border-color: var(--steps-green);
+  box-shadow: 0 0 0 4px var(--steps-green-light);
+  animation: activePulse 2s ease-in-out infinite;
+}
+
+.step-item.active .marker-number {
+  color: var(--steps-green);
+}
+
+.step-item.active .step-title {
+  color: var(--steps-text);
+}
+
+.step-item.active .step-desc {
+  color: var(--steps-text);
+  opacity: 1;
+}
+
+@keyframes activePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 4px var(--steps-green-light);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+  }
+}
+
+/* Progress Bar */
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 4px;
+  background: var(--steps-gray-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--steps-green), #128C7E);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px var(--steps-green-light);
+}
+
+/* Tooltip */
+.step-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--steps-bg);
+  border: 1px solid var(--steps-green);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  font-size: 0.85rem;
+  color: var(--steps-text);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.step-tooltip.active {
+  opacity: 1;
+  visibility: visible;
+  bottom: calc(100% + 15px);
+}
+
+.tooltip-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--steps-green);
+}
+
+/* ============================================
+   STEPS TRACKER - COMPACT
+============================================ */
+.steps-tracker-compact {
+  padding: 1rem;
+}
+
+.steps-compact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-compact {
+  flex: 1;
+  height: 6px;
+  background: var(--steps-gray-light);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step-compact.completed {
+  background: var(--steps-green);
+  box-shadow: 0 0 8px var(--steps-green-light);
+}
+
+.step-compact.active {
+  background: var(--steps-green);
+  box-shadow: 0 0 12px var(--steps-green);
+  animation: compactPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes compactPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.progress-compact {
+  height: 2px;
+  background: var(--steps-gray-light);
+  margin-top: 0.5rem;
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.progress-compact-fill {
+  height: 100%;
+  background: var(--steps-green);
+  transition: width 0.5s ease;
+}
+
+/* ============================================
+   STEPS TRACKER - VERTICAL
+============================================ */
+.steps-tracker-vertical {
+  padding: 2rem;
+}
+
+.steps-vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.step-vertical {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.step-vertical::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 60px;
+  bottom: -40px;
+  width: 2px;
+  background: var(--steps-gray-light);
+  z-index: 0;
+}
+
+.step-vertical:last-child::before {
+  display: none;
+}
+
+.step-vertical-marker {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--steps-gray);
+  border: 2px solid var(--steps-gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.vertical-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  color: var(--steps-text-muted);
+  transition: all 0.3s ease;
+}
+
+.vertical-check {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: #000;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.step-vertical-content {
+  flex: 1;
+  padding-top: 0.5rem;
+}
+
+.vertical-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--steps-text-muted);
+  margin: 0 0 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.vertical-desc {
+  font-size: 0.85rem;
+  color: var(--steps-text-muted);
+  line-height: 1.5;
+  margin: 0 0 0.5rem;
+  display: block;
+}
+
+.vertical-time {
+  font-size: 0.75rem;
+  color: var(--steps-green);
+  background: var(--steps-green-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* Vertical Completed */
+.step-vertical.completed .step-vertical-marker {
+  background: var(--steps-green);
+  border-color: var(--steps-green);
+}
+
+.step-vertical.completed .vertical-number {
+  display: none;
+}
+
+.step-vertical.completed .vertical-check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.step-vertical.completed .vertical-title,
+.step-vertical.completed .vertical-desc {
+  color: var(--steps-text);
+}
+
+.step-vertical.completed::before {
+  background: var(--steps-green);
+}
+
+/* Vertical Active */
+.step-vertical.active .step-vertical-marker {
+  background: var(--steps-bg);
+  border-color: var(--steps-green);
+  box-shadow: 0 0 0 4px var(--steps-green-light);
+}
+
+.step-vertical.active .vertical-number {
+  color: var(--steps-green);
+}
+
+.step-vertical.active .vertical-title {
+  color: var(--steps-text);
+}
+
+.step-vertical.active .vertical-desc {
+  color: var(--steps-text-muted);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+  .steps-container {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .step-item {
+    flex-shrink: 0;
+    min-width: 120px;
+  }
+
+  .step-connector {
+    width: calc(100% + 40px);
+  }
+
+  .step-info {
+    font-size: 0.8rem;
+  }
+
+  .step-title {
+    font-size: 0.8rem;
+  }
+
+  .step-desc {
+    display: none;
+  }
+
+  .steps-tracker-vertical {
+    padding: 1.5rem;
+  }
+
+  .step-vertical::before {
+    left: 20px;
+  }
+
+  .step-vertical-marker {
+    width: 40px;
+    height: 40px;
+  }
+
+  .vertical-number {
+    font-size: 1rem;
+  }
+
+  .vertical-title {
+    font-size: 0.9rem;
+  }
+
+  .vertical-desc {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .steps-tracker {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .step-marker {
+    width: 40px;
+    height: 40px;
+  }
+
+  .marker-number {
+    font-size: 1rem;
+  }
+
+  .step-info {
+    display: none;
+  }
+
+  .progress-bar {
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+}
+
+/* ============================================
+   ANIMATIONS
+============================================ */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.step-vertical {
+  animation: slideIn 0.5s ease backwards;
+}
+
+.step-vertical:nth-child(1) { animation-delay: 0s; }
+.step-vertical:nth-child(2) { animation-delay: 0.1s; }
+.step-vertical:nth-child(3) { animation-delay: 0.2s; }
+.step-vertical:nth-child(4) { animation-delay: 0.3s; }
+
+/* ============================================
+   DARK/LIGHT MODE
+============================================ */
+@media (prefers-color-scheme: light) {
+  :root {
+    --steps-bg: #fff;
+    --steps-text: #0d0d0d;
+    --steps-text-muted: #666;
+    --steps-gray: #e0e0e0;
+    --steps-gray-light: #d0d0d0;
+  }
+}

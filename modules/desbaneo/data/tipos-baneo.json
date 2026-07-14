@@ -1,0 +1,288 @@
+{
+  "tipos": [
+    {
+      "id": "temporal",
+      "nombre": "Baneo Temporal",
+      "categoria": "temporal",
+      "severidad": 1,
+      "nivel": "Bajo",
+      "descripcion": "Tu cuenta está suspendida por un tiempo limitado. Generalmente dura entre 24 horas y 7 días.",
+      "mensaje_error": "Tu cuenta está temporalmente suspendida",
+      "causas": [
+        "Envío de mensajes masivos en corto tiempo",
+        "Comportamiento inusual detectado",
+        "Múltiples bloqueos de contactos",
+        "Uso de listas de difusión muy grandes"
+      ],
+      "duracion": {
+        "min": 24,
+        "max": 168,
+        "unidad": "horas",
+        "descripcion": "24 horas - 7 días"
+      },
+      "recuperacion": {
+        "automatica": true,
+        "tiempo_estimado": "2-24 horas",
+        "requiere_apelacion": false,
+        "descripcion": "Se recupera automáticamente después del período de suspensión"
+      },
+      "caracteristicas": [
+        { "icono": "⏱", "texto": "Duración: 24h - 7 días" },
+        { "icono": "📱", "texto": "Mensaje: 'Temporalmente suspendido'" },
+        { "icono": "✓", "texto": "Se recupera automáticamente" }
+      ],
+      "estadisticas": {
+        "frecuencia": "Alta",
+        "porcentaje_casos": "35%",
+        "tasa_exito": "98%"
+      },
+      "planes_recomendados": ["pro", "premium"],
+      "icono": "⏱️",
+      "color": "#EF9F27"
+    },
+    {
+      "id": "permanente",
+      "nombre": "Baneo Permanente",
+      "categoria": "permanente",
+      "severidad": 3,
+      "nivel": "Alto",
+      "descripcion": "Tu cuenta ha sido desactivada permanentemente. Requiere apelación formal para ser recuperada.",
+      "mensaje_error": "Tu número de teléfono está baneado de WhatsApp",
+      "causas": [
+        "Violación grave de términos de servicio",
+        "Múltiples infracciones repetidas",
+        "Actividad ilegal o fraudulenta",
+        "Spam masivo reportado"
+      ],
+      "duracion": {
+        "min": null,
+        "max": null,
+        "unidad": "indefinido",
+        "descripcion": "Sin fecha de expiración"
+      },
+      "recuperacion": {
+        "automatica": false,
+        "tiempo_estimado": "24-72 horas",
+        "requiere_apelacion": true,
+        "descripcion": "Requiere apelación formal y revisión manual por parte de WhatsApp"
+      },
+      "caracteristicas": [
+        { "icono": "🚫", "texto": "Sin fecha de expiración" },
+        { "icono": "📧", "texto": "Requiere apelación" },
+        { "icono": "⚡", "texto": "Necesitamos actuar rápido" }
+      ],
+      "estadisticas": {
+        "frecuencia": "Media",
+        "porcentaje_casos": "40%",
+        "tasa_exito": "85%"
+      },
+      "planes_recomendados": ["premium", "business-pro"],
+      "icono": "🚫",
+      "color": "#E24B4A"
+    },
+    {
+      "id": "suspicion",
+      "nombre": "Actividad Sospechosa",
+      "categoria": "suspension",
+      "severidad": 2,
+      "nivel": "Medio",
+      "descripcion": "WhatsApp detectó comportamiento inusual en tu cuenta que viola sus políticas de uso.",
+      "mensaje_error": "Tu cuenta ha sido suspendida por actividad sospechosa",
+      "causas": [
+        "Envío de mensajes masivos",
+        "Unión a muchos grupos en poco tiempo",
+        "Uso de apps no oficiales (WhatsApp Plus, GBWhatsApp)",
+        "Cambio frecuente de dispositivo",
+        "Patrones de envío automatizados"
+      ],
+      "duracion": {
+        "min": 12,
+        "max": 48,
+        "unidad": "horas",
+        "descripcion": "12-48 horas"
+      },
+      "recuperacion": {
+        "automatica": false,
+        "tiempo_estimado": "12-48 horas",
+        "requiere_apelacion": true,
+        "descripcion": "Requiere verificación y confirmación de identidad"
+      },
+      "caracteristicas": [
+        { "icono": "📨", "texto": "Envío de mensajes masivos" },
+        { "icono": "👥", "texto": "Unión a muchos grupos" },
+        { "icono": "🤖", "texto": "Uso de apps no oficiales" }
+      ],
+      "estadisticas": {
+        "frecuencia": "Muy Alta",
+        "porcentaje_casos": "45%",
+        "tasa_exito": "92%"
+      },
+      "planes_recomendados": ["premium"],
+      "popular": true,
+      "icono": "⚠️",
+      "color": "#EF9F27"
+    },
+    {
+      "id": "spam",
+      "nombre": "Baneo por Spam",
+      "categoria": "permanente",
+      "severidad": 3,
+      "nivel": "Alto",
+      "descripcion": "Has sido reportado por múltiples usuarios por enviar contenido no deseado o publicidad no solicitada.",
+      "mensaje_error": "Tu cuenta ha sido baneada por spam",
+      "causas": [
+        "Múltiples reportes de usuarios",
+        "Envío de enlaces sospechosos",
+        "Contenido publicitario masivo",
+        "Mensajes no solicitados",
+        "Violación de políticas anti-spam"
+      ],
+      "duracion": {
+        "min": null,
+        "max": null,
+        "unidad": "indefinido",
+        "descripcion": "Permanente hasta apelación exitosa"
+      },
+      "recuperacion": {
+        "automatica": false,
+        "tiempo_estimado": "24-96 horas",
+        "requiere_apelacion": true,
+        "descripcion": "Requiere apelación detallada y compromiso de no repetir"
+      },
+      "caracteristicas": [
+        { "icono": "📢", "texto": "Múltiples reportes" },
+        { "icono": "🔗", "texto": "Enlaces sospechosos" },
+        { "icono": "⚠️", "texto": "Violación de términos" }
+      ],
+      "estadisticas": {
+        "frecuencia": "Media",
+        "porcentaje_casos": "25%",
+        "tasa_exito": "78%"
+      },
+      "planes_recomendados": ["premium", "business-pro"],
+      "icono": "📧",
+      "color": "#E24B4A"
+    },
+    {
+      "id": "verification",
+      "nombre": "Verificación Requerida",
+      "categoria": "suspension",
+      "severidad": 1,
+      "nivel": "Bajo",
+      "descripcion": "WhatsApp solicita verificación de identidad o número de teléfono por seguridad.",
+      "mensaje_error": "Se requiere verificación de tu cuenta",
+      "causas": [
+        "Actividad desde ubicación inusual",
+        "Cambio de número de SIM",
+        "Múltiples intentos de inicio de sesión",
+        "Verificación de seguridad rutinaria"
+      ],
+      "duracion": {
+        "min": 1,
+        "max": 6,
+        "unidad": "horas",
+        "descripcion": "1-6 horas"
+      },
+      "recuperacion": {
+        "automatica": true,
+        "tiempo_estimado": "1-6 horas",
+        "requiere_apelacion": false,
+        "descripcion": "Se resuelve completando la verificación solicitada"
+      },
+      "caracteristicas": [
+        { "icono": "📲", "texto": "Código SMS requerido" },
+        { "icono": "🆔", "texto": "Verificación de identidad" },
+        { "icono": "⏰", "texto": "Tiempo limitado" }
+      ],
+      "estadisticas": {
+        "frecuencia": "Baja",
+        "porcentaje_casos": "15%",
+        "tasa_exito": "99%"
+      },
+      "planes_recomendados": ["pro"],
+      "icono": "✓",
+      "color": "#25D366"
+    },
+    {
+      "id": "reports",
+      "nombre": "Múltiples Denuncias",
+      "categoria": "permanente",
+      "severidad": 3,
+      "nivel": "Crítico",
+      "descripcion": "Varios usuarios han reportado tu número por comportamiento inapropiado, acoso o contenido ofensivo.",
+      "mensaje_error": "Tu cuenta ha sido baneada por múltiples denuncias",
+      "causas": [
+        "Múltiples reportes de usuarios",
+        "Comportamiento inapropiado",
+        "Acoso o amenazas",
+        "Contenido ofensivo o ilegal",
+        "Suplantación de identidad"
+      ],
+      "duracion": {
+        "min": null,
+        "max": null,
+        "unidad": "indefinido",
+        "descripcion": "Permanente - Revisión manual requerida"
+      },
+      "recuperacion": {
+        "automatica": false,
+        "tiempo_estimado": "48-120 horas",
+        "requiere_apelacion": true,
+        "descripcion": "Requiere apelación detallada y revisión manual exhaustiva"
+      },
+      "caracteristicas": [
+        { "icono": "🚨", "texto": "Múltiples reportes" },
+        { "icono": "⚖️", "texto": "Revisión manual" },
+        { "icono": "📝", "texto": "Apelación detallada" }
+      ],
+      "estadisticas": {
+        "frecuencia": "Baja",
+        "porcentaje_casos": "10%",
+        "tasa_exito": "65%"
+      },
+      "planes_recomendados": ["business-pro", "enterprise"],
+      "icono": "🚫",
+      "color": "#E24B4A"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "temporal",
+      "nombre": "Temporales",
+      "descripcion": "Suspensiones con fecha de expiración",
+      "icono": "⏱️",
+      "color": "#EF9F27"
+    },
+    {
+      "id": "permanente",
+      "nombre": "Permanentes",
+      "descripcion": "Baneos que requieren apelación",
+      "icono": "🚫",
+      "color": "#E24B4A"
+    },
+    {
+      "id": "suspension",
+      "nombre": "Suspensiones",
+      "descripcion": "Bloqueos por violación de políticas",
+      "icono": "⚠️",
+      "color": "#EF9F27"
+    }
+  ],
+  "niveles_severidad": [
+    { "nivel": 1, "nombre": "Baja", "color": "#25D366", "descripcion": "Se resuelve rápidamente" },
+    { "nivel": 2, "nombre": "Media", "color": "#EF9F27", "descripcion": "Requiere atención" },
+    { "nivel": 3, "nombre": "Alta", "color": "#E24B4A", "descripcion": "Necesita apelación urgente" }
+  ],
+  "estadisticas_generales": {
+    "total_tipos": 6,
+    "mas_comun": "suspicion",
+    "mas_grave": "reports",
+    "tasa_exito_promedio": "86%",
+    "tiempo_promedio_recuperacion": "24 horas"
+  },
+  "metadata": {
+    "ultima_actualizacion": "2025-01-15",
+    "version": "1.0",
+    "idioma": "es"
+  }
+}

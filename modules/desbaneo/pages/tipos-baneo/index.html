@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipos de Baneo de WhatsApp | Identifica tu Caso | DesbanWA</title>
+  <meta name="description" content="Identifica qué tipo de baneo tiene tu WhatsApp: temporal, permanente, por spam o actividad sospechosa. Soluciones específicas para cada caso.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="tipos-baneo.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="../../../../index.html" class="nav-logo">
+      DESBAN<span class="g">W</span><span class="r">A</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../landing/">Desbaneo</a></li>
+      <li><a href="../planes/">Precios</a></li>
+      <li><a href="../proceso/">Cómo funciona</a></li>
+      <li><a href="./" class="active">Tipos de baneo</a></li>
+      <li><a href="../../../../modules/shared/pages/faq/">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="../../../../modules/baneo/pages/landing/" class="btn-nav-ghost">Banear número</a>
+      <a href="../solicitud/" class="btn-nav-primary">Recuperar mi número →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="tipos-hero">
+    <div class="tipos-hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Conoce tu tipo de baneo
+      </div>
+      
+      <h1 class="hero-title">
+        TIPOS DE<br>
+        <span class="text-green">BANEO</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Identifica qué tipo de baneo tiene tu número de WhatsApp 
+        y conoce la solución adecuada para cada caso.
+      </p>
+      
+      <!-- Search/Filter -->
+      <div class="hero-search">
+        <input 
+          type="text" 
+          id="search-baneo" 
+          class="search-input" 
+          placeholder="Buscar tipo de baneo..."
+          aria-label="Buscar tipos de baneo"
+        >
+        <span class="search-icon">🔍</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPOS GRID -->
+  <section class="tipos-section">
+    <div class="tipos-container">
+      
+      <!-- Filter Buttons -->
+      <div class="tipos-filters" role="group" aria-label="Filtros de tipos de baneo">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">
+          <span class="filter-icon">⊞</span>
+          Todos
+          <span class="filter-count">6</span>
+        </button>
+        <button class="filter-btn" data-filter="temporal" aria-pressed="false">
+          <span class="filter-icon">⏱</span>
+          Temporal
+        </button>
+        <button class="filter-btn" data-filter="permanente" aria-pressed="false">
+          <span class="filter-icon">🚫</span>
+          Permanente
+        </button>
+        <button class="filter-btn" data-filter="suspension" aria-pressed="false">
+          <span class="filter-icon">⚠️</span>
+          Suspensión
+        </button>
+      </div>
+
+      <!-- Results Info -->
+      <div class="results-info" aria-live="polite" hidden>
+        <span class="results-count">Mostrando <strong id="visible-count">6</strong> de <strong id="total-count">6</strong> tipos</span>
+        <button class="reset-filters" type="button">
+          <span aria-hidden="true">↺</span>
+          Ver todos
+        </button>
+      </div>
+
+      <!-- Grid -->
+      <div class="tipos-grid" id="tipos-grid" role="list">
+        
+        <!-- Tipo 1: Baneo Temporal -->
+        <article class="tipo-card" data-categoria="temporal" data-severidad="1" role="listitem" tabindex="0">
+          <div class="card-badge temporal">
+            <span class="badge-dot"></span>
+            Temporal
+          </div>
+          
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          
+          <h3 class="card-title">Baneo Temporal</h3>
+          
+          <p class="card-desc">
+            Tu cuenta está suspendida por un tiempo limitado. Generalmente dura entre 24 horas y 7 días.
+          </p>
+          
+          <ul class="card-features">
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">⏱</span>
+              <span class="feature-text">Duración: 24h - 7 días</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">📱</span>
+              <span class="feature-text">Mensaje: "Temporalmente suspendido"</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">✓</span>
+              <span class="feature-text">Se recupera automáticamente</span>
+            </li>
+          </ul>
+          
+          <div class="card-severity">
+            <span class="severity-label">Severidad:</span>
+            <div class="severity-bars" role="img" aria-label="Severidad baja: 1 de 3">
+              <span class="severity-bar low" aria-hidden="true"></span>
+              <span class="severity-bar" aria-hidden="true"></span>
+              <span class="severity-bar" aria-hidden="true"></span>
+            </div>
+            <span class="severity-text low">Baja</span>
+          </div>
+          
+          <div class="card-meta">
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">⚡</span>
+              <span class="meta-text">Recuperación: 2-24h</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">📊</span>
+              <span class="meta-text">35% de casos</span>
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <a href="../solicitud/?tipo=temporal" class="card-cta">
+              <span class="cta-text">Recuperar ahora</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+            <button class="card-details" type="button" aria-label="Ver más detalles sobre baneo temporal">
+              Más info
+            </button>
+          </div>
+        </article>
+
+        <!-- Tipo 2: Baneo Permanente -->
+        <article class="tipo-card" data-categoria="permanente" data-severidad="3" role="listitem" tabindex="0">
+          <div class="card-badge permanente">
+            <span class="badge-dot"></span>
+            Permanente
+          </div>
+          
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
+          <h3 class="card-title">Baneo Permanente</h3>
+          
+          <p class="card-desc">
+            Tu cuenta ha sido desactivada permanentemente. Requiere apelación para ser recuperada.
+          </p>
+          
+          <ul class="card-features">
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🚫</span>
+              <span class="feature-text">Sin fecha de expiración</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">📧</span>
+              <span class="feature-text">Requiere apelación</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">⚡</span>
+              <span class="feature-text">Necesitamos actuar rápido</span>
+            </li>
+          </ul>
+          
+          <div class="card-severity">
+            <span class="severity-label">Severidad:</span>
+            <div class="severity-bars" role="img" aria-label="Severidad alta: 3 de 3">
+              <span class="severity-bar high" aria-hidden="true"></span>
+              <span class="severity-bar high" aria-hidden="true"></span>
+              <span class="severity-bar high" aria-hidden="true"></span>
+            </div>
+            <span class="severity-text high">Alta</span>
+          </div>
+          
+          <div class="card-meta">
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">⚡</span>
+              <span class="meta-text">Recuperación: 24-72h</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">📊</span>
+              <span class="meta-text">40% de casos</span>
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <a href="../solicitud/?tipo=permanente" class="card-cta primary">
+              <span class="cta-text">Apelar ahora</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+            <button class="card-details" type="button" aria-label="Ver más detalles sobre baneo permanente">
+              Más info
+            </button>
+          </div>
+        </article>
+
+        <!-- Tipo 3: Actividad Sospechosa (POPULAR) -->
+        <article class="tipo-card popular" data-categoria="suspension" data-severidad="2" role="listitem" tabindex="0">
+          <div class="popular-ribbon" aria-hidden="true">Más común</div>
+          
+          <div class="card-badge suspension">
+            <span class="badge-dot"></span>
+            Suspensión
+          </div>
+          
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
+          <h3 class="card-title">Actividad Sospechosa</h3>
+          
+          <p class="card-desc">
+            WhatsApp detectó comportamiento inusual en tu cuenta. Puede ser por envío masivo o grupos.
+          </p>
+          
+          <ul class="card-features">
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">📨</span>
+              <span class="feature-text">Envío de mensajes masivos</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">👥</span>
+              <span class="feature-text">Unión a muchos grupos</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🤖</span>
+              <span class="feature-text">Uso de apps no oficiales</span>
+            </li>
+          </ul>
+          
+          <div class="card-severity">
+            <span class="severity-label">Severidad:</span>
+            <div class="severity-bars" role="img" aria-label="Severidad media: 2 de 3">
+              <span class="severity-bar medium" aria-hidden="true"></span>
+              <span class="severity-bar medium" aria-hidden="true"></span>
+              <span class="severity-bar" aria-hidden="true"></span>
+            </div>
+            <span class="severity-text medium">Media</span>
+          </div>
+          
+          <div class="card-meta">
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">⚡</span>
+              <span class="meta-text">Recuperación: 12-48h</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">📊</span>
+              <span class="meta-text">45% de casos</span>
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <a href="../solicitud/?tipo=suspicion" class="card-cta primary">
+              <span class="cta-text">Solucionar ahora</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+            <button class="card-details" type="button" aria-label="Ver más detalles sobre actividad sospechosa">
+              Más info
+            </button>
+          </div>
+        </article>
+
+        <!-- Tipo 4: Baneo por Spam -->
+        <article class="tipo-card" data-categoria="permanente" data-severidad="3" role="listitem" tabindex="0">
+          <div class="card-badge spam">
+            <span class="badge-dot"></span>
+            Spam
+          </div>
+          
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
+          <h3 class="card-title">Baneo por Spam</h3>
+          
+          <p class="card-desc">
+            Reportado por múltiples usuarios por enviar contenido no deseado o publicidad.
+          </p>
+          
+          <ul class="card-features">
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">📢</span>
+              <span class="feature-text">Múltiples reportes</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🔗</span>
+              <span class="feature-text">Enlaces sospechosos</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">⚠️</span>
+              <span class="feature-text">Violación de términos</span>
+            </li>
+          </ul>
+          
+          <div class="card-severity">
+            <span class="severity-label">Severidad:</span>
+            <div class="severity-bars" role="img" aria-label="Severidad alta: 3 de 3">
+              <span class="severity-bar high" aria-hidden="true"></span>
+              <span class="severity-bar high" aria-hidden="true"></span>
+              <span class="severity-bar medium" aria-hidden="true"></span>
+            </div>
+            <span class="severity-text high">Alta</span>
+          </div>
+          
+          <div class="card-meta">
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">⚡</span>
+              <span class="meta-text">Recuperación: 24-96h</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">📊</span>
+              <span class="meta-text">25% de casos</span>
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <a href="../solicitud/?tipo=spam" class="card-cta">
+              <span class="cta-text">Apelar baneo</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+            <button class="card-details" type="button" aria-label="Ver más detalles sobre baneo por spam">
+              Más info
+            </button>
+          </div>
+        </article>
+
+        <!-- Tipo 5: Verificación Requerida -->
+        <article class="tipo-card" data-categoria="suspension" data-severidad="1" role="listitem" tabindex="0">
+          <div class="card-badge verification">
+            <span class="badge-dot"></span>
+            Verificación
+          </div>
+          
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
+          <h3 class="card-title">Verificación Requerida</h3>
+          
+          <p class="card-desc">
+            WhatsApp solicita verificación de identidad o número de teléfono.
+          </p>
+          
+          <ul class="card-features">
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">📲</span>
+              <span class="feature-text">Código SMS requerido</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🆔</span>
+              <span class="feature-text">Verificación de identidad</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">⏰</span>
+              <span class="feature-text">Tiempo limitado</span>
+            </li>
+          </ul>
+          
+          <div class="card-severity">
+            <span class="severity-label">Severidad:</span>
+            <div class="severity-bars" role="img" aria-label="Severidad baja: 1 de 3">
+              <span class="severity-bar low" aria-hidden="true"></span>
+              <span class="severity-bar" aria-hidden="true"></span>
+              <span class="severity-bar" aria-hidden="true"></span>
+            </div>
+            <span class="severity-text low">Baja</span>
+          </div>
+          
+          <div class="card-meta">
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">⚡</span>
+              <span class="meta-text">Recuperación: 1-6h</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">📊</span>
+              <span class="meta-text">15% de casos</span>
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <a href="../solicitud/?tipo=verification" class="card-cta">
+              <span class="cta-text">Verificar cuenta</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+            <button class="card-details" type="button" aria-label="Ver más detalles sobre verificación requerida">
+              Más info
+            </button>
+          </div>
+        </article>
+
+        <!-- Tipo 6: Múltiples Denuncias -->
+        <article class="tipo-card" data-categoria="permanente" data-severidad="3" role="listitem" tabindex="0">
+          <div class="card-badge reports">
+            <span class="badge-dot"></span>
+            Denuncias
+          </div>
+          
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
+          <h3 class="card-title">Múltiples Denuncias</h3>
+          
+          <p class="card-desc">
+            Varios usuarios han reportado tu número por comportamiento inapropiado o acoso.
+          </p>
+          
+          <ul class="card-features">
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">🚨</span>
+              <span class="feature-text">Múltiples reportes</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">⚖️</span>
+              <span class="feature-text">Revisión manual</span>
+            </li>
+            <li class="feature-item">
+              <span class="feature-icon" aria-hidden="true">📝</span>
+              <span class="feature-text">Apelación detallada</span>
+            </li>
+          </ul>
+          
+          <div class="card-severity">
+            <span class="severity-label">Severidad:</span>
+            <div class="severity-bars" role="img" aria-label="Severidad crítica: 3 de 3">
+              <span class="severity-bar high" aria-hidden="true"></span>
+              <span class="severity-bar high" aria-hidden="true"></span>
+              <span class="severity-bar high" aria-hidden="true"></span>
+            </div>
+            <span class="severity-text high">Crítica</span>
+          </div>
+          
+          <div class="card-meta">
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">⚡</span>
+              <span class="meta-text">Recuperación: 48-120h</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon" aria-hidden="true">📊</span>
+              <span class="meta-text">10% de casos</span>
+            </div>
+          </div>
+          
+          <div class="card-footer">
+            <a href="../solicitud/?tipo=reports" class="card-cta primary">
+              <span class="cta-text">Apelar denuncias</span>
+              <span class="cta-arrow" aria-hidden="true">→</span>
+            </a>
+            <button class="card-details" type="button" aria-label="Ver más detalles sobre múltiples denuncias">
+              Más info
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="empty-state" hidden>
+        <div class="empty-icon" aria-hidden="true">🔍</div>
+        <h3 class="empty-title">No encontramos resultados</h3>
+        <p class="empty-desc">Intenta con otros términos o restablece los filtros</p>
+        <button class="empty-reset" type="button">
+          <span aria-hidden="true">↺</span>
+          Ver todos los tipos
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INFO ADICIONAL -->
+  <section class="info-section">
+    <div class="info-container">
+      <div class="info-card">
+        <div class="info-icon" aria-hidden="true">💡</div>
+        <div class="info-content">
+          <h4>¿No estás seguro de tu tipo de baneo?</h4>
+          <p>Te ayudamos a diagnosticarlo gratuitamente. Solo necesitamos tu número para verificar el estado.</p>
+          <a href="../solicitud/" class="info-link">
+            Diagnóstico gratuito
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stat-item">
+        <div class="stat-number" data-count="5234">0</div>
+        <div class="stat-label">Casos resueltos</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="94">0</div>
+        <div class="stat-label">% Tasa de éxito</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number" data-count="18">0</div>
+        <div class="stat-label">Horas promedio</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATSAPP FLOATING -->
+  <a href="https://wa.me/593991234567" class="whatsapp-float" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        DESBAN<span class="g">W</span><span class="r">A</span>
+      </div>
+      <p>Servicio profesional de desbaneo y baneo de WhatsApp.</p>
+      <p class="footer-legal">Servicio independiente. No afiliado a Meta ni WhatsApp.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 DesbanWA</span>
+    </div>
+  </footer>
+
+  <script src="tipos-baneo.js"></script>
+</body>
+</html>

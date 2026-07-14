@@ -1,0 +1,47 @@
+{
+  "module": "desbaneo",
+  "page": "solicitud",
+  "route": "/desbaneo/solicitud",
+
+  "seo": {
+    "title": "Solicitud de desbaneo — DesbanWA",
+    "description": "Inicia tu solicitud de baneo de número WhatsApp. Proceso anónimo y confidencial. Diagnóstico gratuito antes de pagar.",
+    "canonical": "https://desbanwa.com/desbaneo/solicitud",
+    "robots": "noindex, nofollow"
+  },
+
+  "og": {
+    "title": "Solicitud de desbaneo — DesbanWA",
+    "description": "Reporta un número de WhatsApp de forma anónima.",
+    "image": "shared/assets/images/og/og-desbaneo.png",
+    "type": "website",
+    "url": "https://desbanwa.com/desbaneo/solicitud"
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Desbaneo",  "url": "/desbaneo" },
+    { "label": "Solicitud", "url": "/desbaneo/solicitud/index.html" }
+  ],
+
+  "analytics": {
+    "page_name": "desbaneo_solicitud",
+    "page_category": "desbaneo",
+    "conversion_goal": "pago_completado_desbaneo",
+    "funnel_steps": [
+      "solicitud_paso_1_caso",
+      "solicitud_paso_2_contacto",
+      "solicitud_paso_3_pago",
+      "solicitud_paso_4_confirmacion"
+    ]
+  },
+
+  "settings": {
+    "show_whatsapp_btn": false,
+    "show_cookie_banner": false,
+    "theme": "red",
+    "form_steps": 4,
+    "requires_legal_accept": true,
+    "last_updated": "2025-01-01"
+  }
+}

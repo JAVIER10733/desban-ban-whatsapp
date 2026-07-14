@@ -1,0 +1,222 @@
+{
+  "proceso": {
+    "titulo": "¿Cómo funciona el desbaneo?",
+    "subtitulo": "Proceso simple, rápido y garantizado",
+    "pasos": [
+      {
+        "numero": 1,
+        "titulo": "Diagnóstico gratuito",
+        "descripcion": "Analizamos tu caso sin compromiso. Verificamos el tipo de baneo y la viabilidad de recuperación.",
+        "tiempo": "5-10 minutos",
+        "icono": "🔍",
+        "detalles": [
+          "Ingresas tu número de WhatsApp",
+          "Respondes preguntas básicas",
+          "Nos envías captura del error",
+          "Evaluamos tu caso gratuitamente"
+        ],
+        "cta": {
+          "texto": "Iniciar diagnóstico",
+          "url": "../solicitud/index.html"
+        }
+      },
+      {
+        "numero": 2,
+        "titulo": "Selecciona tu plan",
+        "descripcion": "Elige el plan que mejor se adapte a tu urgencia y necesidades. Todos incluyen garantía.",
+        "tiempo": "2 minutos",
+        "icono": "📋",
+        "detalles": [
+          "Compara planes y precios",
+          "Selecciona según urgencia",
+          "Revisa características",
+          "Confirma tu elección"
+        ],
+        "planes_sugeridos": {
+          "urgente": "premium",
+          "estandar": "pro",
+          "empresarial": "business-pro"
+        }
+      },
+      {
+        "numero": 3,
+        "titulo": "Proporciona información",
+        "descripcion": "Completa el formulario con tus datos y detalles del caso. Información 100% confidencial.",
+        "tiempo": "5 minutos",
+        "icono": "📝",
+        "detalles": [
+          "Datos de contacto",
+          "Número afectado",
+          "Tipo de baneo",
+          "Mensaje de error",
+          "Información adicional"
+        ],
+        "campos_requeridos": [
+          "numero_whatsapp",
+          "nombre_completo",
+          "email",
+          "tipo_baneo",
+          "plan_seleccionado"
+        ]
+      },
+      {
+        "numero": 4,
+        "titulo": "Pago seguro",
+        "descripcion": "Realiza el pago de forma segura. Aceptamos múltiples métodos de pago con encriptación SSL.",
+        "tiempo": "3 minutos",
+        "icono": "💳",
+        "detalles": [
+          "Elige método de pago",
+          "Proceso encriptado SSL",
+          "Confirmación inmediata",
+          "Factura electrónica"
+        ],
+        "metodos_disponibles": [
+          "Tarjeta crédito/débito",
+          "PayPal",
+          "Transferencia",
+          "Criptomonedas"
+        ]
+      },
+      {
+        "numero": 5,
+        "titulo": "Iniciamos la recuperación",
+        "descripcion": "Nuestro equipo de especialistas comienza el proceso de apelación ante WhatsApp/Meta.",
+        "tiempo": "Depende del plan",
+        "icono": "⚡",
+        "detalles": [
+          "Asignamos especialista",
+          "Preparamos documentación",
+          "Enviamos apelación oficial",
+          "Seguimiento constante"
+        ],
+        "tiempos_por_plan": {
+          "pro": "24 horas",
+          "premium": "12 horas",
+          "business": "6 horas",
+          "enterprise": "2 horas"
+        }
+      },
+      {
+        "numero": 6,
+        "titulo": "Seguimiento y actualizaciones",
+        "descripcion": "Te mantenemos informado cada paso del proceso. Recibe actualizaciones según tu plan.",
+        "tiempo": "Durante el proceso",
+        "icono": "📊",
+        "detalles": [
+          "Actualizaciones periódicas",
+          "Acceso a dashboard",
+          "Soporte disponible",
+          "Respuesta a consultas"
+        ],
+        "frecuencia_por_plan": {
+          "pro": "Diaria",
+          "premium": "Cada 6 horas",
+          "business": "Cada 3 horas",
+          "enterprise": "Tiempo real"
+        }
+      },
+      {
+        "numero": 7,
+        "titulo": "Recuperación exitosa",
+        "descripcion": "¡Tu número es recuperado! Te enviamos instrucciones para restaurar tu cuenta y datos.",
+        "tiempo": "Inmediato",
+        "icono": "✅",
+        "detalles": [
+          "Confirmación de recuperación",
+          "Instrucciones de acceso",
+          "Restauración de backup",
+          "Recomendaciones de seguridad"
+        ],
+        "post_recuperacion": [
+          "Verificar cuenta",
+          "Restaurar chats (si hay backup)",
+          "Configurar seguridad",
+          "Seguir recomendaciones"
+        ]
+      },
+      {
+        "numero": 8,
+        "titulo": "Garantía y soporte",
+        "descripcion": "Si no logramos recuperar tu número, aplicamos la garantía de devolución del 100%.",
+        "tiempo": "48 horas máx",
+        "icono": "🛡",
+        "detalles": [
+          "Evaluación de resultado",
+          "Devolución automática si aplica",
+          "Soporte post-servicio",
+          "Recomendaciones preventivas"
+        ],
+        "garantia": {
+          "aplica": true,
+          "tiempo_reembolso": "24-48 horas",
+          "condiciones": [
+            "Plan Pro o superior",
+            "Plazo vencido sin recuperación",
+            "Información veraz proporcionada"
+          ]
+        }
+      }
+    ]
+  },
+  "tiempos_promedio": {
+    "pro": {
+      "min": 24,
+      "max": 48,
+      "unidad": "horas",
+      "exitos": "85%"
+    },
+    "premium": {
+      "min": 12,
+      "max": 24,
+      "unidad": "horas",
+      "exitos": "92%"
+    },
+    "business": {
+      "min": 6,
+      "max": 12,
+      "unidad": "horas",
+      "exitos": "96%"
+    },
+    "enterprise": {
+      "min": 2,
+      "max": 6,
+      "unidad": "horas",
+      "exitos": "98%"
+    }
+  },
+  "estadisticas": {
+    "total_casos": 5234,
+    "tasa_exito": "94%",
+    "tiempo_promedio": "18 horas",
+    "satisfaccion": "4.9/5",
+    "reembolsos": "6%"
+  },
+  "recomendaciones": [
+    {
+      "titulo": "Proporciona información precisa",
+      "descripcion": "Mientras más detalles nos des, más rápido será el proceso.",
+      "icono": "📌"
+    },
+    {
+      "titulo": "Mantente disponible",
+      "descripcion": "Responde rápido nuestras consultas para no retrasar el proceso.",
+      "icono": "⏰"
+    },
+    {
+      "titulo": "No intentes recuperar solo",
+      "descripcion": "Cada intento fallido hace más difícil la recuperación.",
+      "icono": "⚠️"
+    },
+    {
+      "titulo": "Ten paciencia",
+      "descripcion": "El proceso puede tomar tiempo dependiendo de la complejidad.",
+      "icono": "🕐"
+    }
+  ],
+  "metadata": {
+    "ultima_actualizacion": "2025-01-15",
+    "total_pasos": 8,
+    "version": "1.0"
+  }
+}

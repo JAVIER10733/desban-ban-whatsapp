@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desbaneo de WhatsApp — Recupera tu número | DesbanWA</title>
+<meta name="description" content="Recuperamos tu número de WhatsApp baneado en 24-72 horas. Apelación directa ante Meta. Garantía de devolución si no lo logramos.">
+<meta property="og:title" content="Desbaneo de WhatsApp — DesbanWA">
+<meta property="og:description" content="Recupera tu número baneado en 24-72 horas con garantía de devolución.">
+<meta property="og:image" content="../../../../modules/shared/assets/images/og/og-desbaneo.png">
+<link rel="icon" href="../../../../modules/shared/assets/images/favicons/favicon.ico">
+<link rel="stylesheet" href="../../../../modules/shared/styles/main.css">
+<link rel="stylesheet" href="landing.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="../../../../index.html" class="nav-logo">
+    Desban<span class="g">W</span><span class="r">A</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../proceso/index.html">Cómo funciona</a></li>
+    <li><a href="../planes/index.html">Precios</a></li>
+    <li><a href="../tipos-baneo/index.html">Tipos de baneo</a></li>
+    <li><a href="../../../../modules/shared/pages/faq/index.html">FAQ</a></li>
+    <li><a href="../../../../modules/shared/pages/blog/index.html">Blog</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="../../../../modules/baneo/pages/landing/" class="btn-nav-ghost">Banear número</a>
+    <a href="../solicitud/index.html" class="btn-nav-primary">Recuperar mi número →</a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-noise"></div>
+  <div class="hero-content">
+    <div class="hero-badge anim-1">
+      <span class="badge-dot"></span>
+      Servicio activo 24/7 · +4.800 números recuperados
+    </div>
+    <h1 class="hero-title anim-2">
+      Tu número de<br>
+      WhatsApp<br>
+      <span class="title-accent">baneado.</span><br>
+      Lo recuperamos.
+    </h1>
+    <p class="hero-sub anim-3">
+      Gestionamos apelaciones directamente ante Meta para recuperar tu número bloqueado. Sin acceso a tu teléfono. Sin tecnicismos. Resultados en 24 a 72 horas.
+    </p>
+    <div class="hero-actions anim-4">
+      <a href="../solicitud/index.html" class="btn-primary">
+        Iniciar recuperación gratis
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
+      <a href="../proceso/index.html" class="btn-ghost">Ver cómo funciona</a>
+    </div>
+    <div class="hero-trust anim-4">
+      <div class="trust-item">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Diagnóstico gratuito
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Sin acceso a tu teléfono
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Garantía de devolución
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual anim-3">
+    <div class="phone-mockup">
+      <div class="phone-screen">
+        <div class="phone-header">
+          <div class="phone-avatar">WA</div>
+          <div>
+            <div class="phone-name">WhatsApp</div>
+            <div class="phone-status banned" id="phoneStatus">● Número baneado</div>
+          </div>
+        </div>
+        <div class="phone-msgs">
+          <div class="msg msg-in">Tu número fue suspendido</div>
+          <div class="msg msg-in">No puedes enviar mensajes</div>
+          <div class="msg msg-out recovering" id="recoveringMsg">Iniciando recuperación...</div>
+          <div class="msg msg-in success" id="successMsg" style="display:none">✓ Número restaurado</div>
+        </div>
+        <div class="phone-progress" id="phoneProgress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="stat-float stat-1">
+      <div class="stat-float-num">89%</div>
+      <div class="stat-float-lbl">Tasa de éxito</div>
+    </div>
+    <div class="stat-float stat-2">
+      <div class="stat-float-num">48h</div>
+      <div class="stat-float-lbl">Promedio</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num green" data-target="4800">0</div>
+      <div class="stat-lbl">Números recuperados</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num green" data-target="89" data-suffix="%">0%</div>
+      <div class="stat-lbl">Tasa de éxito</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num green" data-target="48" data-suffix="h">0h</div>
+      <div class="stat-lbl">Tiempo promedio</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num green" data-target="6">0</div>
+      <div class="stat-lbl">Años de experiencia</div>
+    </div>
+  </div>
+</div>
+
+<!-- TIPOS DE BANEO -->
+<section class="section tipos-section" id="tipos">
+  <div class="section-inner">
+    <div class="section-tag">Qué resolvemos</div>
+    <h2 class="section-title">¿Qué tipo de baneo<br>tienes tú?</h2>
+    <p class="section-sub">Identificamos el tipo de bloqueo y aplicamos el proceso correcto para cada caso.</p>
+    <div class="tipos-grid">
+      <div class="tipo-card reveal">
+        <div class="tipo-icon">⏱</div>
+        <h3>Baneo temporal</h3>
+        <p>Tu número fue restringido por uso masivo o reportes. Se recupera con apelación estándar en 24-48h.</p>
+        <div class="tipo-tag">Más común</div>
+      </div>
+      <div class="tipo-card reveal">
+        <div class="tipo-icon">🚫</div>
+        <h3>Baneo permanente</h3>
+        <p>Número eliminado por violaciones graves. Aplicamos proceso de revisión especial ante Meta.</p>
+        <div class="tipo-tag">Proceso avanzado</div>
+      </div>
+      <div class="tipo-card reveal">
+        <div class="tipo-icon">💼</div>
+        <h3>WhatsApp Business</h3>
+        <p>Tu cuenta empresarial bloqueada afecta tus ventas. Gestionamos con prioridad alta.</p>
+        <div class="tipo-tag tipo-tag-yellow">Prioridad alta</div>
+      </div>
+      <div class="tipo-card reveal">
+        <div class="tipo-icon">🔌</div>
+        <h3>Número de API</h3>
+        <p>Número integrado a sistemas de mensajería masiva. Recuperación con documentación técnica.</p>
+        <div class="tipo-tag">Empresarial</div>
+      </div>
+    </div>
+    <div class="tipos-cta">
+      <a href="../tipos-baneo/" class="btn-ghost">Ver todos los tipos →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section proceso-section" id="proceso">
+  <div class="section-inner">
+    <div class="section-tag">Cómo funciona</div>
+    <h2 class="section-title">4 pasos.<br>Sin complicaciones.</h2>
+    <div class="proceso-steps">
+      <div class="proceso-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Cuéntanos tu caso</h3>
+          <p>Completa el formulario con tu número y el tipo de baneo. Sin datos sensibles. Tarda menos de 2 minutos.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="proceso-step reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Diagnóstico gratuito</h3>
+          <p>Analizamos tu caso y confirmamos si el número es recuperable antes de que pagues un solo centavo.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="proceso-step reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>Gestionamos la apelación</h3>
+          <p>Enviamos la solicitud formal a Meta con la documentación correcta para tu tipo de baneo específico.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="proceso-step reveal">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3>Número restaurado</h3>
+          <p>Te notificamos cuando el acceso sea restaurado. Si no lo logramos, devolvemos el 100% de tu pago.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proceso-cta">
+      <a href="../solicitud/index.html" class="btn-primary">Empezar ahora →</a>
+      <a href="../proceso/" class="btn-ghost">Ver proceso completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section class="section planes-section" id="planes">
+  <div class="section-inner">
+    <div class="section-tag">Precios</div>
+    <h2 class="section-title">Elige tu plan.<br>Sin costos ocultos.</h2>
+    <p class="section-sub">Pago único. Si no lo recuperamos, devolvemos el 100%.</p>
+    <div class="planes-grid">
+      <div class="plan-card reveal">
+        <div class="plan-name">Básico</div>
+        <div class="plan-price">$19 <span>USD</span></div>
+        <ul class="plan-features">
+          <li>Baneo temporal</li>
+          <li>Apelación estándar</li>
+          <li>Respuesta en 72h</li>
+          <li>Soporte por chat</li>
+        </ul>
+        <a href="../solicitud/?plan=basico" class="btn-plan">Seleccionar</a>
+      </div>
+      <div class="plan-card plan-popular reveal">
+        <div class="plan-badge">Más elegido</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">$39 <span>USD</span></div>
+        <ul class="plan-features">
+          <li>Temporal o permanente</li>
+          <li>Apelación prioritaria</li>
+          <li>Respuesta en 24h</li>
+          <li>Especialista dedicado</li>
+          <li>Garantía de devolución</li>
+        </ul>
+        <a href="../solicitud/?plan=pro" class="btn-plan btn-plan-primary">Seleccionar</a>
+      </div>
+      <div class="plan-card reveal">
+        <div class="plan-name">Business</div>
+        <div class="plan-price">$69 <span>USD</span></div>
+        <ul class="plan-features">
+          <li>Business o API</li>
+          <li>Gestión express</li>
+          <li>Respuesta en 12h</li>
+          <li>Asesor dedicado</li>
+          <li>Garantía de devolución</li>
+        </ul>
+        <a href="../solicitud/?plan=business" class="btn-plan">Seleccionar</a>
+      </div>
+    </div>
+    <div class="planes-note">
+      ¿Tienes un caso especial? <a href="../../../../modules/shared/pages/contacto/index.html">Contáctanos</a> para una solución personalizada.
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section testimonios-section" id="testimonios">
+  <div class="section-inner">
+    <div class="section-tag">Testimonios</div>
+    <h2 class="section-title">Miles de clientes<br>ya recuperaron su número.</h2>
+    <div class="testimonios-grid">
+      <div class="testimonio reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Mi número llevaba 3 días baneado y perdía clientes todos los días. En menos de 48 horas lo recuperaron. El servicio es increíble."</p>
+        <div class="t-author">
+          <div class="t-avatar g">MR</div>
+          <div><div class="t-name">Miguel R.</div><div class="t-role">Vendedor online · Colombia</div></div>
+        </div>
+      </div>
+      <div class="testimonio reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Tenía mi WhatsApp Business baneado y afectaba toda la operación de mi negocio. Lo resolvieron en 36 horas. 100% recomendados."</p>
+        <div class="t-author">
+          <div class="t-avatar g">JC</div>
+          <div><div class="t-name">Juan C.</div><div class="t-role">Dueño de negocio · España</div></div>
+        </div>
+      </div>
+      <div class="testimonio reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Pensé que era un baneo permanente y que nunca lo iba a recuperar. El equipo de DesbanWA lo resolvió en menos de 72 horas."</p>
+        <div class="t-author">
+          <div class="t-avatar g">KL</div>
+          <div><div class="t-name">Karla L.</div><div class="t-role">Emprendedora · México</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ RÁPIDO -->
+<section class="section faq-section" id="faq">
+  <div class="section-inner faq-inner">
+    <div class="faq-left">
+      <div class="section-tag">Preguntas frecuentes</div>
+      <h2 class="section-title">Lo que más<br>nos preguntan.</h2>
+      <a href="../../../../modules/shared/pages/faq/index.html" class="btn-ghost">Ver todas las preguntas →</a>
+    </div>
+    <div class="faq-right">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Necesitan acceso a mi teléfono?</button>
+        <div class="faq-a">No. Solo necesitamos tu número y la información del bloqueo. Tú conservas el control total de tu dispositivo en todo momento.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Funciona para cualquier país?</button>
+        <div class="faq-a">Sí. Gestionamos apelaciones para números de todo el mundo, incluyendo Latinoamérica, España y Estados Unidos.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Qué pasa si no logran recuperarlo?</button>
+        <div class="faq-a">Te devolvemos el 100% de tu pago. La garantía aplica a todos los planes Pro y Business sin preguntas.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Cuánto tiempo demora?</button>
+        <div class="faq-a">El promedio es 24 a 72 horas desde que iniciamos la apelación. Casos complejos pueden tomar hasta 5 días hábiles.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Es seguro dar mi número?</button>
+        <div class="faq-a">Totalmente. Tu número es necesario para gestionar la apelación. No compartimos datos con terceros y usamos conexión cifrada.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-bg"></div>
+  <div class="cta-content">
+    <h2 class="cta-title">¿Tu número está<br>baneado ahora?</h2>
+    <p class="cta-sub">Empieza con el diagnóstico gratuito. Sin compromiso.</p>
+    <a href="../solicitud/index.html" class="btn-primary btn-lg">Recuperar mi número →</a>
+    <div class="cta-trust">
+      <span>✓ Diagnóstico gratis</span>
+      <span>✓ Sin acceso a tu teléfono</span>
+      <span>✓ Garantía de devolución</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Desban<span class="g">W</span><span class="r">A</span></div>
+      <p>Servicio profesional de desbaneo y baneo de números WhatsApp.</p>
+      <p class="footer-legal">Servicio independiente. No afiliado a Meta ni WhatsApp.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Desbaneo</div>
+      <a href="../landing/index.html">Landing</a>
+      <a href="../solicitud/index.html">Solicitud</a>
+      <a href="../planes/index.html">Planes</a>
+      <a href="../proceso/index.html">Proceso</a>
+      <a href="../tipos-baneo/index.html">Tipos de baneo</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Empresa</div>
+      <a href="../../../../modules/shared/pages/nosotros/index.html">Nosotros</a>
+      <a href="../../../../modules/shared/pages/blog/index.html">Blog</a>
+      <a href="../../../../modules/shared/pages/faq/index.html">FAQ</a>
+      <a href="../../../../modules/shared/pages/contacto/index.html">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <a href="../../../../modules/shared/pages/legal/privacidad.html">Privacidad</a>
+      <a href="../../../../modules/shared/pages/legal/terminos.html">Términos</a>
+      <a href="../../../../modules/shared/pages/legal/cookies.html">Cookies</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 DesbanWA</span>
+    <a href="../../../../modules/baneo/pages/landing/" class="footer-other-service">¿Necesitas banear un número? →</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP BTN -->
+<a href="https://wa.me/1234567890?text=Hola,%20necesito%20desbanear%20mi%20número" class="wa-float" target="_blank" rel="noopener" title="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script src="../../../../modules/shared/js/main.js" defer></script>
+<script src="landing.js" defer></script>
+</body>
+</html>

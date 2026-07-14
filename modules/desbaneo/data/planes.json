@@ -1,0 +1,260 @@
+{
+  "planes": [
+    {
+      "id": "pro",
+      "nombre": "Pro",
+      "categoria": "personal",
+      "precio": 39,
+      "moneda": "USD",
+      "popular": false,
+      "descripcion": "Ideal para recuperaciones estándar con garantía completa.",
+      "tiempo_respuesta": "24 horas",
+      "tiempo_recuperacion": "24-48 horas",
+      "numeros_incluidos": 1,
+      "reintentos": 1,
+      "garantia": true,
+      "tiempo_reembolso": "48 horas",
+      "caracteristicas": [
+        { "nombre": "Garantía de devolución 100%", "incluido": true, "destacado": true },
+        { "nombre": "Respuesta en 24 horas", "incluido": true, "destacado": false },
+        { "nombre": "1 número de WhatsApp", "incluido": true, "destacado": false },
+        { "nombre": "Especialista dedicado", "incluido": true, "destacado": false },
+        { "nombre": "Diagnóstico gratuito", "incluido": true, "destacado": true },
+        { "nombre": "Soporte por email", "incluido": true, "destacado": false },
+        { "nombre": "Actualizaciones diarias", "incluido": true, "destacado": false },
+        { "nombre": "1 reintento incluido", "incluido": true, "destacado": false },
+        { "nombre": "Documentación básica", "incluido": true, "destacado": false },
+        { "nombre": "Reporte final PDF", "incluido": true, "destacado": false },
+        { "nombre": "Dashboard básico", "incluido": true, "destacado": false },
+        { "nombre": "Soporte telefónico", "incluido": false, "destacado": false },
+        { "nombre": "API acceso", "incluido": false, "destacado": false }
+      ],
+      "especificaciones": {
+        "apelacion": "Básica",
+        "documentacion": "Estándar",
+        "soporte": "Email",
+        "prioridad": "Normal"
+      },
+      "cta": {
+        "texto": "Elegir Pro",
+        "url": "../solicitud/?plan=pro",
+        "tipo": "secondary"
+      },
+      "badge": {
+        "texto": "Garantía incluida",
+        "icono": "🛡"
+      }
+    },
+    {
+      "id": "premium",
+      "nombre": "Premium",
+      "categoria": "personal",
+      "precio": 59,
+      "moneda": "USD",
+      "popular": true,
+      "descripcion": "Recuperación prioritaria con todas las ventajas y garantía express.",
+      "tiempo_respuesta": "12 horas",
+      "tiempo_recuperacion": "12-24 horas",
+      "numeros_incluidos": 1,
+      "reintentos": 3,
+      "garantia": true,
+      "tiempo_reembolso": "24 horas",
+      "ahorro": "20% vs Pro",
+      "caracteristicas": [
+        { "nombre": "Garantía de devolución 100%", "incluido": true, "destacado": true },
+        { "nombre": "Respuesta en 12 horas", "incluido": true, "destacado": true },
+        { "nombre": "Prioridad express", "incluido": true, "destacado": true },
+        { "nombre": "1 número de WhatsApp", "incluido": true, "destacado": false },
+        { "nombre": "Diagnóstico prioritario", "incluido": true, "destacado": false },
+        { "nombre": "Soporte prioritario 24/7", "incluido": true, "destacado": true },
+        { "nombre": "Actualizaciones cada 6h", "incluido": true, "destacado": false },
+        { "nombre": "3 reintentos incluidos", "incluido": true, "destacado": true },
+        { "nombre": "Reembolso en 24h", "incluido": true, "destacado": true },
+        { "nombre": "Documentación avanzada", "incluido": true, "destacado": false },
+        { "nombre": "WhatsApp directo", "incluido": true, "destacado": true },
+        { "nombre": "Reporte detallado", "incluido": true, "destacado": false },
+        { "nombre": "Dashboard premium", "incluido": true, "destacado": false },
+        { "nombre": "Alertas en tiempo real", "incluido": true, "destacado": false },
+        { "nombre": "Guía anti-baneo", "incluido": true, "destacado": true },
+        { "nombre": "Configuración segura", "incluido": true, "destacado": false },
+        { "nombre": "Backup de configuración", "incluido": true, "destacado": false },
+        { "nombre": "Soporte telefónico", "incluido": false, "destacado": false }
+      ],
+      "especificaciones": {
+        "apelacion": "Prioritaria",
+        "documentacion": "Avanzada",
+        "soporte": "WhatsApp 24/7",
+        "prioridad": "Express"
+      },
+      "bonus": [
+        { "icono": "🎁", "texto": "Guía de prevención de baneos" },
+        { "icono": "📱", "texto": "Configuración de seguridad" },
+        { "icono": "🔐", "texto": "Checklist de verificación" }
+      ],
+      "cta": {
+        "texto": "Elegir Premium",
+        "url": "../solicitud/?plan=premium",
+        "tipo": "primary"
+      },
+      "badge": {
+        "texto": "Garantía Express 24h",
+        "icono": "🛡"
+      }
+    },
+    {
+      "id": "business-pro",
+      "nombre": "Business Pro",
+      "categoria": "business",
+      "precio": 99,
+      "moneda": "USD",
+      "popular": false,
+      "descripcion": "Solución empresarial para múltiples números con atención dedicada.",
+      "tiempo_respuesta": "6 horas",
+      "tiempo_recuperacion": "6-12 horas",
+      "numeros_incluidos": 3,
+      "reintentos": -1,
+      "garantia": true,
+      "tiempo_reembolso": "Inmediato",
+      "caracteristicas": [
+        { "nombre": "Garantía de devolución 100%", "incluido": true, "destacado": true },
+        { "nombre": "Hasta 3 números", "incluido": true, "destacado": true },
+        { "nombre": "Asesor dedicado 24/7", "incluido": true, "destacado": true },
+        { "nombre": "Respuesta en 6 horas", "incluido": true, "destacado": true },
+        { "nombre": "Diagnóstico empresarial", "incluido": true, "destacado": false },
+        { "nombre": "Soporte telefónico", "incluido": true, "destacado": true },
+        { "nombre": "Actualizaciones cada 3h", "incluido": true, "destacado": false },
+        { "nombre": "Reembolso inmediato", "incluido": true, "destacado": true },
+        { "nombre": "Reintentos ilimitados", "incluido": true, "destacado": true },
+        { "nombre": "Documentación premium", "incluido": true, "destacado": false },
+        { "nombre": "Línea directa WhatsApp", "incluido": true, "destacado": false },
+        { "nombre": "API acceso básico", "incluido": true, "destacado": true },
+        { "nombre": "Facturación empresarial", "incluido": true, "destacado": false },
+        { "nombre": "Multi-usuario dashboard", "incluido": true, "destacado": false },
+        { "nombre": "Auditoría de seguridad", "incluido": true, "destacado": true },
+        { "nombre": "Capacitación equipo", "incluido": true, "destacado": false },
+        { "nombre": "Protocolo anti-baneo", "incluido": true, "destacado": false },
+        { "nombre": "Backup automático", "incluido": true, "destacado": false },
+        { "nombre": "Migración asistida", "incluido": true, "destacado": false }
+      ],
+      "especificaciones": {
+        "apelacion": "Empresarial",
+        "documentacion": "Premium",
+        "soporte": "Teléfono + WhatsApp",
+        "prioridad": "Alta"
+      },
+      "bonus": [
+        { "icono": "🎁", "texto": "Auditoría de seguridad" },
+        { "icono": "📱", "texto": "Capacitación equipo" },
+        { "icono": "🔐", "texto": "Protocolo anti-baneo" },
+        { "icono": "📊", "texto": "Reportes mensuales" }
+      ],
+      "cta": {
+        "texto": "Elegir Business Pro",
+        "url": "../solicitud/?plan=business-pro",
+        "tipo": "secondary"
+      },
+      "badge": {
+        "texto": "Garantía Priority",
+        "icono": "🛡"
+      }
+    },
+    {
+      "id": "enterprise",
+      "nombre": "Enterprise",
+      "categoria": "enterprise",
+      "precio": 199,
+      "moneda": "USD",
+      "popular": false,
+      "exclusivo": true,
+      "descripcion": "Solución corporativa completa para empresas con múltiples cuentas.",
+      "tiempo_respuesta": "2 horas",
+      "tiempo_recuperacion": "2-6 horas",
+      "numeros_incluidos": 10,
+      "reintentos": -1,
+      "garantia": true,
+      "tiempo_reembolso": "Inmediato",
+      "sla": "99.9%",
+      "caracteristicas": [
+        { "nombre": "Garantía de devolución 100%", "incluido": true, "destacado": true },
+        { "nombre": "Hasta 10 números", "incluido": true, "destacado": true },
+        { "nombre": "Gerente de cuenta", "incluido": true, "destacado": true },
+        { "nombre": "Respuesta en 2 horas", "incluido": true, "destacado": true },
+        { "nombre": "Soporte dedicado 24/7/365", "incluido": true, "destacado": true },
+        { "nombre": "Actualizaciones real-time", "incluido": true, "destacado": true },
+        { "nombre": "Reembolso inmediato", "incluido": true, "destacado": false },
+        { "nombre": "Reintentos ilimitados", "incluido": true, "destacado": false },
+        { "nombre": "Documentación legal", "incluido": true, "destacado": false },
+        { "nombre": "Dashboard empresarial", "incluido": true, "destacado": true },
+        { "nombre": "API completa", "incluido": true, "destacado": true },
+        { "nombre": "SLA garantizado 99.9%", "incluido": true, "destacado": true },
+        { "nombre": "Consultoría mensual", "incluido": true, "destacado": true },
+        { "nombre": "Auditoría trimestral", "incluido": true, "destacado": false },
+        { "nombre": "SSO / SAML", "incluido": true, "destacado": true },
+        { "nombre": "Cumplimiento GDPR", "incluido": true, "destacado": true },
+        { "nombre": "Integración CRM", "incluido": true, "destacado": false },
+        { "nombre": "Webhooks personalizados", "incluido": true, "destacado": false },
+        { "nombre": "Soporte multi-idioma", "incluido": true, "destacado": false },
+        { "nombre": "Onboarding dedicado", "incluido": true, "destacado": false }
+      ],
+      "especificaciones": {
+        "apelacion": "Corporativa",
+        "documentacion": "Legal",
+        "soporte": "Dedicado 24/7/365",
+        "prioridad": "Máxima"
+      },
+      "bonus": [
+        { "icono": "🎁", "texto": "Consultoría mensual" },
+        { "icono": "📊", "texto": "Reportes analytics" },
+        { "icono": "🔐", "texto": "Auditoría trimestral" },
+        { "icono": "🎓", "texto": "Training equipo" },
+        { "icono": "🔗", "texto": "Integración CRM" }
+      ],
+      "cta": {
+        "texto": "Contactar Ventas",
+        "url": "../solicitud/?plan=enterprise",
+        "tipo": "enterprise"
+      },
+      "badge": {
+        "texto": "Garantía Enterprise",
+        "icono": "🛡"
+      }
+    }
+  ],
+  "comparativa": {
+    "columnas": ["Pro", "Premium", "Business Pro", "Enterprise"],
+    "filas": [
+      { "caracteristica": "Precio", "valores": ["$39", "$59", "$99", "$199"] },
+      { "caracteristica": "Números incluidos", "valores": ["1", "1", "3", "10"] },
+      { "caracteristica": "Tiempo de respuesta", "valores": ["24h", "12h", "6h", "2h"] },
+      { "caracteristica": "Garantía", "valores": ["100%", "100%", "100%", "100%"] },
+      { "caracteristica": "Reembolso", "valores": ["48h", "24h", "Inmediato", "Inmediato"] },
+      { "caracteristica": "Reintentos", "valores": ["1", "3", "∞", "∞"] },
+      { "caracteristica": "Soporte", "valores": ["Email", "WhatsApp 24/7", "Teléfono", "Dedicado 24/7"] },
+      { "caracteristica": "Actualizaciones", "valores": ["Diarias", "c/6h", "c/3h", "Real-time"] },
+      { "caracteristica": "Asesor dedicado", "valores": ["—", "—", "✓", "✓"] },
+      { "caracteristica": "API acceso", "valores": ["—", "—", "Básico", "Completo"] },
+      { "caracteristica": "Dashboard", "valores": ["Básico", "Premium", "Multi-user", "Enterprise"] },
+      { "caracteristica": "Facturación", "valores": ["—", "—", "Empresarial", "Avanzada"] },
+      { "caracteristica": "SLA", "valores": ["—", "—", "—", "99.9%"] },
+      { "caracteristica": "SSO/SAML", "valores": ["—", "—", "—", "✓"] },
+      { "caracteristica": "GDPR Ready", "valores": ["—", "—", "—", "✓"] }
+    ]
+  },
+  "metodos_pago": [
+    { "nombre": "Visa", "icono": "💳" },
+    { "nombre": "Mastercard", "icono": "💳" },
+    { "nombre": "American Express", "icono": "💳" },
+    { "nombre": "Transferencia", "icono": "🏦" },
+    { "nombre": "PayPal", "icono": "💰" },
+    { "nombre": "Criptomonedas", "icono": "₿" },
+    { "nombre": "Yape/Plin", "icono": "📱" },
+    { "nombre": "Efectivo", "icono": "💵" }
+  ],
+  "metadata": {
+    "ultima_actualizacion": "2025-01-15",
+    "total_planes": 4,
+    "moneda_base": "USD",
+    "impuestos_incluidos": false,
+    "version": "1.0"
+  }
+}

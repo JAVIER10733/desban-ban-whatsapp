@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="garantia-badge.css">
+<div class="garantia-badge-container" role="region" aria-label="Garantía de servicio">
+  
+  <!-- Badge Principal Flotante -->
+  <button class="garantia-badge" id="garantia-badge" aria-haspopup="dialog" aria-expanded="false">
+    <div class="badge-shield">
+      <svg class="shield-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="badge-content">
+      <div class="badge-title">Garantía 100%</div>
+      <div class="badge-subtitle">Devolución total</div>
+    </div>
+    <div class="badge-glow" aria-hidden="true"></div>
+  </button>
+
+  <!-- Tooltip/Modal de Detalles -->
+  <div class="garantia-details" id="garantia-details" role="dialog" aria-modal="true" aria-labelledby="garantia-title" hidden>
+    <div class="details-header">
+      <h3 id="garantia-title" class="details-title">
+        <span class="title-icon">🛡</span>
+        Garantía de Satisfacción Total
+      </h3>
+      <button class="details-close" aria-label="Cerrar detalles de garantía">&times;</button>
+    </div>
+    
+    <div class="details-body">
+      <p class="details-description">
+        Si no recuperamos tu número de WhatsApp en el plazo acordado, 
+        te devolvemos el <strong>100% de tu dinero</strong>. Sin preguntas, sin complicaciones.
+      </p>
+
+      <div class="guarantee-features">
+        <div class="guarantee-feature">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-content">
+            <div class="feature-title">Reembolso Rápido</div>
+            <div class="feature-desc">Procesamos tu devolución en menos de 48 horas hábiles</div>
+          </div>
+        </div>
+
+        <div class="guarantee-feature">
+          <div class="feature-icon">🔄</div>
+          <div class="feature-content">
+            <div class="feature-title">Sin Preguntas</div>
+            <div class="feature-desc">No necesitas justificar ni explicar nada. Proceso automático.</div>
+          </div>
+        </div>
+
+        <div class="guarantee-feature">
+          <div class="feature-icon">💳</div>
+          <div class="feature-content">
+            <div class="feature-title">Mismo Método de Pago</div>
+            <div class="feature-desc">El dinero regresa a tu tarjeta o PayPal original</div>
+          </div>
+        </div>
+
+        <div class="guarantee-feature">
+          <div class="feature-icon">📧</div>
+          <div class="feature-content">
+            <div class="feature-title">Confirmación por Email</div>
+            <div class="feature-desc">Recibirás un comprobante de reembolso inmediatamente</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="guarantee-terms">
+        <h4 class="terms-title">Condiciones de la garantía:</h4>
+        <ul class="terms-list">
+          <li>✓ Aplicable en planes Pro, Premium, Business y Enterprise</li>
+          <li>✓ El número no debe haber sido recuperado en el plazo acordado</li>
+          <li>✓ Debes haber proporcionado información veraz</li>
+          <li>✓ Sin violaciones a nuestros términos de uso</li>
+        </ul>
+      </div>
+
+      <a href="../garantia/" class="details-link">
+        Ver detalles completos de la garantía →
+      </a>
+    </div>
+  </div>
+
+  <!-- Overlay para mobile -->
+  <div class="garantia-overlay" aria-hidden="true"></div>
+
+</div>
+
+<!-- Badge Compacto (para usar en cards de precios) -->
+<div class="garantia-badge-compact" role="img" aria-label="Garantía de devolución incluida">
+  <span class="compact-shield" aria-hidden="true">🛡</span>
+  <span class="compact-text">Garantía incluida</span>
+</div>
+
+<!-- Badge de Trust (para footer/hero) -->
+<div class="garantia-trust-badge">
+  <div class="trust-icon">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"/>
+      <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2"/>
+    </svg>
+  </div>
+  <div class="trust-content">
+    <div class="trust-title">Garantía 100%</div>
+    <div class="trust-desc">Devolución si no lo logramos</div>
+  </div>
+</div>
+<script src="garantia-badge.js"></script>

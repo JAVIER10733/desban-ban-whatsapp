@@ -1,0 +1,111 @@
+{
+  "module": "desbaneo",
+  "page": "landing",
+  "route": "/desbaneo",
+
+  "seo": {
+    "title": "Desbaneo de WhatsApp — Recupera tu número en 24-72h | DesbanWA",
+    "description": "Recuperamos tu número de WhatsApp baneado en 24 a 72 horas. Apelación directa ante Meta. Sin acceso a tu teléfono. Garantía de devolución si no lo logramos.",
+    "keywords": [
+      "desbanear whatsapp",
+      "numero whatsapp baneado",
+      "recuperar numero whatsapp",
+      "whatsapp baneado como recuperar",
+      "desbloquear numero whatsapp",
+      "whatsapp bloqueado",
+      "recuperar cuenta whatsapp",
+      "desbaneo whatsapp profesional"
+    ],
+    "canonical": "https://desbanwa.com/desbaneo",
+    "robots": "index, follow"
+  },
+
+  "og": {
+    "title": "Desbaneo de WhatsApp — DesbanWA",
+    "description": "Recupera tu número baneado en 24-72 horas con garantía de devolución.",
+    "image": "/modules/shared/assets/images/og/og-desbaneo.png",
+    "image_width": 1200,
+    "image_height": 630,
+    "type": "website",
+    "url": "https://desbanwa.com/desbaneo",
+    "locale": "es_ES",
+    "site_name": "DesbanWA"
+  },
+
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Desbaneo de WhatsApp — DesbanWA",
+    "description": "Recupera tu número baneado en 24-72 horas con garantía de devolución.",
+    "image": "/modules/shared/assets/images/og/og-desbaneo.png"
+  },
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Servicio de Desbaneo de WhatsApp",
+    "description": "Recuperamos números de WhatsApp baneados mediante apelación directa ante Meta.",
+    "provider": {
+      "@type": "Organization",
+      "name": "DesbanWA",
+      "url": "https://desbanwa.com"
+    },
+    "areaServed": "Worldwide",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://desbanwa.com/desbaneo/solicitud"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Plan Básico",
+        "price": "19",
+        "priceCurrency": "USD",
+        "description": "Desbaneo temporal con respuesta en 72h"
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Pro",
+        "price": "39",
+        "priceCurrency": "USD",
+        "description": "Desbaneo temporal o permanente con respuesta en 24h y garantía de devolución"
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Business",
+        "price": "69",
+        "priceCurrency": "USD",
+        "description": "Desbaneo para cuentas Business o API con respuesta en 12h"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "4800",
+      "bestRating": "5"
+    }
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio",    "url": "/" },
+    { "label": "Desbaneo",  "url": "/desbaneo" }
+  ],
+
+  "nav": {
+    "label": "Desbaneo",
+    "icon": "shield",
+    "order": 1
+  },
+
+  "analytics": {
+    "page_name": "desbaneo_landing",
+    "page_category": "desbaneo",
+    "conversion_goal": "solicitud_desbaneo"
+  },
+
+  "settings": {
+    "show_whatsapp_btn": true,
+    "show_cookie_banner": true,
+    "theme": "green",
+    "last_updated": "2025-01-01"
+  }
+}

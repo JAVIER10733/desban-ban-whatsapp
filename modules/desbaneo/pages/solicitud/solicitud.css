@@ -1,0 +1,198 @@
+/* =============================================
+   solicitud.css — Módulo Baneo
+============================================= */
+:root{
+  --green:#25D366;--red:#E24B4A;--red-dark:#A32D2D;--amber:#EF9F27;
+  --bg:#0d0d0d;--bg2:#111;--bg3:#181818;
+  --text:#f5f5f5;--muted:#777;--border:rgba(255,255,255,0.07);
+  --radius:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;overflow-x:hidden;min-height:100vh}
+a{text-decoration:none;color:inherit}
+input,select,textarea,button{font-family:'DM Sans',sans-serif}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes successPop{0%{transform:scale(0);opacity:0}60%{transform:scale(1.2)}100%{transform:scale(1);opacity:1}}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;background:rgba(13,13,13,.95);backdrop-filter:blur(14px);border-bottom:.5px solid var(--border)}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px}
+.nav-logo .g{color:var(--green)}.nav-logo .r{color:var(--red)}
+.nav-right{display:flex;align-items:center;gap:2rem}
+.nav-back{font-size:.82rem;color:var(--muted);transition:color .2s}
+.nav-back:hover{color:var(--text)}
+.nav-steps{display:flex;align-items:center;gap:.5rem}
+.nav-step{font-size:.75rem;color:var(--muted);padding:.3rem .6rem;border-radius:100px;transition:all .2s;white-space:nowrap}
+.nav-step.active{background:rgba(226,75,74,.12);color:var(--red);font-weight:500}
+.nav-step.done{color:var(--text)}
+.nav-step-sep{width:16px;height:.5px;background:var(--border)}
+
+/* MAIN LAYOUT */
+.solicitud-main{display:grid;grid-template-columns:340px 1fr;min-height:100vh;padding-top:60px}
+
+/* SIDEBAR */
+.solicitud-sidebar{background:var(--bg2);border-right:.5px solid var(--border);padding:2.5rem 1.8rem;display:flex;flex-direction:column;gap:2rem;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto}
+.sidebar-tag{font-size:.65rem;text-transform:uppercase;letter-spacing:3px;color:var(--red);font-weight:500;margin-bottom:.6rem}
+.sidebar-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:1px;line-height:1.05;margin-bottom:.6rem}
+.t-red{color:var(--red)}
+.sidebar-sub{font-size:.82rem;color:var(--muted);font-weight:300;line-height:1.7}
+.sidebar-guarantees{display:flex;flex-direction:column;gap:1.2rem}
+.guarantee-item{display:flex;align-items:flex-start;gap:.8rem}
+.gi-icon{font-size:1rem;width:28px;height:28px;background:rgba(226,75,74,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.gi-title{font-size:.82rem;font-weight:500;margin-bottom:.15rem}
+.gi-desc{font-size:.75rem;color:var(--muted);font-weight:300;line-height:1.5}
+.sidebar-legal{font-size:.72rem;color:var(--muted);line-height:1.6;padding:1rem;background:rgba(226,75,74,.05);border:.5px solid rgba(226,75,74,.12);border-radius:10px;display:flex;gap:.6rem;align-items:flex-start}
+.legal-icon{flex-shrink:0}
+.sidebar-legal a{color:var(--red)}
+.sidebar-legal a:hover{text-decoration:underline}
+.sidebar-stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:.5px solid var(--border);border-radius:10px;overflow:hidden}
+.ss-item{background:var(--bg);padding:1rem;text-align:center}
+.ss-num{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--red);letter-spacing:1px}
+.ss-lbl{font-size:.65rem;color:var(--muted);margin-top:2px}
+
+/* FORM WRAP */
+.solicitud-form-wrap{padding:3rem 2.5rem;max-width:700px}
+.form-step{display:none;animation:fadeUp .4s ease}
+.form-step.active{display:block}
+
+/* STEP HEADER */
+.step-badge{font-size:.68rem;text-transform:uppercase;letter-spacing:2px;font-weight:600;padding:3px 10px;border-radius:100px;display:inline-block;margin-bottom:1rem}
+.step-badge.red{background:rgba(226,75,74,.12);color:var(--red)}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:1px;margin-bottom:.5rem}
+.step-desc{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:2rem}
+
+/* FORM FIELDS */
+.form-body{display:flex;flex-direction:column;gap:1.5rem}
+.field-group{display:flex;flex-direction:column;gap:.4rem}
+.fields-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field-label{font-size:.82rem;font-weight:500;color:var(--text)}
+.required{color:var(--red)}
+.optional{font-size:.72rem;color:var(--muted);font-weight:400}
+.field-input{background:var(--bg2);border:.5px solid var(--border);color:var(--text);padding:.75rem 1rem;border-radius:8px;font-size:.88rem;outline:none;transition:border-color .2s;width:100%}
+.field-input:focus{border-color:rgba(226,75,74,.5)}
+.field-input:hover{border-color:rgba(255,255,255,.15)}
+.field-input.error{border-color:var(--red)}
+.field-input::placeholder{color:var(--muted)}
+.field-textarea{background:var(--bg2);border:.5px solid var(--border);color:var(--text);padding:.75rem 1rem;border-radius:8px;font-size:.88rem;outline:none;resize:vertical;min-height:90px;transition:border-color .2s;width:100%;line-height:1.6}
+.field-textarea:focus{border-color:rgba(226,75,74,.5)}
+.field-textarea::placeholder{color:var(--muted)}
+.field-textarea.error{border-color:var(--red)}
+.field-hint{font-size:.72rem;color:var(--muted);font-weight:300}
+.field-error{font-size:.72rem;color:var(--red);font-weight:400}
+.field-error.hidden{display:none}
+
+/* PHONE INPUT */
+.phone-input-wrap{display:flex;gap:.5rem}
+.phone-prefix{background:var(--bg2);border:.5px solid var(--border);color:var(--text);padding:.75rem .8rem;border-radius:8px;font-size:.85rem;outline:none;cursor:pointer;flex-shrink:0}
+.phone-input{flex:1}
+
+/* MOTIVOS */
+.motivo-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.motivo-btn{background:var(--bg2);border:.5px solid var(--border);color:var(--muted);padding:.7rem 1rem;border-radius:8px;font-size:.82rem;cursor:pointer;text-align:left;transition:all .2s}
+.motivo-btn:hover{border-color:rgba(226,75,74,.3);color:var(--text)}
+.motivo-btn.selected{border-color:var(--red);background:rgba(226,75,74,.08);color:var(--red)}
+
+/* UPLOAD */
+.evidencia-upload{border:.5px dashed var(--border);border-radius:10px;padding:2rem;text-align:center;cursor:pointer;transition:all .2s}
+.evidencia-upload:hover{border-color:rgba(226,75,74,.3);background:rgba(226,75,74,.03)}
+.upload-icon{font-size:1.5rem;margin-bottom:.5rem}
+.upload-text{font-size:.85rem;color:var(--text);margin-bottom:.2rem}
+.upload-sub{font-size:.72rem;color:var(--muted)}
+.upload-files{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.upload-file-item{display:flex;align-items:center;gap:.5rem;background:var(--bg2);border:.5px solid var(--border);padding:.3rem .7rem;border-radius:6px;font-size:.75rem;color:var(--muted)}
+.upload-file-remove{cursor:pointer;color:var(--red);font-size:.8rem;transition:opacity .2s}
+.upload-file-remove:hover{opacity:.7}
+
+/* CHECKBOX */
+.aviso-check{display:flex;align-items:flex-start;gap:.7rem;margin-top:.5rem}
+.check-input{width:16px;height:16px;cursor:pointer;accent-color:var(--red);flex-shrink:0;margin-top:2px}
+.check-label{font-size:.8rem;color:var(--muted);line-height:1.6;cursor:pointer}
+.check-label a{color:var(--red)}
+.check-label a:hover{text-decoration:underline}
+
+/* PREFERENCES */
+.pref-grid{display:flex;gap:.5rem}
+.pref-btn{background:var(--bg2);border:.5px solid var(--border);color:var(--muted);padding:.6rem 1.2rem;border-radius:8px;font-size:.82rem;cursor:pointer;transition:all .2s}
+.pref-btn:hover{border-color:rgba(255,255,255,.15);color:var(--text)}
+.pref-btn.active{border-color:var(--red);background:rgba(226,75,74,.08);color:var(--red)}
+
+/* PLANES SELECT */
+.planes-select{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}
+.plan-option{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:var(--bg2);border:.5px solid var(--border);border-radius:10px;cursor:pointer;transition:all .2s}
+.plan-option:hover{border-color:rgba(255,255,255,.15)}
+.plan-option.selected{border-color:var(--red);background:rgba(226,75,74,.06)}
+.plan-radio{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;transition:all .2s}
+.plan-radio.checked{border-color:var(--red);background:var(--red);box-shadow:inset 0 0 0 3px var(--bg2)}
+.plan-info{flex:1}
+.plan-name-s{font-size:.88rem;font-weight:500;margin-bottom:.15rem;display:flex;align-items:center;gap:.5rem}
+.plan-popular-s{font-size:.65rem;background:rgba(226,75,74,.12);color:var(--red);padding:1px 7px;border-radius:100px;font-weight:600}
+.plan-features-s{font-size:.75rem;color:var(--muted);font-weight:300}
+.plan-price-s{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--text);letter-spacing:1px;flex-shrink:0}
+.plan-price-s span{font-size:.7rem;font-family:'DM Sans',sans-serif;color:var(--muted);font-weight:300}
+
+/* SUMMARY */
+.order-summary{background:var(--bg2);border:.5px solid var(--border);border-radius:10px;padding:1.2rem;margin-bottom:1.5rem}
+.summary-title{font-size:.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-weight:500;margin-bottom:1rem}
+.summary-row{display:flex;justify-content:space-between;align-items:center;font-size:.82rem;padding:.3rem 0}
+.summary-row span:first-child{color:var(--muted)}
+.summary-divider{height:.5px;background:var(--border);margin:.6rem 0}
+.summary-total{font-weight:500;font-size:.9rem}
+.summary-note{font-size:.7rem;color:var(--muted);text-align:center;margin-top:.8rem}
+
+/* PAYMENT */
+.payment-section{margin-top:1rem}
+.payment-title{font-size:.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-weight:500;margin-bottom:1rem}
+.card-input-wrap{position:relative}
+.card-input{padding-right:80px}
+.card-brands{position:absolute;right:10px;top:50%;transform:translateY(-50%);display:flex;gap:4px}
+.card-brand{font-size:.6rem;font-weight:700;padding:2px 5px;border-radius:3px;border:.5px solid var(--border);color:var(--muted);opacity:.4;transition:opacity .2s}
+.card-brand.active{opacity:1;color:var(--text)}
+.secure-badge{font-size:.72rem;color:var(--muted);display:flex;align-items:center;gap:.4rem;margin-top:.8rem;padding:.7rem 1rem;background:rgba(37,211,102,.05);border:.5px solid rgba(37,211,102,.12);border-radius:8px}
+
+/* FORM FOOTER */
+.form-footer{display:flex;justify-content:space-between;align-items:center;margin-top:2.5rem;padding-top:1.5rem;border-top:.5px solid var(--border)}
+.btn-next{background:var(--red);color:#fff;padding:.8rem 2rem;border:none;border-radius:8px;font-size:.92rem;font-weight:500;cursor:pointer;transition:opacity .2s,transform .15s}
+.btn-next:hover{opacity:.88;transform:translateY(-1px)}
+.btn-back{background:none;border:.5px solid var(--border);color:var(--muted);padding:.8rem 1.5rem;border-radius:8px;font-size:.88rem;cursor:pointer;transition:all .2s}
+.btn-back:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+.btn-pay{background:var(--red);color:#fff;padding:.8rem 2rem;border:none;border-radius:8px;font-size:.92rem;font-weight:500;cursor:pointer;display:flex;align-items:center;gap:.6rem;transition:opacity .2s}
+.btn-pay:hover{opacity:.88}
+.btn-pay:disabled{opacity:.5;cursor:not-allowed}
+.pay-spinner{width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite}
+.pay-spinner.hidden{display:none}
+
+/* SUCCESS */
+.success-wrap{text-align:center;padding:3rem 1rem;max-width:500px;margin:0 auto}
+.success-icon{width:72px;height:72px;border-radius:50%;background:rgba(226,75,74,.12);border:1.5px solid var(--red);color:var(--red);font-size:1.8rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;animation:successPop .5s ease both}
+.success-title{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;letter-spacing:1px;margin-bottom:.8rem}
+.success-sub{color:var(--muted);font-size:.92rem;font-weight:300;line-height:1.7;margin-bottom:2rem}
+.success-details{background:var(--bg2);border:.5px solid var(--border);border-radius:var(--radius);padding:1.2rem;margin-bottom:1.5rem;text-align:left}
+.sd-row{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:.5px solid var(--border);font-size:.83rem}
+.sd-row:last-child{border-bottom:none}
+.sd-label{color:var(--muted)}
+.sd-val{font-weight:500}
+.red-text{color:var(--red)}
+.success-email{font-size:.82rem;color:var(--muted);margin-bottom:2rem}
+.success-email strong{color:var(--text)}
+.success-actions{display:flex;flex-direction:column;gap:.7rem;align-items:center}
+.btn-red{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:#fff;padding:.85rem 1.8rem;border-radius:8px;font-size:.9rem;font-weight:500;transition:opacity .2s}
+.btn-red:hover{opacity:.88}
+.btn-ghost-s{font-size:.82rem;color:var(--muted);transition:color .2s}
+.btn-ghost-s:hover{color:var(--text)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .solicitud-main{grid-template-columns:1fr}
+  .solicitud-sidebar{display:none}
+  .solicitud-form-wrap{padding:2rem 1.5rem;max-width:100%}
+  .nav-steps{display:none}
+}
+@media(max-width:600px){
+  .fields-row{grid-template-columns:1fr}
+  .motivo-grid{grid-template-columns:1fr}
+  .pref-grid{flex-wrap:wrap}
+  .nav-right{gap:1rem}
+}

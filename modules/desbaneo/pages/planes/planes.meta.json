@@ -1,0 +1,302 @@
+{
+  "page": {
+    "title": "Planes y Precios de Desbaneo | Desde $19 | DesbanWA",
+    "description": "Elige el plan perfecto para recuperar tu WhatsApp. 3 planes desde $19 hasta $59. Todos incluyen garantía de devolución 100%. Compara ahora.",
+    "keywords": [
+      "planes desbaneo whatsapp",
+      "precios recuperar whatsapp",
+      "costo desbaneo",
+      "planes y precios whatsapp",
+      "desbaneo barato",
+      "recuperar whatsapp precio",
+      "desbanwa planes"
+    ],
+    "canonical": "/modules/desbaneo/pages/planes/",
+    "robots": "index, follow",
+    "author": "DesbanWA Team",
+    "language": "es"
+  },
+  
+  "og": {
+    "type": "website",
+    "title": "Planes y Precios de Desbaneo | Desde $19",
+    "description": "3 planes diferentes para recuperar tu WhatsApp. Desde $19 con garantía 100%.",
+    "image": "/modules/shared/assets/images/og/og-planes.png",
+    "imageWidth": 1200,
+    "imageHeight": 630,
+    "locale": "es_EC",
+    "siteName": "DesbanWA"
+  },
+  
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Planes y Precios de Desbaneo | Desde $19",
+    "description": "Compara 3 planes diferentes. Garantía de devolución 100%.",
+    "image": "/modules/shared/assets/images/og/og-planes.png",
+    "site": "@desbanwa",
+    "creator": "@desbanwa"
+  },
+  
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Planes y Precios de Desbaneo",
+        "description": "Elige el plan perfecto para recuperar tu WhatsApp. Desde $19 con garantía de devolución.",
+        "url": "https://desbanwa.com/modules/desbaneo/pages/planes/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuál plan me recomiendan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Para la mayoría de usuarios, el plan Pro ($39) es la mejor opción. Si necesitas rapidez, elige Premium. Para empresas, Business o Enterprise."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo funciona la garantía?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Si no recuperamos tu número en el plazo acordado, te devolvemos el 100% automáticamente en 24-48 horas. Sin preguntas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo cambiar de plan después?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, puedes hacer upgrade pagando la diferencia. El downgrade no está disponible una vez iniciado el servicio."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "Servicio de Desbaneo de WhatsApp",
+        "description": "Recupera tu número de WhatsApp baneado con garantía de devolución",
+        "brand": {
+          "@type": "Organization",
+          "name": "DesbanWA",
+          "url": "https://desbanwa.com"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Plan Básico",
+            "price": "19",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "description": "Para baneos temporales recientes"
+          },
+          {
+            "@type": "Offer",
+            "name": "Plan Pro",
+            "price": "39",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "description": "Para baneos temporales o permanentes"
+          },
+          {
+            "@type": "Offer",
+            "name": "Plan Premium",
+            "price": "59",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "description": "Para casos complejos o urgentes"
+          }
+        ]
+      }
+    ]
+  },
+  
+  "plans": {
+    "total": 6,
+    "categories": [
+      {
+        "id": "personal",
+        "name": "Personal",
+        "plans": ["basico", "pro", "premium"]
+      },
+      {
+        "id": "business",
+        "name": "Business / API",
+        "plans": ["business", "enterprise", "api"]
+      }
+    ],
+    "priceRange": {
+      "min": 19,
+      "max": 299,
+      "currency": "USD"
+    },
+    "details": [
+      {
+        "id": "basico",
+        "name": "Básico",
+        "price": 19,
+        "category": "personal",
+        "popular": false,
+        "features": [
+          "Diagnóstico básico",
+          "1 número WhatsApp",
+          "Respuesta en 48h",
+          "Soporte email"
+        ],
+        "garantia": false
+      },
+      {
+        "id": "pro",
+        "name": "Pro",
+        "price": 39,
+        "category": "personal",
+        "popular": true,
+        "features": [
+          "Garantía 100% devolución",
+          "Respuesta en 24h",
+          "1 número WhatsApp",
+          "Especialista dedicado",
+          "1 reintento incluido",
+          "Soporte WhatsApp"
+        ],
+        "garantia": true
+      },
+      {
+        "id": "premium",
+        "name": "Premium",
+        "price": 59,
+        "category": "personal",
+        "popular": false,
+        "features": [
+          "Todo del plan Pro",
+          "Respuesta en 12h",
+          "Prioridad máxima",
+          "3 reintentos",
+          "Soporte 24/7",
+          "Guía anti-baneo"
+        ],
+        "garantia": true
+      },
+      {
+        "id": "business",
+        "name": "Business",
+        "price": 99,
+        "category": "business",
+        "popular": false,
+        "features": [
+          "Hasta 3 números",
+          "Asesor dedicado 24/7",
+          "Respuesta en 6h",
+          "Reintentos ilimitados",
+          "Soporte telefónico",
+          "API acceso básico",
+          "Facturación empresarial"
+        ],
+        "garantia": true
+      },
+      {
+        "id": "enterprise",
+        "name": "Enterprise",
+        "price": 199,
+        "category": "business",
+        "popular": false,
+        "features": [
+          "Hasta 10 números",
+          "Gerente de cuenta",
+          "Respuesta en 2h",
+          "SLA 99.9%",
+          "API completa",
+          "Dashboard empresarial",
+          "Consultoría mensual"
+        ],
+        "garantia": true
+      },
+      {
+        "id": "api",
+        "name": "API",
+        "price": 299,
+        "category": "business",
+        "popular": false,
+        "features": [
+          "Números ilimitados",
+          "API REST completa",
+          "Webhooks personalizados",
+          "White label",
+          "Soporte dedicado",
+          "Documentación completa",
+          "SLA garantizado"
+        ],
+        "garantia": true
+      }
+    ]
+  },
+  
+  "guarantee": {
+    "enabled": true,
+    "percentage": 100,
+    "timeframe": "24-48 horas",
+    "conditions": [
+      "Plan Pro o superior",
+      "Plazo acordado vencido",
+      "Información veraz proporcionada",
+      "Sin violaciones a términos de uso"
+    ],
+    "exclusions": [
+      "Plan Básico",
+      "Información falsa o incompleta",
+      "Número recuperado exitosamente",
+      "Cancelación antes del plazo"
+    ]
+  },
+  
+  "paymentMethods": [
+    { "id": "card", "name": "Tarjeta de crédito/débito", "icon": "💳" },
+    { "id": "paypal", "name": "PayPal", "icon": "💰" },
+    { "id": "transfer", "name": "Transferencia bancaria", "icon": "🏦" },
+    { "id": "crypto", "name": "Criptomonedas", "icon": "₿" },
+    { "id": "yape", "name": "Yape/Plin", "icon": "📱" }
+  ],
+  
+  "stats": {
+    "totalCasosResueltos": 5234,
+    "tasaExito": 94,
+    "tiempoPromedioRecuperacion": "18 horas",
+    "satisfaccionClientes": 4.9
+  },
+  
+  "seo": {
+    "canonical": "/modules/desbaneo/pages/planes/",
+    "alternateLanguages": [
+      { "lang": "en", "href": "/en/modules/desbaneo/pages/planes/" }
+    ],
+    "breadcrumbs": [
+      { "name": "Inicio", "url": "/" },
+      { "name": "Desbaneo", "url": "/modules/desbaneo/pages/landing/" },
+      { "name": "Planes", "url": "/modules/desbaneo/pages/planes/" }
+    ]
+  },
+  
+  "analytics": {
+    "trackPageView": true,
+    "trackPlanSelection": true,
+    "trackToggleUsage": true,
+    "trackFAQClicks": true,
+    "events": [
+      "plan_view",
+      "plan_select",
+      "toggle_change",
+      "faq_expand",
+      "cta_click"
+    ]
+  },
+  
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-01-15",
+    "author": "DesbanWA Team",
+    "license": "Proprietary"
+  }
+}

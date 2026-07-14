@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitud de Desbaneo — DesbanWA</title>
+<meta name="description" content="Recupera tu número de WhatsApp baneado. Diagnóstico gratuito. Solo pagas si confirmamos que podemos recuperarlo.">
+<link rel="icon" href="../../../../modules/shared/assets/images/favicons/favicon.ico">
+<link rel="stylesheet" href="../../../../modules/shared/styles/main.css">
+<link rel="stylesheet" href="solicitud.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="../../../../index.html" class="nav-logo">Desban<span class="g">W</span><span class="r">A</span></a>
+  <div class="nav-right">
+    <a href="../landing/" class="nav-back">← Volver a desbaneo</a>
+    <div class="nav-steps" id="navSteps">
+      <div class="nav-step active" data-step="1">1. Caso</div>
+      <div class="nav-step-sep"></div>
+      <div class="nav-step" data-step="2">2. Detalles</div>
+      <div class="nav-step-sep"></div>
+      <div class="nav-step" data-step="3">3. Pago</div>
+      <div class="nav-step-sep"></div>
+      <div class="nav-step" data-step="4">4. Listo</div>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="solicitud-main">
+
+  <!-- SIDEBAR INFO -->
+  <aside class="solicitud-sidebar">
+    <div class="sidebar-hero">
+      <div class="sidebar-tag">Servicio de desbaneo</div>
+      <h2 class="sidebar-title">Recupera tu<br><span class="t-green">número ahora</span></h2>
+      <p class="sidebar-sub">Diagnóstico gratuito. Solo pagas si confirmamos que podemos recuperarlo.</p>
+    </div>
+    <div class="sidebar-guarantees">
+      <div class="guarantee-item">
+        <div class="gi-icon">🔒</div>
+        <div>
+          <div class="gi-title">100% seguro y legal</div>
+          <div class="gi-desc">Usamos métodos oficiales de apelación ante WhatsApp.</div>
+        </div>
+      </div>
+      <div class="guarantee-item">
+        <div class="gi-icon">🛡</div>
+        <div>
+          <div class="gi-title">Garantía de devolución</div>
+          <div class="gi-desc">Si no recuperamos tu número, devolvemos el 100%.</div>
+        </div>
+      </div>
+      <div class="guarantee-item">
+        <div class="gi-icon">⚡</div>
+        <div>
+          <div class="gi-title">Resultados en 24-72h</div>
+          <div class="gi-desc">Tiempo promedio desde que iniciamos el proceso.</div>
+        </div>
+      </div>
+      <div class="guarantee-item">
+        <div class="gi-icon">✓</div>
+        <div>
+          <div class="gi-title">Solo pagas al confirmar</div>
+          <div class="gi-desc">Revisamos tu caso antes de procesar cualquier pago.</div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-legal">
+      <span class="legal-icon">⚖</span>
+      Al continuar aceptas el <a href="../aviso-legal/">aviso legal</a> y los <a href="../../../../modules/shared/pages/legal/terminos.html">términos del servicio</a>.
+    </div>
+    <div class="sidebar-stats">
+      <div class="ss-item">
+        <div class="ss-num">+5.200</div>
+        <div class="ss-lbl">Números recuperados</div>
+      </div>
+      <div class="ss-item">
+        <div class="ss-num">94%</div>
+        <div class="ss-lbl">Tasa de éxito</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- FORMULARIO -->
+  <section class="solicitud-form-wrap">
+
+    <!-- PASO 1 — Caso -->
+    <div class="form-step active" id="step1">
+      <div class="step-header">
+        <div class="step-badge green">Paso 1 de 4</div>
+        <h1 class="step-title">Cuéntanos tu caso</h1>
+        <p class="step-desc">Indica tu número y el tipo de baneo. Esta información es confidencial.</p>
+      </div>
+      <div class="form-body">
+        <div class="field-group">
+          <label class="field-label" for="numero">Tu número de WhatsApp <span class="required">*</span></label>
+          <div class="phone-input-wrap">
+            <select class="phone-prefix" id="phonePrefix" title="Código de país">
+              <option value="+52">🇲🇽 +52</option>
+              <option value="+57">🇨🇴 +57</option>
+              <option value="+34">🇪🇸 +34</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+54">🇦🇷 +54</option>
+              <option value="+56">🇨🇱 +56</option>
+              <option value="+51">🇵🇪 +51</option>
+              <option value="+58">🇻🇪 +58</option>
+              <option value="+593">🇪🇨 +593</option>
+              <option value="+595">🇵🇾 +595</option>
+            </select>
+            <input type="tel" id="numero" class="field-input phone-input" placeholder="55 1234 5678" maxlength="15" autocomplete="off">
+          </div>
+          <div class="field-hint">Ingresa el número sin el código de país.</div>
+          <div class="field-error hidden" id="errorNumero">Ingresa un número válido.</div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Tipo de baneo <span class="required">*</span></label>
+          <div class="motivo-grid" id="motivoGrid">
+            <button type="button" class="motivo-btn" data-value="temporal">⏱ Baneo temporal</button>
+            <button type="button" class="motivo-btn" data-value="permanente">🚫 Baneo permanente</button>
+            <button type="button" class="motivo-btn" data-value="suspicion">⚠ Actividad sospechosa</button>
+            <button type="button" class="motivo-btn" data-value="spam">📩 Spam reportado</button>
+            <button type="button" class="motivo-btn" data-value="verification">🔐 Verificación requerida</button>
+            <button type="button" class="motivo-btn" data-value="otro">⚙ Otro motivo</button>
+          </div>
+          <div class="field-error hidden" id="errorMotivo">Selecciona el tipo de baneo.</div>
+        </div>
+
+        <div class="field-group" id="otroMotivoGroup" style="display:none">
+          <label class="field-label" for="otroMotivo">Describe el tipo de baneo <span class="required">*</span></label>
+          <textarea id="otroMotivo" class="field-textarea" placeholder="Describe brevemente el mensaje de error que ves..." rows="3" maxlength="300"></textarea>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="descripcion">¿Qué mensaje de error ves? <span class="required">*</span></label>
+          <textarea id="descripcion" class="field-textarea" placeholder="Copia y pega el mensaje exacto que aparece en WhatsApp. Ej: 'Tu número está temporalmente suspendido'..." rows="4" maxlength="500"></textarea>
+          <div class="field-hint"><span id="charCount">0</span>/500 caracteres</div>
+          <div class="field-error hidden" id="errorDescripcion">Describe el problema (mínimo 20 caracteres).</div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">¿Tienes capturas del error? <span class="optional">(opcional)</span></label>
+          <div class="evidencia-upload" id="evidenciaUpload">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">Arrastra capturas de pantalla aquí</div>
+            <div class="upload-sub">o haz clic para seleccionar · PNG, JPG, PDF · Máx. 5MB</div>
+            <input type="file" id="evidenciaFile" accept="image/*,.pdf" multiple style="display:none">
+          </div>
+          <div class="upload-files" id="uploadFiles"></div>
+        </div>
+
+        <div class="aviso-check">
+          <input type="checkbox" id="aceptaAviso" class="check-input">
+          <label for="aceptaAviso" class="check-label">
+            He leído y acepto el <a href="../aviso-legal/" target="_blank">aviso legal</a>. Confirmo que este número me pertenece y que deseo recuperarlo legítimamente.
+          </label>
+        </div>
+        <div class="field-error hidden" id="errorAviso">Debes aceptar el aviso legal para continuar.</div>
+      </div>
+      <div class="form-footer">
+        <div></div>
+        <button type="button" class="btn-next" id="nextStep1">Continuar →</button>
+      </div>
+    </div>
+
+    <!-- PASO 2 — Detalles de contacto -->
+    <div class="form-step" id="step2">
+      <div class="step-header">
+        <div class="step-badge green">Paso 2 de 4</div>
+        <h1 class="step-title">Tus datos de contacto</h1>
+        <p class="step-desc">Solo para enviarte actualizaciones sobre tu caso. No compartimos tu información.</p>
+      </div>
+      <div class="form-body">
+        <div class="fields-row">
+          <div class="field-group">
+            <label class="field-label" for="nombre">Nombre completo <span class="required">*</span></label>
+            <input type="text" id="nombre" class="field-input" placeholder="Tu nombre completo" autocomplete="given-name">
+            <div class="field-error hidden" id="errorNombre">Ingresa tu nombre.</div>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="email">Correo electrónico <span class="required">*</span></label>
+          <input type="email" id="email" class="field-input" placeholder="tu@email.com" autocomplete="email">
+          <div class="field-hint">Aquí recibirás el estado de tu solicitud.</div>
+          <div class="field-error hidden" id="errorEmail">Ingresa un correo válido.</div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="whatsappContacto">Tu WhatsApp alternativo <span class="optional">(opcional)</span></label>
+          <input type="tel" id="whatsappContacto" class="field-input" placeholder="+52 55 1234 5678">
+          <div class="field-hint">Para contactarte directamente si necesitamos más información.</div>
+        </div>
+        <div class="field-group">
+          <label class="field-label">¿Cómo prefieres recibir actualizaciones?</label>
+          <div class="pref-grid">
+            <button type="button" class="pref-btn active" data-value="email">📧 Email</button>
+            <button type="button" class="pref-btn" data-value="whatsapp">💬 WhatsApp</button>
+            <button type="button" class="pref-btn" data-value="ambos">Ambos</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-footer">
+        <button type="button" class="btn-back" id="backStep2">← Atrás</button>
+        <button type="button" class="btn-next" id="nextStep2">Continuar →</button>
+      </div>
+    </div>
+
+    <!-- PASO 3 — Plan y pago -->
+    <div class="form-step" id="step3">
+      <div class="step-header">
+        <div class="step-badge green">Paso 3 de 4</div>
+        <h1 class="step-title">Elige tu plan</h1>
+        <p class="step-desc">Selecciona el plan y completa el pago. Solo se cobra si el diagnóstico confirma que podemos proceder.</p>
+      </div>
+      <div class="form-body">
+        <div class="planes-select" id="planesSelect">
+          <div class="plan-option" data-plan="basico" data-price="19">
+            <div class="plan-radio"></div>
+            <div class="plan-info">
+              <div class="plan-name-s">Básico</div>
+              <div class="plan-features-s">1 número · Respuesta 48h · Sin garantía</div>
+            </div>
+            <div class="plan-price-s">$19 <span>USD</span></div>
+          </div>
+          <div class="plan-option selected" data-plan="pro" data-price="39">
+            <div class="plan-radio checked"></div>
+            <div class="plan-info">
+              <div class="plan-name-s">Pro <span class="plan-popular-s">Más elegido</span></div>
+              <div class="plan-features-s">1 número · Respuesta 24h · Garantía de devolución</div>
+            </div>
+            <div class="plan-price-s">$39 <span>USD</span></div>
+          </div>
+          <div class="plan-option" data-plan="premium" data-price="59">
+            <div class="plan-radio"></div>
+            <div class="plan-info">
+              <div class="plan-name-s">Premium</div>
+              <div class="plan-features-s">1 número · Respuesta 12h · Garantía express · Soporte 24/7</div>
+            </div>
+            <div class="plan-price-s">$59 <span>USD</span></div>
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <div class="summary-title">Resumen del pedido</div>
+          <div class="summary-row">
+            <span>Plan seleccionado</span>
+            <span id="summaryPlan">Pro</span>
+          </div>
+          <div class="summary-row">
+            <span>Número a recuperar</span>
+            <span id="summaryNumero">—</span>
+          </div>
+          <div class="summary-row">
+            <span>Tipo de baneo</span>
+            <span id="summaryMotivo">—</span>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="summary-row summary-total">
+            <span>Total</span>
+            <span id="summaryTotal">$39 USD</span>
+          </div>
+          <div class="summary-note">Pago único · Sin suscripción · Garantía incluida</div>
+        </div>
+
+        <div class="payment-section">
+          <div class="payment-title">Datos de pago</div>
+          <div class="stripe-mock">
+            <div class="field-group">
+              <label class="field-label" for="cardName">Nombre en la tarjeta <span class="required">*</span></label>
+              <input type="text" id="cardName" class="field-input" placeholder="Como aparece en tu tarjeta" autocomplete="cc-name">
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="cardNumber">Número de tarjeta <span class="required">*</span></label>
+              <div class="card-input-wrap">
+                <input type="text" id="cardNumber" class="field-input card-input" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number">
+                <div class="card-brands">
+                  <span class="card-brand" id="brandVisa">VISA</span>
+                  <span class="card-brand" id="brandMC">MC</span>
+                </div>
+              </div>
+            </div>
+            <div class="fields-row">
+              <div class="field-group">
+                <label class="field-label" for="cardExpiry">Vencimiento <span class="required">*</span></label>
+                <input type="text" id="cardExpiry" class="field-input" placeholder="MM / AA" maxlength="7" autocomplete="cc-exp">
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="cardCvc">CVC <span class="required">*</span></label>
+                <input type="text" id="cardCvc" class="field-input" placeholder="123" maxlength="4" autocomplete="cc-csc">
+              </div>
+            </div>
+            <div class="secure-badge">
+              <span>🔒</span> Pago seguro procesado por Stripe. Nunca almacenamos tus datos de tarjeta.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-footer">
+        <button type="button" class="btn-back" id="backStep3">← Atrás</button>
+        <button type="button" class="btn-pay" id="btnPay">
+          <span id="payBtnText">Pagar $39 USD →</span>
+          <div class="pay-spinner hidden" id="paySpinner"></div>
+        </button>
+      </div>
+    </div>
+
+    <!-- PASO 4 — Confirmación -->
+    <div class="form-step" id="step4">
+      <div class="success-wrap">
+        <div class="success-icon">✓</div>
+        <h1 class="success-title">¡Solicitud enviada!</h1>
+        <p class="success-sub">Tu solicitud de desbaneo fue recibida. Revisamos tu caso y te contactamos en las próximas horas.</p>
+        <div class="success-details">
+          <div class="sd-row">
+            <span class="sd-label">Número de caso</span>
+            <span class="sd-val" id="caseNumber">#DSB-0000</span>
+          </div>
+          <div class="sd-row">
+            <span class="sd-label">Número a recuperar</span>
+            <span class="sd-val" id="successNumero">—</span>
+          </div>
+          <div class="sd-row">
+            <span class="sd-label">Plan</span>
+            <span class="sd-val" id="successPlan">—</span>
+          </div>
+          <div class="sd-row">
+            <span class="sd-label">Tiempo estimado</span>
+            <span class="sd-val green-text">24-72 horas</span>
+          </div>
+        </div>
+        <p class="success-email">Te enviamos una confirmación a <strong id="successEmail">—</strong></p>
+        <div class="success-actions">
+          <a href="../../../../modules/desbaneo/pages/estado-solicitud/index.html" class="btn-green">Ver estado de mi solicitud</a>
+          <a href="../landing/" class="btn-ghost-s">Volver al inicio</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<script src="../../../../modules/shared/js/main.js" defer></script>
+<script src="../../services/desbaneo.api.js" defer></script>
+<script src="../../services/desbaneo.service.js" defer></script>
+<script src="solicitud.js" defer></script>
+</body>
+</html>

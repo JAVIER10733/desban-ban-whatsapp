@@ -1,0 +1,241 @@
+{
+  "page": {
+    "title": "Tipos de Baneo de WhatsApp | Identifica tu Caso | DesbanWA",
+    "description": "Identifica qué tipo de baneo tiene tu WhatsApp: temporal, permanente, por spam o actividad sospechosa. Soluciones específicas para cada caso.",
+    "keywords": [
+      "tipos de baneo whatsapp",
+      "baneo temporal whatsapp",
+      "baneo permanente whatsapp",
+      "suspension whatsapp",
+      "tipos suspension whatsapp",
+      "desbaneo tipos"
+    ],
+    "canonical": "/modules/desbaneo/pages/tipos-baneo/",
+    "robots": "index, follow",
+    "author": "DesbanWA Team",
+    "language": "es"
+  },
+  
+  "og": {
+    "type": "website",
+    "title": "Tipos de Baneo de WhatsApp | Identifica tu Caso",
+    "description": "6 tipos diferentes de baneo. Identifica el tuyo y conoce la solución.",
+    "image": "/modules/shared/assets/images/og/og-tipos-baneo.png",
+    "imageWidth": 1200,
+    "imageHeight": 630,
+    "locale": "es_EC",
+    "siteName": "DesbanWA"
+  },
+  
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Tipos de Baneo de WhatsApp | Identifica tu Caso",
+    "description": "Conoce los 6 tipos de baneo y sus soluciones.",
+    "image": "/modules/shared/assets/images/og/og-tipos-baneo.png",
+    "site": "@desbanwa",
+    "creator": "@desbanwa"
+  },
+  
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Tipos de Baneo de WhatsApp",
+        "description": "Identifica qué tipo de baneo tiene tu WhatsApp.",
+        "url": "https://desbanwa.com/modules/desbaneo/pages/tipos-baneo/"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuántos tipos de baneo existen en WhatsApp?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Existen 6 tipos principales: Baneo Temporal, Baneo Permanente, Actividad Sospechosa, Baneo por Spam, Verificación Requerida y Múltiples Denuncias."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuál es el tipo de baneo más común?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El tipo más común es la Actividad Sospechosa (45% de los casos), seguido del Baneo Permanente (40%) y el Baneo Temporal (35%)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto dura un baneo temporal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Un baneo temporal generalmente dura entre 24 horas y 7 días, dependiendo de la gravedad de la infracción."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  
+  "tiposBaneo": {
+    "total": 6,
+    "categorias": [
+      {
+        "id": "temporal",
+        "nombre": "Temporal",
+        "icono": "⏱",
+        "color": "#EF9F27",
+        "descripcion": "Suspensiones con fecha de expiración"
+      },
+      {
+        "id": "permanente",
+        "nombre": "Permanente",
+        "icono": "🚫",
+        "color": "#E24B4A",
+        "descripcion": "Baneos que requieren apelación"
+      },
+      {
+        "id": "suspension",
+        "nombre": "Suspensión",
+        "icono": "⚠️",
+        "color": "#EF9F27",
+        "descripcion": "Bloqueos por violación de políticas"
+      }
+    ],
+    "detalles": [
+      {
+        "id": "temporal",
+        "nombre": "Baneo Temporal",
+        "categoria": "temporal",
+        "severidad": 1,
+        "nivel": "Bajo",
+        "duracion": {
+          "min": 24,
+          "max": 168,
+          "unidad": "horas"
+        },
+        "recuperacion": {
+          "automatica": true,
+          "tiempo": "2-24 horas"
+        },
+        "porcentajeCasos": 35,
+        "tasaExito": 98
+      },
+      {
+        "id": "permanente",
+        "nombre": "Baneo Permanente",
+        "categoria": "permanente",
+        "severidad": 3,
+        "nivel": "Alto",
+        "duracion": {
+          "min": null,
+          "max": null,
+          "unidad": "indefinido"
+        },
+        "recuperacion": {
+          "automatica": false,
+          "tiempo": "24-72 horas",
+          "requiereApelacion": true
+        },
+        "porcentajeCasos": 40,
+        "tasaExito": 85
+      },
+      {
+        "id": "suspicion",
+        "nombre": "Actividad Sospechosa",
+        "categoria": "suspension",
+        "severidad": 2,
+        "nivel": "Medio",
+        "popular": true,
+        "duracion": {
+          "min": 12,
+          "max": 48,
+          "unidad": "horas"
+        },
+        "recuperacion": {
+          "automatica": false,
+          "tiempo": "12-48 horas"
+        },
+        "porcentajeCasos": 45,
+        "tasaExito": 92
+      },
+      {
+        "id": "spam",
+        "nombre": "Baneo por Spam",
+        "categoria": "permanente",
+        "severidad": 3,
+        "nivel": "Alto",
+        "duracion": {
+          "min": null,
+          "max": null,
+          "unidad": "indefinido"
+        },
+        "recuperacion": {
+          "automatica": false,
+          "tiempo": "24-96 horas",
+          "requiereApelacion": true
+        },
+        "porcentajeCasos": 25,
+        "tasaExito": 78
+      },
+      {
+        "id": "verification",
+        "nombre": "Verificación Requerida",
+        "categoria": "suspension",
+        "severidad": 1,
+        "nivel": "Bajo",
+        "duracion": {
+          "min": 1,
+          "max": 6,
+          "unidad": "horas"
+        },
+        "recuperacion": {
+          "automatica": true,
+          "tiempo": "1-6 horas"
+        },
+        "porcentajeCasos": 15,
+        "tasaExito": 99
+      },
+      {
+        "id": "reports",
+        "nombre": "Múltiples Denuncias",
+        "categoria": "permanente",
+        "severidad": 3,
+        "nivel": "Crítico",
+        "duracion": {
+          "min": null,
+          "max": null,
+          "unidad": "indefinido"
+        },
+        "recuperacion": {
+          "automatica": false,
+          "tiempo": "48-120 horas",
+          "requiereApelacion": true
+        },
+        "porcentajeCasos": 10,
+        "tasaExito": 65
+      }
+    ]
+  },
+  
+  "stats": {
+    "totalCasosResueltos": 5234,
+    "tasaExito": 94,
+    "tiempoPromedioRecuperacion": 18,
+    "satisfaccionClientes": 4.9
+  },
+  
+  "filters": {
+    "enabled": true,
+    "types": ["all", "temporal", "permanente", "suspension"],
+    "search": true,
+    "sortBy": ["severidad", "tiempo", "nombre"]
+  },
+  
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-01-15",
+    "author": "DesbanWA Team",
+    "license": "Proprietary"
+  }
+}

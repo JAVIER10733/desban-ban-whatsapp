@@ -1,0 +1,190 @@
+{
+  "page": {
+    "title": "Cómo Funciona el Desbaneo | Proceso Paso a Paso | DesbanWA",
+    "description": "Conoce el proceso de desbaneo de WhatsApp paso a paso. Diagnóstico gratuito, recuperación en horas y garantía total. Simple, rápido y seguro.",
+    "keywords": [
+      "como funciona desbaneo",
+      "proceso desbaneo whatsapp",
+      "pasos recuperar whatsapp",
+      "metodo desbaneo",
+      "proceso recuperacion whatsapp",
+      "como recuperar whatsapp baneado"
+    ],
+    "canonical": "/modules/desbaneo/pages/proceso/",
+    "robots": "index, follow",
+    "author": "DesbanWA Team",
+    "language": "es"
+  },
+  
+  "og": {
+    "type": "website",
+    "title": "Cómo Funciona el Desbaneo | Proceso Paso a Paso",
+    "description": "Recupera tu WhatsApp en 3 simples pasos. Diagnóstico gratuito, recuperación en horas y garantía total.",
+    "image": "/modules/shared/assets/images/og/og-proceso.png",
+    "imageWidth": 1200,
+    "imageHeight": 630,
+    "locale": "es_EC",
+    "siteName": "DesbanWA"
+  },
+  
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Cómo Funciona el Desbaneo | Proceso Paso a Paso",
+    "description": "Recupera tu WhatsApp en 3 simples pasos. Garantía 100%.",
+    "image": "/modules/shared/assets/images/og/og-proceso.png",
+    "site": "@desbanwa",
+    "creator": "@desbanwa"
+  },
+  
+  "structuredData": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Cómo Funciona el Desbaneo",
+        "description": "Conoce el proceso de desbaneo de WhatsApp paso a paso.",
+        "url": "https://desbanwa.com/modules/desbaneo/pages/proceso/"
+      },
+      {
+        "@type": "HowTo",
+        "name": "Proceso de Desbaneo de WhatsApp",
+        "description": "Recupera tu número de WhatsApp baneado en 3 simples pasos",
+        "totalTime": "PT24H",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Completa el formulario",
+            "text": "Ingresa tu número de WhatsApp, selecciona el tipo de baneo y proporciona la información básica sobre tu caso.",
+            "position": 1
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Elige tu plan y paga",
+            "text": "Selecciona el plan que mejor se adapte a tu caso. Todos incluyen garantía de devolución del 100%.",
+            "position": 2
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Recuperamos tu número",
+            "text": "Nuestro equipo de especialistas trabaja en tu caso. Te mantenemos informado en todo momento.",
+            "position": 3
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Cuánto tiempo tarda el proceso completo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Depende del plan que elijas: Pro (24-48h), Premium (12-24h), Business (6-12h). El 94% de los casos se resuelven en menos de 24 horas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Necesito proporcionar mi contraseña?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Nunca solicitamos tu contraseña ni información sensible. Solo necesitamos tu número y detalles del baneo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo cancelar si cambio de opinión?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, puedes cancelar antes de que iniciemos el trabajo y recibirás un reembolso completo. Una vez iniciado el proceso, aplica la garantía estándar."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  
+  "process": {
+    "totalSteps": 3,
+    "steps": [
+      {
+        "number": 1,
+        "title": "Completa el formulario",
+        "description": "Ingresa tu número de WhatsApp, selecciona el tipo de baneo y proporciona la información básica.",
+        "time": "2-3 minutos",
+        "icon": "📝"
+      },
+      {
+        "number": 2,
+        "title": "Elige tu plan y paga",
+        "description": "Selecciona el plan que mejor se adapte a tu caso. Todos incluyen garantía de devolución del 100%.",
+        "time": "2-5 minutos",
+        "icon": "💳"
+      },
+      {
+        "number": 3,
+        "title": "Recuperamos tu número",
+        "description": "Nuestro equipo de especialistas trabaja en tu caso. Te mantenemos informado en todo momento.",
+        "time": "12-48 horas",
+        "icon": "⚡"
+      }
+    ],
+    "timeline": [
+      {
+        "step": 1,
+        "title": "Confirmación de pago",
+        "description": "Recibes confirmación inmediata y asignamos un especialista a tu caso.",
+        "time": "Inmediato"
+      },
+      {
+        "step": 2,
+        "title": "Diagnóstico del caso",
+        "description": "Analizamos tu tipo de baneo y preparamos la estrategia de recuperación.",
+        "time": "1-2 horas"
+      },
+      {
+        "step": 3,
+        "title": "Envío de apelación",
+        "description": "Preparamos y enviamos la apelación formal a WhatsApp/Meta.",
+        "time": "2-4 horas"
+      },
+      {
+        "step": 4,
+        "title": "Esperamos respuesta",
+        "description": "Monitoreamos constantemente la respuesta de WhatsApp.",
+        "time": "12-48 horas"
+      },
+      {
+        "step": 5,
+        "title": "¡Número recuperado!",
+        "description": "Te notificamos inmediatamente y te damos instrucciones de acceso.",
+        "time": "¡Listo!"
+      }
+    ]
+  },
+  
+  "guarantee": {
+    "enabled": true,
+    "percentage": 100,
+    "timeframe": "24-48 horas",
+    "features": [
+      "Proceso automático de reembolso",
+      "Devolución en 24-48 horas",
+      "Mismo método de pago",
+      "Sin costos ocultos"
+    ]
+  },
+  
+  "stats": {
+    "successRate": 94,
+    "averageTime": "18 horas",
+    "satisfaction": 4.9,
+    "totalCases": 5234
+  },
+  
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-01-15",
+    "author": "DesbanWA Team",
+    "license": "Proprietary"
+  }
+}
