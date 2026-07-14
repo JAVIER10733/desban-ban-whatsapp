@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planes y precios — Desbaneo de WhatsApp | DesbanWA</title>
+<meta name="description" content="Elige el plan de desbaneo que necesitas. Desde $19 USD. Garantía de devolución si no recuperamos tu número. Sin costos ocultos.">
+<link rel="icon" href="../../../../modules/shared/assets/images/favicons/favicon.ico">
+<link rel="stylesheet" href="../../../../modules/shared/styles/main.css">
+<link rel="stylesheet" href="planes.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="../../../../index.html" class="nav-logo">Desban<span class="g">W</span><span class="r">A</span></a>
+  <ul class="nav-links">
+    <li><a href="../landing/">Desbaneo</a></li>
+    <li><a href="../proceso/">Cómo funciona</a></li>
+    <li><a href="../tipos-baneo/index.html">Tipos de baneo</a></li>
+    <li><a href="../../../../modules/shared/pages/faq/">FAQ</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="../../../../modules/baneo/pages/landing/" class="btn-nav-ghost">Banear número</a>
+    <a href="../solicitud/" class="btn-nav-primary">Recuperar mi número →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="planes-hero">
+  <div class="planes-hero-content">
+    <div class="hero-badge anim-1">
+      <span class="badge-dot"></span>
+      Sin costos ocultos · Pago único
+    </div>
+    <h1 class="hero-title anim-2">Planes de<br><span class="t-green">desbaneo</span></h1>
+    <p class="hero-sub anim-3">Elige el plan que se adapta a tu caso. Si no recuperamos tu número, devolvemos el 100% de tu pago.</p>
+    <div class="toggle-wrap anim-3" id="toggleWrap">
+      <button class="toggle-btn active" data-type="personal" id="btnPersonal">Personal</button>
+      <button class="toggle-btn" data-type="business" id="btnBusiness">Business / API</button>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES GRID -->
+<section class="planes-section">
+  <div class="planes-inner">
+
+    <!-- PERSONAL -->
+    <div class="planes-group" id="groupPersonal">
+      <div class="plan-card reveal">
+        <div class="plan-header">
+          <div class="plan-name">Básico</div>
+          <div class="plan-price">$19<span class="price-currency"> USD</span></div>
+          <div class="plan-desc">Para baneos temporales recientes.</div>
+        </div>
+        <ul class="plan-features">
+          <li class="feat-yes">Baneo temporal</li>
+          <li class="feat-yes">Apelación estándar</li>
+          <li class="feat-yes">Respuesta en 72 horas</li>
+          <li class="feat-yes">Soporte por chat</li>
+          <li class="feat-yes">1 número incluido</li>
+          <li class="feat-no">Garantía de devolución</li>
+          <li class="feat-no">Especialista dedicado</li>
+          <li class="feat-no">Prioridad express</li>
+        </ul>
+        <a href="../solicitud/?plan=basico" class="btn-plan">Seleccionar básico</a>
+        <div class="plan-note">Pago único · Sin suscripción</div>
+      </div>
+
+      <div class="plan-card plan-popular reveal">
+        <div class="popular-badge">Más elegido</div>
+        <div class="plan-header">
+          <div class="plan-name">Pro</div>
+          <div class="plan-price">$39<span class="price-currency"> USD</span></div>
+          <div class="plan-desc">Para baneos temporales o permanentes.</div>
+        </div>
+        <ul class="plan-features">
+          <li class="feat-yes">Temporal o permanente</li>
+          <li class="feat-yes">Apelación prioritaria</li>
+          <li class="feat-yes">Respuesta en 24 horas</li>
+          <li class="feat-yes">Soporte directo con especialista</li>
+          <li class="feat-yes">1 número incluido</li>
+          <li class="feat-yes">Garantía de devolución</li>
+          <li class="feat-yes">Especialista dedicado</li>
+          <li class="feat-no">Prioridad express</li>
+        </ul>
+        <a href="../solicitud/?plan=pro" class="btn-plan btn-plan-primary">Seleccionar pro</a>
+        <div class="plan-note">Pago único · Sin suscripción</div>
+      </div>
+
+      <div class="plan-card reveal">
+        <div class="plan-header">
+          <div class="plan-name">Premium</div>
+          <div class="plan-price">$59<span class="price-currency"> USD</span></div>
+          <div class="plan-desc">Para casos complejos o urgentes.</div>
+        </div>
+        <ul class="plan-features">
+          <li class="feat-yes">Temporal o permanente</li>
+          <li class="feat-yes">Apelación express</li>
+          <li class="feat-yes">Respuesta en 12 horas</li>
+          <li class="feat-yes">Soporte 24/7</li>
+          <li class="feat-yes">Hasta 2 números</li>
+          <li class="feat-yes">Garantía de devolución</li>
+          <li class="feat-yes">Especialista dedicado</li>
+          <li class="feat-yes">Prioridad express</li>
+        </ul>
+        <a href="../solicitud/?plan=premium" class="btn-plan">Seleccionar premium</a>
+        <div class="plan-note">Pago único · Sin suscripción</div>
+      </div>
+    </div>
+
+    <!-- BUSINESS / API -->
+    <div class="planes-group hidden" id="groupBusiness">
+      <div class="plan-card reveal">
+        <div class="plan-header">
+          <div class="plan-name">Business</div>
+          <div class="plan-price">$69<span class="price-currency"> USD</span></div>
+          <div class="plan-desc">Para cuentas WhatsApp Business.</div>
+        </div>
+        <ul class="plan-features">
+          <li class="feat-yes">WhatsApp Business</li>
+          <li class="feat-yes">Apelación prioritaria</li>
+          <li class="feat-yes">Respuesta en 24 horas</li>
+          <li class="feat-yes">Asesor de negocio</li>
+          <li class="feat-yes">1 número incluido</li>
+          <li class="feat-yes">Garantía de devolución</li>
+          <li class="feat-no">Números múltiples</li>
+          <li class="feat-no">Integración API</li>
+        </ul>
+        <a href="../solicitud/?plan=business" class="btn-plan">Seleccionar business</a>
+        <div class="plan-note">Pago único · Sin suscripción</div>
+      </div>
+
+      <div class="plan-card plan-popular reveal">
+        <div class="popular-badge">Recomendado</div>
+        <div class="plan-header">
+          <div class="plan-name">Business Pro</div>
+          <div class="plan-price">$99<span class="price-currency"> USD</span></div>
+          <div class="plan-desc">Para negocios con múltiples números.</div>
+        </div>
+        <ul class="plan-features">
+          <li class="feat-yes">WhatsApp Business</li>
+          <li class="feat-yes">Apelación express</li>
+          <li class="feat-yes">Respuesta en 12 horas</li>
+          <li class="feat-yes">Asesor dedicado 24/7</li>
+          <li class="feat-yes">Hasta 3 números</li>
+          <li class="feat-yes">Garantía de devolución</li>
+          <li class="feat-yes">Números múltiples</li>
+          <li class="feat-no">Integración API</li>
+        </ul>
+        <a href="../solicitud/?plan=business-pro" class="btn-plan btn-plan-primary">Seleccionar business pro</a>
+        <div class="plan-note">Pago único · Sin suscripción</div>
+      </div>
+
+      <div class="plan-card reveal">
+        <div class="plan-header">
+          <div class="plan-name">API Enterprise</div>
+          <div class="plan-price">$149<span class="price-currency"> USD</span></div>
+          <div class="plan-desc">Para números integrados a sistemas.</div>
+        </div>
+        <ul class="plan-features">
+          <li class="feat-yes">Números de API</li>
+          <li class="feat-yes">Apelación técnica</li>
+          <li class="feat-yes">Respuesta en 8 horas</li>
+          <li class="feat-yes">Ingeniero técnico dedicado</li>
+          <li class="feat-yes">Hasta 5 números</li>
+          <li class="feat-yes">Garantía de devolución</li>
+          <li class="feat-yes">Números múltiples</li>
+          <li class="feat-yes">Integración API</li>
+        </ul>
+        <a href="../solicitud/?plan=api-enterprise" class="btn-plan">Seleccionar enterprise</a>
+        <div class="plan-note">Pago único · Sin suscripción</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARATIVA -->
+<section class="comparativa-section">
+  <div class="comparativa-inner">
+    <div class="section-tag">Comparativa completa</div>
+    <h2 class="section-title">¿Qué incluye cada plan?</h2>
+    <div class="table-wrap">
+      <table class="compare-table" id="compareTable">
+        <thead>
+          <tr>
+            <th class="feat-col">Característica</th>
+            <th>Básico<br><span>$19</span></th>
+            <th class="th-popular">Pro<br><span>$39</span></th>
+            <th>Premium<br><span>$59</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Tipo de baneo</td><td>Temporal</td><td>Temp. o perm.</td><td>Temp. o perm.</td></tr>
+          <tr><td>Tiempo de respuesta</td><td>72h</td><td>24h</td><td>12h</td></tr>
+          <tr><td>Números incluidos</td><td>1</td><td>1</td><td>Hasta 2</td></tr>
+          <tr><td>Especialista dedicado</td><td class="no-cell">✕</td><td class="yes-cell">✓</td><td class="yes-cell">✓</td></tr>
+          <tr><td>Garantía de devolución</td><td class="no-cell">✕</td><td class="yes-cell">✓</td><td class="yes-cell">✓</td></tr>
+          <tr><td>Soporte 24/7</td><td class="no-cell">✕</td><td class="no-cell">✕</td><td class="yes-cell">✓</td></tr>
+          <tr><td>Prioridad express</td><td class="no-cell">✕</td><td class="no-cell">✕</td><td class="yes-cell">✓</td></tr>
+          <tr>
+            <td></td>
+            <td><a href="../solicitud/?plan=basico" class="btn-table">Elegir</a></td>
+            <td><a href="../solicitud/?plan=pro" class="btn-table btn-table-primary">Elegir</a></td>
+            <td><a href="../solicitud/?plan=premium" class="btn-table">Elegir</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="garantia-section">
+  <div class="garantia-inner reveal">
+    <div class="garantia-icon">🛡</div>
+    <div class="garantia-body">
+      <h2>Garantía de devolución total</h2>
+      <p>Si no recuperamos tu número con los planes Pro, Premium, Business Pro o Enterprise, devolvemos el 100% de tu pago sin preguntas. Sin formularios complicados. Sin esperas.</p>
+      <div class="garantia-items">
+        <div class="garantia-item"><span class="gi-check">✓</span> Devolución en menos de 48h</div>
+        <div class="garantia-item"><span class="gi-check">✓</span> Sin preguntas ni justificaciones</div>
+        <div class="garantia-item"><span class="gi-check">✓</span> Al mismo método de pago</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ PRECIOS -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="section-tag">Preguntas sobre precios</div>
+    <h2 class="section-title">Dudas frecuentes<br>sobre los planes</h2>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Puedo cambiar de plan después de pagar?</button>
+        <div class="faq-a">Sí. Si necesitas un plan superior, contacta a soporte y aplicamos la diferencia de precio. No hay cargos adicionales por el cambio.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Qué métodos de pago aceptan?</button>
+        <div class="faq-a">Aceptamos tarjetas de crédito y débito (Visa, Mastercard, Amex), PayPal y transferencias. Todos los pagos son procesados de forma segura por Stripe.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿El precio es por número o por cuenta?</button>
+        <div class="faq-a">El precio es por número de teléfono. Si tienes más de un número baneado, cada uno requiere su propio plan. Los planes Premium y Business Pro incluyen múltiples números.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Cuándo se cobra exactamente?</button>
+        <div class="faq-a">El cobro ocurre después del diagnóstico gratuito. Si tu caso no es recuperable, no se realiza ningún cargo. Solo pagas cuando confirmamos que podemos ayudarte.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-bg"></div>
+  <div class="cta-content">
+    <h2 class="cta-title">¿No sabes qué plan<br>necesitas?</h2>
+    <p class="cta-sub">Empieza con el diagnóstico gratuito y te recomendamos el plan correcto para tu caso.</p>
+    <div class="cta-actions">
+      <a href="../solicitud/" class="btn-primary">Diagnóstico gratuito →</a>
+      <a href="../../../../modules/shared/pages/contacto/" class="btn-ghost">Hablar con un asesor</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Desban<span class="g">W</span><span class="r">A</span></div>
+      <p>Servicio profesional de desbaneo y baneo de números WhatsApp.</p>
+      <p class="footer-legal">Servicio independiente. No afiliado a Meta ni WhatsApp.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Desbaneo</div>
+      <a href="../landing/">Landing</a>
+      <a href="../solicitud/">Solicitud</a>
+      <a href="../planes/">Planes</a>
+      <a href="../proceso/">Proceso</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Empresa</div>
+      <a href="../../../../modules/shared/pages/nosotros/">Nosotros</a>
+      <a href="../../../../modules/shared/pages/faq/">FAQ</a>
+      <a href="../../../../modules/shared/pages/contacto/">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <a href="../../../../modules/shared/pages/legal/privacidad.html">Privacidad</a>
+      <a href="../../../../modules/shared/pages/legal/terminos.html">Términos</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 DesbanWA</span>
+    <a href="../../../../modules/baneo/pages/planes/" class="footer-other">¿Necesitas banear? Ver planes de baneo →</a>
+  </div>
+</footer>
+
+<a href="https://wa.me/1234567890" class="wa-float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script src="../../../../modules/shared/js/main.js" defer></script>
+<script src="../../services/baneo.api.js" defer></script>
+<script src="../../services/planes.service.js" defer></script>
+<script src="planes.js" defer></script>
+</body>
+</html>

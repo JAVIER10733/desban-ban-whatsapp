@@ -1,0 +1,270 @@
+/* =============================================
+   confirmacion.css — Componente Confirmación
+   Módulo: Baneo / Components
+============================================= */
+:root {
+  --red: #E24B4A;
+  --green: #25D366;
+  --amber: #EF9F27;
+  --bg2: #111;
+  --bg3: #181818;
+  --text: #f5f5f5;
+  --muted: #777;
+  --border: rgba(255,255,255,0.07);
+  --radius: 12px;
+}
+
+.confirmacion {
+  max-width: 480px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.conf-estado { text-align: center; }
+.hidden { display: none !important; }
+
+/* =============================================
+   PROCESSING
+============================================= */
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes ringPulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: .6; transform: scale(.96); }
+}
+@keyframes stepSlide {
+  from { opacity:0; transform:translateX(-8px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+
+.processing-ring {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  border-top-color: var(--red);
+  animation: ringRotate .8s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+.ring-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: ringPulse 1.6s ease-in-out infinite;
+}
+
+.conf-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-bottom: .5rem;
+}
+.conf-sub {
+  font-size: .88rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.processing-steps {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  max-width: 260px;
+  margin: 0 auto;
+  text-align: left;
+}
+.ps-step {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-size: .82rem;
+  color: var(--muted);
+  padding: .4rem 0;
+  transition: color .3s;
+}
+.ps-step.active { color: var(--text); animation: stepSlide .3s ease; }
+.ps-step.done   { color: var(--green); }
+.pss-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+  transition: background .3s;
+}
+.ps-step.active .pss-dot { background: var(--red); }
+.ps-step.done   .pss-dot { background: var(--green); }
+
+/* =============================================
+   SUCCESS
+============================================= */
+@keyframes circleIn  { from { transform:scale(0); opacity:0; } to { transform:scale(1); opacity:1; } }
+@keyframes checkIn   { from { transform:scale(0) rotate(-20deg); opacity:0; } 60% { transform:scale(1.2) rotate(5deg); } to { transform:scale(1) rotate(0); opacity:1; } }
+@keyframes cardSlide { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+
+.success-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(226,75,74,.1);
+  border: 1.5px solid var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  animation: circleIn .4s ease both;
+}
+.success-check {
+  color: var(--red);
+  font-size: 1.6rem;
+  font-weight: 300;
+  animation: checkIn .5s .2s ease both;
+}
+
+.caso-card {
+  background: var(--bg2);
+  border: .5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  text-align: left;
+  animation: cardSlide .4s .3s ease both;
+}
+.caso-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .82rem;
+  padding: .45rem 0;
+  border-bottom: .5px solid var(--border);
+}
+.caso-row:last-child { border-bottom: none; }
+.caso-lbl { color: var(--muted); font-weight: 300; }
+.caso-val  { font-weight: 500; }
+.caso-id   { font-family: 'Bebas Neue', sans-serif; font-size: 1rem; letter-spacing: 1px; color: var(--red); }
+.red-val   { color: var(--red); }
+
+.conf-email-aviso {
+  font-size: .78rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  animation: cardSlide .4s .4s ease both;
+}
+.conf-email-aviso strong { color: var(--text); font-weight: 500; }
+
+/* PRÓXIMOS PASOS */
+.conf-proximos-pasos {
+  background: var(--bg2);
+  border: .5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  animation: cardSlide .4s .5s ease both;
+}
+.nps-titulo {
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.nps-lista { display: flex; flex-direction: column; gap: .6rem; }
+.nps-item  { display: flex; align-items: flex-start; gap: .8rem; }
+.nps-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(226,75,74,.1);
+  color: var(--red);
+  font-size: .68rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.nps-txt { font-size: .82rem; color: var(--muted); font-weight: 300; line-height: 1.6; }
+
+/* ACCIONES */
+.conf-actions {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  margin-bottom: 1.2rem;
+  animation: cardSlide .4s .6s ease both;
+}
+.conf-btn-primary {
+  display: block;
+  text-align: center;
+  background: var(--red);
+  color: #fff;
+  padding: .85rem 1.5rem;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: opacity .2s;
+}
+.conf-btn-primary:hover { opacity: .88; }
+.conf-btn-ghost {
+  display: block;
+  text-align: center;
+  color: var(--muted);
+  font-size: .85rem;
+  text-decoration: none;
+  transition: color .2s;
+  padding: .4rem;
+}
+.conf-btn-ghost:hover { color: var(--text); }
+
+/* BADGE ANONIMO */
+.conf-anonimo-badge {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  justify-content: center;
+  font-size: .72rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.5;
+  padding: .6rem .8rem;
+  background: rgba(37,211,102,.04);
+  border: .5px solid rgba(37,211,102,.1);
+  border-radius: 8px;
+  text-align: left;
+  animation: cardSlide .4s .7s ease both;
+}
+
+/* =============================================
+   ERROR
+============================================= */
+@keyframes errorShake {
+  0%,100% { transform: translateX(0); }
+  20%,60% { transform: translateX(-6px); }
+  40%,80% { transform: translateX(6px); }
+}
+.error-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(226,75,74,.1);
+  border: 1.5px solid var(--red);
+  color: var(--red);
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  animation: errorShake .5s ease both;
+}

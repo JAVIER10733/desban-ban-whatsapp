@@ -1,0 +1,63 @@
+{
+  "module": "desbaneo",
+  "page": "tipos-baneo",
+  "route": "/desbaneo/tipos-baneo",
+
+  "seo": {
+    "title": "Tipos de Baneo de WhatsApp — Cuál tienes y cómo resolverlo | DesbanWA",
+    "description": "Guía completa de los 5 tipos de baneo de WhatsApp: temporal, permanente, Business, API y restricción de mensajes. Descubre cuál tienes y cómo recuperarlo.",
+    "keywords": [
+      "tipos de baneo whatsapp",
+      "baneo temporal whatsapp",
+      "baneo permanente whatsapp",
+      "whatsapp business baneado",
+      "numero whatsapp api baneado",
+      "que tipo de baneo tengo whatsapp",
+      "como saber si mi whatsapp esta baneado"
+    ],
+    "canonical": "https://desbanwa.com/desbaneo/tipos-baneo",
+    "robots": "index, follow"
+  },
+
+  "og": {
+    "title": "Tipos de Baneo de WhatsApp — DesbanWA",
+    "description": "Guía completa de los 5 tipos de baneo de WhatsApp. Identifica el tuyo y descubre la solución.",
+    "image": "/modules/shared/assets/images/og/og-desbaneo.png",
+    "type": "article",
+    "url": "https://desbanwa.com/desbaneo/tipos-baneo"
+  },
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Tipos de Baneo de WhatsApp: Guía Completa 2025",
+    "description": "Guía completa de los 5 tipos de baneo de WhatsApp con diagnóstico y solución para cada caso.",
+    "author": {
+      "@type": "Organization",
+      "name": "DesbanWA"
+    },
+    "datePublished": "2025-01-01",
+    "dateModified": "2025-01-01"
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio",        "url": "/" },
+    { "label": "Desbaneo",      "url": "/desbaneo" },
+    { "label": "Tipos de baneo","url": "/desbaneo/tipos-baneo" }
+  ],
+
+  "analytics": {
+    "page_name": "desbaneo_tipos_baneo",
+    "page_category": "desbaneo",
+    "conversion_goal": "solicitud_desbaneo",
+    "content_type": "guia"
+  },
+
+  "settings": {
+    "show_whatsapp_btn": true,
+    "theme": "green",
+    "has_quiz": true,
+    "tipos_count": 5,
+    "last_updated": "2025-01-01"
+  }
+}

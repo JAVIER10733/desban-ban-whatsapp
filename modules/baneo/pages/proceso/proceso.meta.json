@@ -1,0 +1,84 @@
+{
+  "module": "baneo",
+  "page": "proceso",
+  "route": "/baneo/proceso",
+
+  "seo": {
+    "title": "Cómo funciona el Baneo de WhatsApp | DesbanWA",
+    "description": "Proceso de baneo de números WhatsApp en 4 pasos. Anónimo, confidencial y efectivo. Enviamos el reporte formal ante Meta en 24-72 horas.",
+    "keywords": [
+      "como banear numero whatsapp",
+      "proceso baneo whatsapp",
+      "pasos reportar numero whatsapp",
+      "como funciona baneo whatsapp"
+    ],
+    "canonical": "https://desbanwa.com/baneo/proceso",
+    "robots": "index, follow"
+  },
+
+  "og": {
+    "title": "Cómo funciona el Baneo de WhatsApp — DesbanWA",
+    "description": "4 pasos simples. Proceso anónimo y confidencial. Resultados en 24-72 horas.",
+    "image": "/modules/shared/assets/images/og/og-baneo.png",
+    "type": "article",
+    "url": "https://desbanwa.com/baneo/proceso"
+  },
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Cómo banear un número de WhatsApp",
+    "description": "Proceso para reportar y banear un número problemático de WhatsApp en 4 pasos.",
+    "totalTime": "PT72H",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": "29"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Describe el caso",
+        "text": "Indica el número a reportar, el motivo y una descripción del problema."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Revisamos el caso",
+        "text": "Verificamos que el reporte cumple los criterios de uso legítimo."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Reportamos ante Meta",
+        "text": "Enviamos el reporte formal a Meta por los canales oficiales."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Número baneado",
+        "text": "Meta aplica el baneo y te notificamos. Garantía de devolución si no lo logramos."
+      }
+    ]
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio",  "url": "/" },
+    { "label": "Baneo",   "url": "/baneo" },
+    { "label": "Proceso", "url": "/baneo/proceso" }
+  ],
+
+  "analytics": {
+    "page_name": "baneo_proceso",
+    "page_category": "baneo",
+    "conversion_goal": "solicitud_baneo",
+    "content_type": "how_to"
+  },
+
+  "settings": {
+    "show_whatsapp_btn": true,
+    "theme": "red",
+    "last_updated": "2025-01-01"
+  }
+}

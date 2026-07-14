@@ -1,0 +1,78 @@
+{
+  "module": "desbaneo",
+  "page": "planes",
+  "route": "/desbaneo/planes",
+
+  "seo": {
+    "title": "Planes y precios — Desbaneo de WhatsApp | DesbanWA",
+    "description": "Elige el plan de desbaneo que necesitas. Desde $19 USD. Pago único, sin suscripción. Garantía de devolución si no recuperamos tu número de WhatsApp.",
+    "keywords": [
+      "precio desbaneo whatsapp",
+      "costo recuperar numero whatsapp",
+      "plan desbaneo whatsapp",
+      "cuanto cuesta desbanear whatsapp",
+      "desbaneo whatsapp precio"
+    ],
+    "canonical": "https://desbanwa.com/desbaneo/planes",
+    "robots": "index, follow"
+  },
+
+  "og": {
+    "title": "Planes de Desbaneo — DesbanWA",
+    "description": "Desde $19 USD. Pago único. Garantía de devolución.",
+    "image": "/modules/shared/assets/images/og/og-desbaneo.png",
+    "type": "website",
+    "url": "https://desbanwa.com/desbaneo/planes"
+  },
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Planes de Desbaneo WhatsApp",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "position": 1,
+        "name": "Plan Básico",
+        "price": "19",
+        "priceCurrency": "USD",
+        "description": "Desbaneo temporal con respuesta en 72h"
+      },
+      {
+        "@type": "Offer",
+        "position": 2,
+        "name": "Plan Pro",
+        "price": "39",
+        "priceCurrency": "USD",
+        "description": "Desbaneo temporal o permanente en 24h con garantía"
+      },
+      {
+        "@type": "Offer",
+        "position": 3,
+        "name": "Plan Premium",
+        "price": "59",
+        "priceCurrency": "USD",
+        "description": "Desbaneo express en 12h para casos urgentes"
+      }
+    ]
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio",   "url": "/" },
+    { "label": "Desbaneo", "url": "/desbaneo" },
+    { "label": "Planes",   "url": "/desbaneo/planes" }
+  ],
+
+  "analytics": {
+    "page_name": "desbaneo_planes",
+    "page_category": "desbaneo",
+    "conversion_goal": "seleccion_plan_desbaneo"
+  },
+
+  "settings": {
+    "show_whatsapp_btn": true,
+    "theme": "green",
+    "default_toggle": "personal",
+    "last_updated": "2025-01-01"
+  }
+}

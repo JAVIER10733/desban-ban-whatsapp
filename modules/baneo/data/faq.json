@@ -1,0 +1,85 @@
+{
+  "module": "baneo",
+  "version": "1.0",
+  "updated": "2025-01-01",
+  "items": [
+    {
+      "id": "faq-b-01",
+      "categoria": "general",
+      "pregunta": "¿Es completamente anónimo el reporte?",
+      "respuesta": "Sí. El número reportado nunca sabrá quién hizo el reporte. No compartimos tu identidad con Meta ni con ningún tercero. El proceso es 100% confidencial desde el inicio hasta el final."
+    },
+    {
+      "id": "faq-b-02",
+      "categoria": "general",
+      "pregunta": "¿Puedo banear cualquier número?",
+      "respuesta": "No. Solo aceptamos reportes legítimos de números que han violado los Términos de Servicio de WhatsApp. Reportes de acoso, spam, estafas, suplantación o contenido ilegal. Usarlo para otro fin viola nuestros términos y puede tener consecuencias legales."
+    },
+    {
+      "id": "faq-b-03",
+      "categoria": "proceso",
+      "pregunta": "¿Cuánto tiempo tarda el proceso?",
+      "respuesta": "El promedio es 24 a 72 horas desde que iniciamos el reporte formal. Casos que requieren más documentación pueden tomar hasta 5 días hábiles. Te notificamos por correo en cada etapa del proceso."
+    },
+    {
+      "id": "faq-b-04",
+      "categoria": "proceso",
+      "pregunta": "¿Qué necesito para hacer el reporte?",
+      "respuesta": "Solo necesitas el número a reportar, el motivo y una descripción del problema. Opcionalmente puedes adjuntar capturas de pantalla como evidencia. No necesitas acceso al teléfono del número reportado."
+    },
+    {
+      "id": "faq-b-05",
+      "categoria": "garantia",
+      "pregunta": "¿Qué pasa si el número no es baneado?",
+      "respuesta": "Con los planes Pro y Enterprise devolvemos el 100% de tu pago si Meta no aplica el baneo dentro del plazo establecido. La garantía no aplica si el reporte fue rechazado por uso ilegítimo del servicio."
+    },
+    {
+      "id": "faq-b-06",
+      "categoria": "garantia",
+      "pregunta": "¿Cuándo se procesa la devolución?",
+      "respuesta": "Las devoluciones se procesan en un máximo de 5 días hábiles al mismo método de pago original. No tienes que hacer nada, nosotros iniciamos el proceso automáticamente."
+    },
+    {
+      "id": "faq-b-07",
+      "categoria": "pago",
+      "pregunta": "¿Cuándo se realiza el cobro?",
+      "respuesta": "El cobro se realiza después del diagnóstico inicial. Si el caso no cumple con los criterios de uso legítimo, no se realiza ningún cargo. Solo pagas cuando confirmamos que podemos proceder con el reporte."
+    },
+    {
+      "id": "faq-b-08",
+      "categoria": "pago",
+      "pregunta": "¿Qué métodos de pago aceptan?",
+      "respuesta": "Aceptamos tarjetas de crédito y débito Visa, Mastercard y Amex, así como PayPal. Todos los pagos son procesados de forma segura por Stripe con cifrado SSL. No almacenamos datos de tarjeta."
+    },
+    {
+      "id": "faq-b-09",
+      "categoria": "general",
+      "pregunta": "¿Funciona para números de cualquier país?",
+      "respuesta": "Sí. Procesamos reportes para números de todo el mundo. El servicio funciona para cualquier número activo en WhatsApp, independientemente del país de origen."
+    },
+    {
+      "id": "faq-b-10",
+      "categoria": "proceso",
+      "pregunta": "¿Qué pasa si el número ya no está activo?",
+      "respuesta": "Si el número no está activo al momento del reporte, Meta no puede procesarlo. En ese caso, evaluamos la situación y si no podemos proceder, no realizamos ningún cobro."
+    },
+    {
+      "id": "faq-b-11",
+      "categoria": "general",
+      "pregunta": "¿Puedo reportar un número de WhatsApp Business?",
+      "respuesta": "Sí. Aceptamos reportes de números personales, cuentas Business y números integrados a la API. Cada tipo tiene su propio proceso de reporte ante Meta."
+    },
+    {
+      "id": "faq-b-12",
+      "categoria": "proceso",
+      "pregunta": "¿Puedo ver el estado de mi reporte?",
+      "respuesta": "Sí. Recibirás actualizaciones por correo en cada etapa del proceso. También puedes consultar el estado en tiempo real en la página de seguimiento con tu número de caso."
+    }
+  ],
+  "categorias": [
+    { "id": "general",  "label": "General" },
+    { "id": "proceso",  "label": "Proceso" },
+    { "id": "garantia", "label": "Garantía" },
+    { "id": "pago",     "label": "Pagos" }
+  ]
+}

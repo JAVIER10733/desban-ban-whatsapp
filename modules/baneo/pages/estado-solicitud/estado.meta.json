@@ -1,0 +1,40 @@
+{
+  "module": "shared",
+  "page": "estado-solicitud",
+  "route": "/estado",
+
+  "seo": {
+    "title": "Estado de mi solicitud | DesbanWA",
+    "description": "Consulta el estado en tiempo real de tu solicitud de desbaneo o baneo de WhatsApp. Ingresa tu número de caso para ver las actualizaciones.",
+    "canonical": "https://desbanwa.com/estado",
+    "robots": "noindex, nofollow"
+  },
+
+  "og": {
+    "title": "Estado de solicitud — DesbanWA",
+    "description": "Consulta el estado de tu solicitud de desbaneo o baneo.",
+    "image": "/modules/shared/assets/images/og/og-home.png",
+    "type": "website",
+    "url": "https://desbanwa.com/estado"
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio",  "url": "/" },
+    { "label": "Estado",  "url": "/estado" }
+  ],
+
+  "analytics": {
+    "page_name": "estado_solicitud",
+    "page_category": "shared",
+    "conversion_goal": null
+  },
+
+  "settings": {
+    "show_whatsapp_btn": false,
+    "show_cookie_banner": false,
+    "theme": "green",
+    "supports_url_param": true,
+    "url_param": "caso",
+    "last_updated": "2025-01-01"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "module": "baneo",
+  "version": "1.0",
+  "updated": "2025-01-01",
+  "site_name": "DesbanWA",
+  "base_url": "https://desbanwa.com",
+  "pages": {
+    "landing": {
+      "route": "/baneo",
+      "title": "Banear número de WhatsApp — Reporta y bloquea | DesbanWA",
+      "description": "Reporta y banea números de WhatsApp que te acosan, hacen spam o estafan. Proceso 100% anónimo y confidencial. Resultados en 24-72 horas.",
+      "keywords": [
+        "banear numero whatsapp",
+        "reportar numero whatsapp",
+        "como banear whatsapp",
+        "bloquear numero whatsapp permanentemente",
+        "reportar acoso whatsapp",
+        "banear numero spam whatsapp"
+      ],
+      "og_image": "/modules/shared/assets/images/og/og-baneo.png",
+      "robots": "index, follow",
+      "schema_type": "Service",
+      "priority": 0.95,
+      "changefreq": "weekly"
+    },
+    "planes": {
+      "route": "/baneo/planes",
+      "title": "Planes de Baneo de WhatsApp — Precios | DesbanWA",
+      "description": "Elige el plan de baneo para reportar números problemáticos de WhatsApp. Desde $29 USD. Pago único. Garantía de devolución en planes Pro+.",
+      "keywords": [
+        "precio baneo whatsapp",
+        "plan baneo numero whatsapp",
+        "cuanto cuesta banear whatsapp"
+      ],
+      "og_image": "/modules/shared/assets/images/og/og-baneo.png",
+      "robots": "index, follow",
+      "schema_type": "ItemList",
+      "priority": 0.85,
+      "changefreq": "weekly"
+    },
+    "proceso": {
+      "route": "/baneo/proceso",
+      "title": "Cómo funciona el Baneo de WhatsApp | DesbanWA",
+      "description": "Proceso de baneo de números WhatsApp en 4 pasos. Anónimo, confidencial y efectivo. Enviamos el reporte formal ante Meta.",
+      "keywords": [
+        "como banear numero whatsapp",
+        "proceso baneo whatsapp",
+        "pasos para reportar numero whatsapp"
+      ],
+      "og_image": "/modules/shared/assets/images/og/og-baneo.png",
+      "robots": "index, follow",
+      "schema_type": "HowTo",
+      "priority": 0.75,
+      "changefreq": "monthly"
+    },
+    "razones": {
+      "route": "/baneo/razones",
+      "title": "Razones para Banear un Número de WhatsApp | DesbanWA",
+      "description": "Descubre cuándo y por qué reportar un número de WhatsApp. Acoso, spam, estafas, suplantación y más. Guía completa de uso legítimo.",
+      "keywords": [
+        "razones para banear whatsapp",
+        "cuando reportar numero whatsapp",
+        "como denunciar acoso whatsapp",
+        "reportar spam whatsapp"
+      ],
+      "og_image": "/modules/shared/assets/images/og/og-baneo.png",
+      "robots": "index, follow",
+      "schema_type": "Article",
+      "priority": 0.7,
+      "changefreq": "monthly"
+    },
+    "aviso-legal": {
+      "route": "/baneo/aviso-legal",
+      "title": "Aviso Legal — Servicio de Baneo | DesbanWA",
+      "description": "Aviso legal del servicio de baneo de WhatsApp. Términos, condiciones y responsabilidades antes de contratar.",
+      "keywords": [],
+      "og_image": "/modules/shared/assets/images/og/og-baneo.png",
+      "robots": "index, follow",
+      "schema_type": "WebPage",
+      "priority": 0.4,
+      "changefreq": "yearly"
+    },
+    "solicitud": {
+      "route": "/baneo/solicitud",
+      "title": "Solicitud de Baneo | DesbanWA",
+      "description": "Inicia tu solicitud de baneo de número WhatsApp. Proceso anónimo y confidencial.",
+      "keywords": [],
+      "og_image": "/modules/shared/assets/images/og/og-baneo.png",
+      "robots": "noindex, nofollow",
+      "schema_type": null,
+      "priority": 0,
+      "changefreq": null
+    }
+  },
+  "global": {
+    "og_locale": "es_ES",
+    "og_type": "website",
+    "twitter_card": "summary_large_image",
+    "theme_color": "#E24B4A",
+    "lang": "es"
+  }
+}

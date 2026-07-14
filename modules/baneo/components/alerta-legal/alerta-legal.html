@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="./alerta-legal.css">
+<div class="alerta-legal" id="alertaLegal" role="alert" aria-live="polite">
+
+  <!-- VERSIÓN COMPACTA (inline, dentro de formularios) -->
+  <div class="alerta-inline" id="alertaInline">
+    <div class="ai-icon">⚖</div>
+    <div class="ai-body">
+      <span class="ai-titulo">Uso exclusivo para reportes legítimos.</span>
+      <span class="ai-texto">
+        Al continuar confirmas que el número a reportar ha cometido una infracción real.
+        <a href="../../pages/aviso-legal/" class="ai-link" target="_blank">Leer aviso legal completo →</a>
+      </span>
+    </div>
+    <button class="ai-close" id="alertaInlineClose" aria-label="Cerrar aviso">✕</button>
+  </div>
+
+  <!-- VERSIÓN EXPANDIDA (antes del CTA principal) -->
+  <div class="alerta-expandida hidden" id="alertaExpandida">
+    <div class="ae-header">
+      <div class="ae-icon">⚖</div>
+      <div class="ae-titulo">Aviso legal importante</div>
+      <button class="ae-toggle" id="alertaToggle" aria-expanded="false">
+        <span class="toggle-txt">Ver más</span>
+        <span class="toggle-arrow">↓</span>
+      </button>
+    </div>
+    <div class="ae-body" id="alertaBody">
+      <p>Este servicio está diseñado <strong>exclusivamente</strong> para reportar números que violan los Términos de Servicio de WhatsApp:</p>
+      <ul class="ae-lista">
+        <li>Acoso, amenazas o intimidación</li>
+        <li>Spam masivo no solicitado</li>
+        <li>Estafas, phishing o fraude</li>
+        <li>Suplantación de identidad</li>
+        <li>Distribución de contenido ilegal</li>
+      </ul>
+      <div class="ae-prohibido">
+        <span class="prohibido-icon">🚫</span>
+        <span>Usar este servicio para reportes falsos o sin causa legítima está <strong>estrictamente prohibido</strong> y puede tener consecuencias legales.</span>
+      </div>
+      <div class="ae-footer">
+        <label class="ae-check-wrap">
+          <input type="checkbox" id="aceptaAvisoLegal" class="ae-check">
+          <span class="ae-check-label">He leído y acepto el aviso legal. Este reporte es legítimo.</span>
+        </label>
+        <a href="../../pages/aviso-legal/" class="ae-link" target="_blank">Ver aviso legal completo →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- VERSIÓN BANNER (top de página, descartable) -->
+  <div class="alerta-banner hidden" id="alertaBanner">
+    <div class="ab-content">
+      <span class="ab-icon">⚖</span>
+      <span class="ab-texto">
+        <strong>Importante:</strong> Este servicio es solo para reportes legítimos.
+        <a href="../../pages/aviso-legal/" target="_blank">Ver aviso legal</a>
+      </span>
+    </div>
+    <button class="ab-close" id="alertaBannerClose" aria-label="Cerrar">✕</button>
+  </div>
+
+</div>
+<script src="./alerta-legal.js"></script>

@@ -1,0 +1,87 @@
+/* =============================================
+   razones.css — Módulo Baneo / Razones
+============================================= */
+:root{
+  --green:#25D366;--red:#E24B4A;--amber:#EF9F27;
+  --bg:#0d0d0d;--bg2:#111;--bg3:#181818;
+  --text:#f5f5f5;--muted:#777;--border:rgba(255,255,255,0.07);
+  --radius:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body.razones-page{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.anim-1{animation:fadeUp .6s .0s ease both}
+.anim-2{animation:fadeUp .6s .15s ease both}
+.anim-3{animation:fadeUp .6s .3s ease both}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;background:rgba(13,13,13,.92);backdrop-filter:blur(14px);border-bottom:.5px solid var(--border)}
+.nav.scrolled{background:rgba(13,13,13,.97)}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px}
+.nav-logo .g{color:var(--green)}.nav-logo .r{color:var(--red)}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{font-size:.84rem;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-actions{display:flex;gap:.6rem;align-items:center}
+.btn-nav-ghost{font-size:.82rem;color:var(--muted);padding:.45rem 1rem;border:.5px solid var(--border);border-radius:6px;transition:all .2s}
+.btn-nav-ghost:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+.btn-nav-red{background:var(--red);color:#fff;padding:.45rem 1.1rem;border-radius:6px;font-size:.82rem;font-weight:500;transition:opacity .2s}
+.btn-nav-red:hover{opacity:.85}
+
+/* HERO */
+.razones-hero{padding:7rem 2rem 4rem;text-align:center;border-bottom:.5px solid var(--border);position:relative;overflow:hidden}
+.razones-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 50% 100%,rgba(226,75,74,.06),transparent);pointer-events:none}
+.razones-hero-content{max-width:680px;margin:0 auto;position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;justify-content:center;gap:.5rem;font-size:.75rem;color:var(--muted);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--muted);transition:color .2s}.breadcrumb a:hover{color:var(--text)}
+.breadcrumb span{color:var(--border)}.bc-current{color:var(--text)}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(226,75,74,.08);border:.5px solid rgba(226,75,74,.2);padding:.35rem 1rem;border-radius:100px;font-size:.75rem;color:var(--red);margin-bottom:1.5rem}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--red);animation:pulse 1.8s infinite}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5.5vw,4.5rem);line-height:1;letter-spacing:1px;margin-bottom:1rem}
+.t-red{color:var(--red)}
+.hero-sub{color:var(--muted);font-size:1rem;font-weight:300;line-height:1.7;margin-bottom:2rem}
+.hero-actions{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:.9rem 1.8rem;border-radius:8px;font-size:.92rem;font-weight:500;transition:opacity .2s,transform .15s}
+.btn-primary:hover{opacity:.88;transform:translateY(-2px)}
+.btn-ghost-hero{display:inline-flex;align-items:center;color:var(--muted);font-size:.88rem;border:.5px solid var(--border);padding:.85rem 1.5rem;border-radius:8px;transition:all .2s}
+.btn-ghost-hero:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+
+/* Grid section: hero ya tiene borde inferior */
+body.razones-page .razones-grid-section{border-top:none}
+
+/* CTA */
+.cta-final{padding:7rem 2rem;text-align:center;position:relative;overflow:hidden}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 50% 100%,rgba(226,75,74,.06),transparent)}
+.cta-content{position:relative;z-index:1}
+.cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:2px;margin-bottom:1rem}
+.cta-sub{color:var(--muted);font-size:1rem;font-weight:300;margin-bottom:2.5rem}
+.btn-red{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;padding:.9rem 2.2rem;border-radius:8px;font-size:.95rem;font-weight:500;transition:opacity .2s,transform .15s}
+.btn-red:hover{opacity:.88;transform:translateY(-2px)}
+.cta-trust{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem;font-size:.78rem;color:var(--muted)}
+
+/* FOOTER */
+.footer{background:var(--bg2);border-top:.5px solid var(--border)}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding:4rem 2rem 3rem}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;margin-bottom:.8rem}
+.footer-logo .g{color:var(--green)}.footer-logo .r{color:var(--red)}
+.footer-brand p{font-size:.82rem;color:var(--muted);line-height:1.6;font-weight:300;margin-bottom:.4rem}
+.footer-legal{font-size:.72rem!important;opacity:.6}
+.footer-col-title{font-size:.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:1rem;font-weight:500}
+.footer-col{display:flex;flex-direction:column;gap:.5rem}
+.footer-col a{font-size:.82rem;color:var(--muted);transition:color .2s}
+.footer-col a:hover{color:var(--text)}
+.footer-bottom{max-width:1100px;margin:0 auto;padding:1.2rem 2rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted)}
+.footer-other{color:var(--green)}.footer-other:hover{text-decoration:underline}
+
+@media(max-width:768px){
+  .nav-links,.btn-nav-ghost{display:none}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:500px){
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:.5rem;text-align:center}
+}

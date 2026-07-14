@@ -1,0 +1,105 @@
+{
+  "module": "baneo",
+  "version": "1.0",
+  "updated": "2025-01-01",
+  "razones": [
+    {
+      "id": "acoso",
+      "slug": "acoso",
+      "titulo": "Acoso y amenazas",
+      "icono": "📵",
+      "descripcion": "Recibes mensajes intimidatorios, amenazas o contenido que te hace sentir en peligro físico o emocional.",
+      "es_mas_reportado": true,
+      "ejemplos": [
+        "Mensajes de amenaza directa",
+        "Insultos y hostigamiento repetido",
+        "Mensajes a horas inapropiadas",
+        "Presión psicológica sostenida"
+      ],
+      "aplica_garantia": true,
+      "motivo_solicitud": "acoso"
+    },
+    {
+      "id": "spam",
+      "slug": "spam",
+      "titulo": "Spam masivo",
+      "icono": "📩",
+      "descripcion": "Un número te envía publicidad no solicitada de forma masiva, repetitiva y sin que hayas dado tu consentimiento.",
+      "es_mas_reportado": false,
+      "ejemplos": [
+        "Cadenas de mensajes publicitarios",
+        "Listas de difusión sin permiso",
+        "Mensajes automatizados repetidos",
+        "Ofertas comerciales no solicitadas"
+      ],
+      "aplica_garantia": true,
+      "motivo_solicitud": "spam"
+    },
+    {
+      "id": "estafa",
+      "slug": "estafa",
+      "titulo": "Estafas y fraudes",
+      "icono": "💸",
+      "descripcion": "El número intenta engañarte con ofertas falsas, solicitudes de dinero o roba datos personales mediante phishing.",
+      "es_mas_reportado": false,
+      "ejemplos": [
+        "Premios falsos o loterías",
+        "Solicitudes de transferencia urgente",
+        "Links de phishing o malware",
+        "Falsos empleos o inversiones"
+      ],
+      "aplica_garantia": true,
+      "motivo_solicitud": "estafa"
+    },
+    {
+      "id": "suplantacion",
+      "slug": "suplantacion",
+      "titulo": "Suplantación de identidad",
+      "icono": "🎭",
+      "descripcion": "Alguien usa un número para hacerse pasar por otra persona, empresa o institución de forma fraudulenta.",
+      "es_mas_reportado": false,
+      "ejemplos": [
+        "Haciéndose pasar por un banco",
+        "Falso soporte técnico de empresa conocida",
+        "Suplantando a un familiar o amigo",
+        "Falsa cuenta oficial de institución"
+      ],
+      "aplica_garantia": true,
+      "motivo_solicitud": "suplantacion"
+    },
+    {
+      "id": "contenido-ilegal",
+      "slug": "contenido-ilegal",
+      "titulo": "Contenido ilegal",
+      "icono": "🔞",
+      "descripcion": "El número distribuye material prohibido, imágenes ilegales o contenido que viola la ley y las políticas de WhatsApp.",
+      "es_mas_reportado": false,
+      "ejemplos": [
+        "Material de abuso infantil",
+        "Contenido que incita al odio",
+        "Distribución de sustancias ilegales",
+        "Pornografía no consensuada"
+      ],
+      "aplica_garantia": true,
+      "motivo_solicitud": "contenido-ilegal"
+    },
+    {
+      "id": "bots",
+      "slug": "bots",
+      "titulo": "Bots abusivos",
+      "icono": "🤖",
+      "descripcion": "Números automatizados que generan actividad masiva, violan las políticas de uso de Meta y saturan conversaciones.",
+      "es_mas_reportado": false,
+      "ejemplos": [
+        "Bots de mensajería masiva",
+        "Números que usan WhatsApp mod",
+        "Scripts de envío automatizado",
+        "Actividad coordinada de spam"
+      ],
+      "aplica_garantia": true,
+      "motivo_solicitud": "otro"
+    }
+  ],
+  "aviso": "Este servicio es exclusivamente para reportes legítimos. Usarlo para reportes falsos viola los términos del servicio y puede tener consecuencias legales.",
+  "enlace_aviso_legal": "/baneo/aviso-legal"
+}

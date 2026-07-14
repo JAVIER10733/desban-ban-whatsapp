@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tipos de Baneo de WhatsApp — Cuál tienes tú | DesbanWA</title>
+<meta name="description" content="Descubre los diferentes tipos de baneo de WhatsApp y cómo identificar cuál tienes. Temporal, permanente, Business o API. Solución para cada caso.">
+<link rel="icon" href="../../../../modules/shared/assets/images/favicons/favicon.ico">
+<link rel="stylesheet" href="../../../../modules/shared/styles/main.css">
+<link rel="stylesheet" href="tipos.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="../../../../index.html" class="nav-logo">Desban<span class="g">W</span><span class="r">A</span></a>
+  <ul class="nav-links">
+    <li><a href="../landing/">Desbaneo</a></li>
+    <li><a href="../planes/">Precios</a></li>
+    <li><a href="../proceso/">Cómo funciona</a></li>
+    <li><a href="../../../../modules/shared/pages/faq/">FAQ</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="../../../../modules/baneo/pages/landing/" class="btn-nav-ghost">Banear número</a>
+    <a href="../solicitud/" class="btn-nav-primary">Recuperar mi número →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="tipos-hero">
+  <div class="tipos-hero-content">
+    <div class="breadcrumb anim-1">
+      <a href="../../../../index.html">Inicio</a>
+      <span>/</span>
+      <a href="../landing/">Desbaneo</a>
+      <span>/</span>
+      <span class="bc-current">Tipos de baneo</span>
+    </div>
+    <div class="hero-badge anim-1">
+      <span class="badge-dot"></span>
+      Guía completa · Actualizada 2025
+    </div>
+    <h1 class="hero-title anim-2">¿Qué tipo de<br><span class="t-green">baneo tienes?</span></h1>
+    <p class="hero-sub anim-3">Identifica tu tipo de bloqueo y descubre la solución correcta para cada caso. No todos los baneos son iguales.</p>
+    <div class="hero-actions anim-3">
+      <a href="#quiz" class="btn-primary">Identificar mi baneo →</a>
+      <a href="#tipos" class="btn-ghost">Ver todos los tipos</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ DIAGNÓSTICO -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-inner">
+    <div class="section-tag">Diagnóstico rápido</div>
+    <h2 class="section-title">¿Qué ves en tu WhatsApp?</h2>
+    <p class="section-sub">Responde 2 preguntas y te decimos qué tipo de baneo tienes.</p>
+
+    <div class="quiz-wrap" id="quizWrap">
+
+      <!-- Q1 -->
+      <div class="quiz-step active" id="q1">
+        <div class="quiz-q">¿Puedes abrir WhatsApp normalmente?</div>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-next="q2" data-val="si">Sí, la app abre bien</button>
+          <button class="quiz-opt" data-next="result-api" data-val="no">No, me pide verificar el número</button>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="quiz-step" id="q2">
+        <div class="quiz-q">¿Qué mensaje aparece al intentar enviar?</div>
+        <div class="quiz-opts">
+          <button class="quiz-opt" data-next="result-temporal" data-val="temporal">"Tu cuenta fue suspendida temporalmente"</button>
+          <button class="quiz-opt" data-next="result-permanente" data-val="permanente">"Tu cuenta fue suspendida permanentemente"</button>
+          <button class="quiz-opt" data-next="result-business" data-val="business">Mensaje de baneo en cuenta Business</button>
+          <button class="quiz-opt" data-next="result-limitado" data-val="limitado">Puedo enviar pero con límites o restricciones</button>
+        </div>
+      </div>
+
+      <!-- RESULTADOS -->
+      <div class="quiz-result" id="result-temporal">
+        <div class="result-icon">⏱</div>
+        <div class="result-type">Baneo temporal</div>
+        <p>Tu número fue bloqueado de forma temporal. Es el más común y el más fácil de recuperar.</p>
+        <div class="result-actions">
+          <a href="#tipo-temporal" class="btn-primary-sm">Ver cómo resolverlo →</a>
+          <button class="quiz-restart">Reiniciar diagnóstico</button>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="result-permanente">
+        <div class="result-icon">🚫</div>
+        <div class="result-type">Baneo permanente</div>
+        <p>Tu número fue eliminado permanentemente. Requiere proceso de apelación especial.</p>
+        <div class="result-actions">
+          <a href="#tipo-permanente" class="btn-primary-sm">Ver cómo resolverlo →</a>
+          <button class="quiz-restart">Reiniciar diagnóstico</button>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="result-business">
+        <div class="result-icon">💼</div>
+        <div class="result-type">Baneo de cuenta Business</div>
+        <p>Tu cuenta WhatsApp Business fue suspendida. Afecta tu operación comercial.</p>
+        <div class="result-actions">
+          <a href="#tipo-business" class="btn-primary-sm">Ver cómo resolverlo →</a>
+          <button class="quiz-restart">Reiniciar diagnóstico</button>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="result-api">
+        <div class="result-icon">🔌</div>
+        <div class="result-type">Número de API baneado</div>
+        <p>Tu número integrado a la API de WhatsApp fue bloqueado.</p>
+        <div class="result-actions">
+          <a href="#tipo-api" class="btn-primary-sm">Ver cómo resolverlo →</a>
+          <button class="quiz-restart">Reiniciar diagnóstico</button>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="result-limitado">
+        <div class="result-icon">⚠</div>
+        <div class="result-type">Restricción de mensajes</div>
+        <p>Tu número tiene limitaciones pero no está completamente baneado. Actúa antes de que escale.</p>
+        <div class="result-actions">
+          <a href="#tipo-restriccion" class="btn-primary-sm">Ver cómo resolverlo →</a>
+          <button class="quiz-restart">Reiniciar diagnóstico</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="quiz-progress" id="quizProgress">
+      <div class="qp-bar" id="quizBar" style="width:50%"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPOS DETALLADOS -->
+<section class="tipos-section" id="tipos">
+  <div class="tipos-inner">
+    <div class="section-tag">Todos los tipos</div>
+    <h2 class="section-title">Los 5 tipos de baneo<br>de WhatsApp</h2>
+
+    <!-- TIPO 1 -->
+    <div class="tipo-card reveal" id="tipo-temporal">
+      <div class="tipo-header">
+        <div class="tipo-icon-wrap green">⏱</div>
+        <div>
+          <div class="tipo-tag green-tag">Más común · 60% de los casos</div>
+          <h3 class="tipo-title">Baneo temporal</h3>
+        </div>
+        <div class="tipo-dificultad">
+          <div class="dif-label">Dificultad de recuperación</div>
+          <div class="dif-bars">
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar"></div>
+            <div class="dif-bar"></div>
+            <div class="dif-bar"></div>
+          </div>
+          <div class="dif-txt">Baja</div>
+        </div>
+      </div>
+      <div class="tipo-body">
+        <div class="tipo-col">
+          <h4>¿Qué es?</h4>
+          <p>WhatsApp suspende temporalmente tu número cuando detecta actividad inusual. El mensaje típico dice "Tu cuenta fue suspendida temporalmente". El bloqueo dura entre 24 horas y 30 días según la gravedad.</p>
+          <h4>Causas más comunes</h4>
+          <ul class="tipo-list">
+            <li>Envío masivo de mensajes en poco tiempo</li>
+            <li>Múltiples reportes de otros usuarios</li>
+            <li>Uso de versiones no oficiales de WhatsApp</li>
+            <li>Cambio frecuente de número o dispositivo</li>
+            <li>Mensajes con contenido marcado como spam</li>
+          </ul>
+        </div>
+        <div class="tipo-col">
+          <h4>Cómo identificarlo</h4>
+          <div class="identificador">
+            <div class="id-item">
+              <span class="id-icon">📱</span>
+              La app abre normalmente
+            </div>
+            <div class="id-item">
+              <span class="id-icon">💬</span>
+              No puedes enviar mensajes
+            </div>
+            <div class="id-item">
+              <span class="id-icon">⚠</span>
+              Aparece mensaje de suspensión temporal
+            </div>
+            <div class="id-item">
+              <span class="id-icon">⏳</span>
+              Muestra un contador de tiempo
+            </div>
+          </div>
+          <div class="tipo-cta">
+            <a href="../solicitud/?tipo=temporal" class="btn-green-sm">Resolver este baneo →</a>
+            <div class="tipo-precio">Desde $19 USD · Plan Básico</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIPO 2 -->
+    <div class="tipo-card reveal" id="tipo-permanente">
+      <div class="tipo-header">
+        <div class="tipo-icon-wrap red">🚫</div>
+        <div>
+          <div class="tipo-tag red-tag">Avanzado · 25% de los casos</div>
+          <h3 class="tipo-title">Baneo permanente</h3>
+        </div>
+        <div class="tipo-dificultad">
+          <div class="dif-label">Dificultad de recuperación</div>
+          <div class="dif-bars">
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar"></div>
+          </div>
+          <div class="dif-txt">Alta</div>
+        </div>
+      </div>
+      <div class="tipo-body">
+        <div class="tipo-col">
+          <h4>¿Qué es?</h4>
+          <p>Meta elimina permanentemente el número de WhatsApp por violaciones graves o reiteradas. El mensaje dice "Tu cuenta fue suspendida permanentemente". Sin intervención, el número nunca vuelve.</p>
+          <h4>Causas más comunes</h4>
+          <ul class="tipo-list">
+            <li>Violaciones repetidas de los términos de servicio</li>
+            <li>Distribución de contenido ilegal o peligroso</li>
+            <li>Spam masivo y sostenido en el tiempo</li>
+            <li>Actividad fraudulenta detectada por Meta</li>
+            <li>Incumplimiento de políticas tras baneo temporal previo</li>
+          </ul>
+        </div>
+        <div class="tipo-col">
+          <h4>Cómo identificarlo</h4>
+          <div class="identificador">
+            <div class="id-item">
+              <span class="id-icon">📱</span>
+              La app abre pero no funciona
+            </div>
+            <div class="id-item">
+              <span class="id-icon">🚫</span>
+              Mensaje de suspensión permanente
+            </div>
+            <div class="id-item">
+              <span class="id-icon">❌</span>
+              No hay contador de tiempo
+            </div>
+            <div class="id-item">
+              <span class="id-icon">📞</span>
+              No puedes recibir ni enviar
+            </div>
+          </div>
+          <div class="tipo-cta">
+            <a href="../solicitud/?tipo=permanente" class="btn-green-sm">Resolver este baneo →</a>
+            <div class="tipo-precio">Desde $39 USD · Plan Pro</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIPO 3 -->
+    <div class="tipo-card reveal" id="tipo-business">
+      <div class="tipo-header">
+        <div class="tipo-icon-wrap amber">💼</div>
+        <div>
+          <div class="tipo-tag amber-tag">Prioridad alta · 10% de los casos</div>
+          <h3 class="tipo-title">Baneo de WhatsApp Business</h3>
+        </div>
+        <div class="tipo-dificultad">
+          <div class="dif-label">Dificultad de recuperación</div>
+          <div class="dif-bars">
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar"></div>
+            <div class="dif-bar"></div>
+          </div>
+          <div class="dif-txt">Media-alta</div>
+        </div>
+      </div>
+      <div class="tipo-body">
+        <div class="tipo-col">
+          <h4>¿Qué es?</h4>
+          <p>Tu cuenta de WhatsApp Business fue suspendida por Meta. Esto afecta directamente la operación de tu negocio, comunicación con clientes y ventas. Requiere documentación empresarial adicional.</p>
+          <h4>Causas más comunes</h4>
+          <ul class="tipo-list">
+            <li>Envío de mensajes no solicitados a listas de clientes</li>
+            <li>Uso de plantillas de mensajes no aprobadas</li>
+            <li>Tasa alta de bloqueos por parte de clientes</li>
+            <li>Violación de políticas comerciales de Meta</li>
+            <li>Catálogo con productos o servicios prohibidos</li>
+          </ul>
+        </div>
+        <div class="tipo-col">
+          <h4>Cómo identificarlo</h4>
+          <div class="identificador">
+            <div class="id-item"><span class="id-icon">💼</span>Cuenta Business bloqueada</div>
+            <div class="id-item"><span class="id-icon">📊</span>Panel de Business Manager suspendido</div>
+            <div class="id-item"><span class="id-icon">🛍</span>Catálogo inaccesible</div>
+            <div class="id-item"><span class="id-icon">📩</span>No puedes enviar mensajes masivos</div>
+          </div>
+          <div class="tipo-cta">
+            <a href="../solicitud/?tipo=business" class="btn-green-sm">Resolver este baneo →</a>
+            <div class="tipo-precio">Desde $69 USD · Plan Business</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIPO 4 -->
+    <div class="tipo-card reveal" id="tipo-api">
+      <div class="tipo-header">
+        <div class="tipo-icon-wrap blue">🔌</div>
+        <div>
+          <div class="tipo-tag blue-tag">Empresarial · 4% de los casos</div>
+          <h3 class="tipo-title">Número de API baneado</h3>
+        </div>
+        <div class="tipo-dificultad">
+          <div class="dif-label">Dificultad de recuperación</div>
+          <div class="dif-bars">
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar filled"></div>
+          </div>
+          <div class="dif-txt">Muy alta</div>
+        </div>
+      </div>
+      <div class="tipo-body">
+        <div class="tipo-col">
+          <h4>¿Qué es?</h4>
+          <p>Un número integrado a la API oficial de WhatsApp Business fue suspendido. Afecta sistemas enteros de mensajería automatizada, CRMs y plataformas de atención al cliente.</p>
+          <h4>Causas más comunes</h4>
+          <ul class="tipo-list">
+            <li>Tasa de opt-out superior al límite permitido</li>
+            <li>Calidad de mensajes marcada como baja por Meta</li>
+            <li>Envío fuera de las ventanas de conversación permitidas</li>
+            <li>Uso de plantillas no aprobadas o modificadas</li>
+            <li>Violación de políticas de la plataforma de API</li>
+          </ul>
+        </div>
+        <div class="tipo-col">
+          <h4>Cómo identificarlo</h4>
+          <div class="identificador">
+            <div class="id-item"><span class="id-icon">🔌</span>API deja de responder</div>
+            <div class="id-item"><span class="id-icon">📉</span>Error en el dashboard de Meta</div>
+            <div class="id-item"><span class="id-icon">🛑</span>Mensajes automáticos no se envían</div>
+            <div class="id-item"><span class="id-icon">⚙</span>Error 470 o similar en la API</div>
+          </div>
+          <div class="tipo-cta">
+            <a href="../solicitud/?tipo=api" class="btn-green-sm">Resolver este baneo →</a>
+            <div class="tipo-precio">Desde $149 USD · Plan Enterprise</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIPO 5 -->
+    <div class="tipo-card reveal" id="tipo-restriccion">
+      <div class="tipo-header">
+        <div class="tipo-icon-wrap gray">⚠</div>
+        <div>
+          <div class="tipo-tag gray-tag">Preventivo · 1% de los casos</div>
+          <h3 class="tipo-title">Restricción de mensajes</h3>
+        </div>
+        <div class="tipo-dificultad">
+          <div class="dif-label">Dificultad de recuperación</div>
+          <div class="dif-bars">
+            <div class="dif-bar filled"></div>
+            <div class="dif-bar"></div>
+            <div class="dif-bar"></div>
+            <div class="dif-bar"></div>
+            <div class="dif-bar"></div>
+          </div>
+          <div class="dif-txt">Muy baja</div>
+        </div>
+      </div>
+      <div class="tipo-body">
+        <div class="tipo-col">
+          <h4>¿Qué es?</h4>
+          <p>Tu número puede enviar mensajes pero con limitaciones: no puedes agregar personas a grupos, enviar a desconocidos o tu velocidad de envío está reducida. Es una advertencia previa al baneo total.</p>
+          <h4>Señales de alerta</h4>
+          <ul class="tipo-list">
+            <li>No puedes agregar contactos a grupos</li>
+            <li>Mensajes a desconocidos requieren aprobación previa</li>
+            <li>Advertencias de "actividad inusual" en la app</li>
+            <li>Mensajes entregados con retraso</li>
+            <li>Función de difusión deshabilitada</li>
+          </ul>
+        </div>
+        <div class="tipo-col">
+          <h4>Qué hacer ahora</h4>
+          <div class="identificador">
+            <div class="id-item"><span class="id-icon">✓</span>Deja de enviar masivamente</div>
+            <div class="id-item"><span class="id-icon">✓</span>Usa solo la app oficial</div>
+            <div class="id-item"><span class="id-icon">✓</span>Solicita recuperación preventiva</div>
+            <div class="id-item"><span class="id-icon">⚡</span>Actúa antes de que escale</div>
+          </div>
+          <div class="tipo-cta">
+            <a href="../solicitud/?tipo=restriccion" class="btn-green-sm">Recuperación preventiva →</a>
+            <div class="tipo-precio">Desde $19 USD · Plan Básico</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-bg"></div>
+  <div class="cta-content">
+    <h2 class="cta-title">¿Ya sabes qué<br>tipo de baneo tienes?</h2>
+    <p class="cta-sub">Inicia la recuperación ahora. Diagnóstico gratuito antes de pagar.</p>
+    <a href="../solicitud/" class="btn-primary">Iniciar recuperación →</a>
+    <div class="cta-trust">
+      <span>✓ Diagnóstico gratis</span>
+      <span>✓ Sin acceso a tu teléfono</span>
+      <span>✓ Garantía de devolución</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Desban<span class="g">W</span><span class="r">A</span></div>
+      <p>Servicio profesional de desbaneo y baneo de números WhatsApp.</p>
+      <p class="footer-legal">Servicio independiente. No afiliado a Meta ni WhatsApp.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Desbaneo</div>
+      <a href="../landing/">Landing</a>
+      <a href="../solicitud/">Solicitud</a>
+      <a href="../planes/">Planes</a>
+      <a href="../proceso/">Proceso</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Empresa</div>
+      <a href="../../../../modules/shared/pages/nosotros/">Nosotros</a>
+      <a href="../../../../modules/shared/pages/faq/">FAQ</a>
+      <a href="../../../../modules/shared/pages/contacto/">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <a href="../../../../modules/shared/pages/legal/privacidad.html">Privacidad</a>
+      <a href="../../../../modules/shared/pages/legal/terminos.html">Términos</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 DesbanWA</span>
+    <a href="../../../../modules/baneo/pages/landing/" class="footer-other">¿Necesitas banear un número? →</a>
+  </div>
+</footer>
+
+<script src="../../../../modules/shared/js/main.js" defer></script>
+<script src="tipos.js" defer></script>
+</body>
+</html>

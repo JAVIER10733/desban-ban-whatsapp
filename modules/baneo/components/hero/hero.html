@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="./hero.css">
+<section class="hero-baneo" id="heroBaneo" aria-label="Sección principal">
+
+  <!-- FONDOS -->
+  <div class="hb-bg"         aria-hidden="true"></div>
+  <div class="hb-grid"       aria-hidden="true"></div>
+  <div class="hb-glow-left"  aria-hidden="true"></div>
+  <div class="hb-glow-right" aria-hidden="true"></div>
+
+  <!-- CONTENIDO -->
+  <div class="hb-content">
+
+    <!-- BADGE -->
+    <div class="hb-badge anim-1" id="hbBadge">
+      <span class="hb-badge-dot"></span>
+      <span class="hb-badge-txt">Proceso 100% anónimo · +1.200 números baneados</span>
+    </div>
+
+    <!-- TÍTULO -->
+    <h1 class="hb-title anim-2">
+      <span class="hb-title-line" id="hbLine1">Un número</span>
+      <span class="hb-title-line" id="hbLine2">te acosa.</span>
+      <span class="hb-title-accent anim-3" id="hbLine3">Lo baneamos.</span>
+    </h1>
+
+    <!-- SUBTÍTULO -->
+    <p class="hb-sub anim-3">
+      Reportamos números problemáticos directamente ante Meta para que sean bloqueados de WhatsApp.
+      Sin que sepan quién lo reportó.
+    </p>
+
+    <!-- CTA -->
+    <div class="hb-actions anim-4">
+      <a href="../../pages/solicitud/" class="hb-btn-primary" id="hbBtnPrimary">
+        <span>Reportar número ahora</span>
+        <svg class="hb-btn-arrow" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+        </svg>
+      </a>
+      <a href="../../pages/proceso/" class="hb-btn-ghost">
+        Ver cómo funciona
+      </a>
+    </div>
+
+    <!-- TRUST BADGES -->
+    <div class="hb-trust anim-4" role="list" aria-label="Garantías del servicio">
+      <div class="hb-trust-item" role="listitem">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        100% anónimo
+      </div>
+      <div class="hb-trust-item" role="listitem">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        Sin acceso a tu teléfono
+      </div>
+      <div class="hb-trust-item" role="listitem">
+        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        Garantía de devolución
+      </div>
+    </div>
+
+  </div>
+
+  <!-- VISUAL / MOCKUP -->
+  <div class="hb-visual anim-3" aria-hidden="true">
+
+    <!-- TERMINAL MOCKUP -->
+    <div class="hb-terminal" id="hbTerminal">
+      <div class="terminal-bar">
+        <div class="t-dot t-red"></div>
+        <div class="t-dot t-amber"></div>
+        <div class="t-dot t-green"></div>
+        <span class="t-title">desbanwa — reporte</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <div class="t-line" id="tl1">
+          <span class="t-prompt">$</span>
+          <span class="t-cmd"> iniciar-reporte <span class="t-arg">--numero +52·····4782</span></span>
+        </div>
+        <div class="t-line t-output hidden" id="tl2">
+          <span class="t-ok">✓</span> Número verificado
+        </div>
+        <div class="t-line t-output hidden" id="tl3">
+          <span class="t-ok">✓</span> Caso registrado <span class="t-dim">#BAN-1847</span>
+        </div>
+        <div class="t-line t-output hidden" id="tl4">
+          <span class="t-loading" id="tLoading">◌</span>
+          <span id="tLoadingTxt"> Enviando reporte a Meta...</span>
+        </div>
+        <div class="t-line t-output hidden" id="tl5">
+          <span class="t-success">●</span>
+          <span class="t-success-txt"> Número baneado exitosamente</span>
+        </div>
+        <div class="t-cursor hidden" id="tCursor">█</div>
+      </div>
+    </div>
+
+    <!-- STAT FLOATS -->
+    <div class="hb-stat-float hb-stat-1" id="hbStat1">
+      <div class="hsf-num">94%</div>
+      <div class="hsf-lbl">Tasa de éxito</div>
+    </div>
+    <div class="hb-stat-float hb-stat-2" id="hbStat2">
+      <div class="hsf-num">24h</div>
+      <div class="hsf-lbl">Promedio</div>
+    </div>
+    <div class="hb-stat-float hb-stat-3" id="hbStat3">
+      <div class="hsf-num">🔒</div>
+      <div class="hsf-lbl">Anónimo</div>
+    </div>
+
+  </div>
+
+  <!-- SCROLL HINT -->
+  <div class="hb-scroll-hint" aria-hidden="true">
+    <span>scroll</span>
+    <div class="hb-scroll-line"></div>
+  </div>
+
+</section>
+<script src="./hero.js"></script>

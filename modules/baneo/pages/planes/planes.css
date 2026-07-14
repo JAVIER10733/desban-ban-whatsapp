@@ -1,0 +1,174 @@
+/* =============================================
+   planes.css — Módulo Desbaneo / Planes
+============================================= */
+:root {
+  --green:#25D366;--green-dark:#075E54;--red:#E24B4A;
+  --bg:#0d0d0d;--bg2:#111;--bg3:#181818;
+  --text:#f5f5f5;--muted:#777;--border:rgba(255,255,255,0.07);
+  --radius:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.anim-1{animation:fadeUp .7s .0s ease both}
+.anim-2{animation:fadeUp .7s .15s ease both}
+.anim-3{animation:fadeUp .7s .3s ease both}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;background:rgba(13,13,13,.92);backdrop-filter:blur(14px);border-bottom:.5px solid var(--border)}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px}
+.nav-logo .g{color:var(--green)}.nav-logo .r{color:var(--red)}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{font-size:.84rem;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-actions{display:flex;gap:.6rem;align-items:center}
+.btn-nav-ghost{font-size:.82rem;color:var(--muted);padding:.45rem 1rem;border:.5px solid var(--border);border-radius:6px;transition:all .2s}
+.btn-nav-ghost:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+.btn-nav-primary{background:var(--green);color:#fff;padding:.45rem 1.1rem;border-radius:6px;font-size:.82rem;font-weight:500;transition:opacity .2s}
+.btn-nav-primary:hover{opacity:.85}
+
+/* HERO */
+.planes-hero{padding:8rem 2rem 4rem;text-align:center;border-bottom:.5px solid var(--border);position:relative;overflow:hidden}
+.planes-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 100%,rgba(37,211,102,.06),transparent);pointer-events:none}
+.planes-hero-content{position:relative;z-index:1;max-width:600px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,.08);border:.5px solid rgba(37,211,102,.2);padding:.35rem 1rem;border-radius:100px;font-size:.75rem;color:var(--green);margin-bottom:1.5rem}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);line-height:1;letter-spacing:1px;margin-bottom:1rem}
+.t-green{color:var(--green)}
+.hero-sub{color:var(--muted);font-size:1rem;font-weight:300;line-height:1.7;margin-bottom:2rem}
+
+/* TOGGLE */
+.toggle-wrap{display:inline-flex;background:var(--bg2);border:.5px solid var(--border);border-radius:8px;padding:4px;gap:4px}
+.toggle-btn{background:none;border:none;color:var(--muted);padding:.5rem 1.4rem;border-radius:6px;font-size:.85rem;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .2s}
+.toggle-btn.active{background:var(--green);color:#fff}
+
+/* PLANES */
+.planes-section{padding:4rem 2rem;border-bottom:.5px solid var(--border)}
+.planes-inner{max-width:1100px;margin:0 auto}
+.planes-group{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.planes-group.hidden{display:none}
+
+.plan-card{background:var(--bg2);border:.5px solid var(--border);border-radius:var(--radius);padding:2rem;position:relative;transition:border-color .2s;display:flex;flex-direction:column}
+.plan-card:hover{border-color:rgba(255,255,255,.15)}
+.plan-card.plan-popular{border:2px solid var(--green)}
+.popular-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:.68rem;font-weight:600;padding:3px 14px;border-radius:100px;white-space:nowrap}
+
+.plan-header{margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--border)}
+.plan-name{font-size:.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-weight:500;margin-bottom:.5rem}
+.plan-price{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:1px;line-height:1;color:var(--text);margin-bottom:.4rem}
+.price-currency{font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:300;color:var(--muted)}
+.plan-desc{font-size:.8rem;color:var(--muted);font-weight:300}
+
+.plan-features{list-style:none;margin-bottom:1.8rem;flex:1;display:flex;flex-direction:column;gap:0}
+.plan-features li{display:flex;align-items:center;gap:10px;font-size:.82rem;padding:7px 0;border-bottom:.5px solid var(--border)}
+.plan-features li:last-child{border-bottom:none}
+.feat-yes{color:var(--text)}
+.feat-no{color:var(--muted);opacity:.45}
+.feat-yes::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+.feat-no::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--border);border:.5px solid var(--border);flex-shrink:0}
+
+.btn-plan{display:block;text-align:center;border:.5px solid var(--border);color:var(--muted);padding:.8rem;border-radius:8px;font-size:.88rem;transition:all .2s;margin-bottom:.8rem}
+.btn-plan:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+.btn-plan.btn-plan-primary{background:var(--green);color:#fff;border-color:var(--green)}
+.btn-plan.btn-plan-primary:hover{opacity:.88}
+.plan-note{text-align:center;font-size:.7rem;color:var(--muted)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* COMPARATIVA */
+.comparativa-section{padding:5rem 2rem;border-bottom:.5px solid var(--border);background:var(--bg2)}
+.comparativa-inner{max-width:900px;margin:0 auto}
+.section-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:3px;color:var(--green);font-weight:500;margin-bottom:.8rem}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:1px;margin-bottom:2rem}
+.table-wrap{overflow-x:auto}
+.compare-table{width:100%;border-collapse:collapse;font-size:.82rem}
+.compare-table th{padding:1rem 1.2rem;text-align:center;font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);border-bottom:.5px solid var(--border)}
+.compare-table th span{display:block;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:1px;color:var(--text);font-weight:400;text-transform:none;margin-top:2px}
+.th-popular{color:var(--green)!important;border-bottom:2px solid var(--green)!important}
+.th-popular span{color:var(--green)!important}
+.feat-col{text-align:left!important;color:var(--text)!important}
+.compare-table td{padding:.85rem 1.2rem;text-align:center;border-bottom:.5px solid var(--border);color:var(--muted)}
+.feat-col.compare-table td,.compare-table td.feat-col{text-align:left;color:var(--text)}
+.yes-cell{color:var(--green);font-weight:500}
+.no-cell{color:var(--border);opacity:.5}
+.compare-table tr:last-child td{border-bottom:none;padding-top:1.2rem}
+.btn-table{display:inline-block;padding:.5rem 1.2rem;border:.5px solid var(--border);border-radius:6px;font-size:.78rem;color:var(--muted);transition:all .2s}
+.btn-table:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+.btn-table.btn-table-primary{background:var(--green);color:#fff;border-color:var(--green)}
+.btn-table.btn-table-primary:hover{opacity:.88}
+
+/* GARANTIA */
+.garantia-section{padding:4rem 2rem;border-bottom:.5px solid var(--border)}
+.garantia-inner{max-width:800px;margin:0 auto;display:flex;gap:2rem;align-items:flex-start;background:rgba(37,211,102,.04);border:.5px solid rgba(37,211,102,.15);border-radius:var(--radius);padding:2.5rem}
+.garantia-icon{font-size:2.5rem;flex-shrink:0}
+.garantia-body h2{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:1px;margin-bottom:.8rem}
+.garantia-body p{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:1.2rem}
+.garantia-items{display:flex;flex-direction:column;gap:.4rem}
+.garantia-item{font-size:.82rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+.gi-check{color:var(--green);font-weight:600}
+
+/* FAQ */
+.faq-section{padding:5rem 2rem;border-bottom:.5px solid var(--border);background:var(--bg2)}
+.faq-inner{max-width:700px;margin:0 auto}
+.faq-list{margin-top:2rem;display:flex;flex-direction:column}
+.faq-item{border-bottom:.5px solid var(--border)}
+.faq-item:first-child{border-top:.5px solid var(--border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--text);font-size:.88rem;font-family:'DM Sans',sans-serif;padding:1rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color .2s}
+.faq-q:hover{color:var(--green)}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--muted);flex-shrink:0;transition:transform .3s}
+.faq-q[aria-expanded="true"]{color:var(--green)}
+.faq-q[aria-expanded="true"]::after{transform:rotate(45deg)}
+.faq-a{font-size:.82rem;color:var(--muted);line-height:1.7;font-weight:300;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
+.faq-a.open{max-height:200px;padding-bottom:1rem}
+
+/* CTA FINAL */
+.cta-final{padding:7rem 2rem;text-align:center;position:relative;overflow:hidden}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 50% 100%,rgba(37,211,102,.06),transparent)}
+.cta-content{position:relative;z-index:1}
+.cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);letter-spacing:2px;margin-bottom:1rem}
+.cta-sub{color:var(--muted);font-size:1rem;font-weight:300;margin-bottom:2.5rem}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;padding:.85rem 1.8rem;border-radius:8px;font-size:.92rem;font-weight:500;transition:opacity .2s,transform .15s}
+.btn-primary:hover{opacity:.88;transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;color:var(--muted);font-size:.88rem;border:.5px solid var(--border);padding:.85rem 1.5rem;border-radius:8px;transition:all .2s}
+.btn-ghost:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+
+/* FOOTER */
+.footer{background:var(--bg2);border-top:.5px solid var(--border)}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding:4rem 2rem 3rem}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;margin-bottom:.8rem}
+.footer-logo .g{color:var(--green)}.footer-logo .r{color:var(--red)}
+.footer-brand p{font-size:.82rem;color:var(--muted);line-height:1.6;font-weight:300;margin-bottom:.4rem}
+.footer-legal{font-size:.72rem!important;opacity:.6}
+.footer-col-title{font-size:.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:1rem;font-weight:500}
+.footer-col{display:flex;flex-direction:column;gap:.5rem}
+.footer-col a{font-size:.82rem;color:var(--muted);transition:color .2s}
+.footer-col a:hover{color:var(--text)}
+.footer-bottom{max-width:1100px;margin:0 auto;padding:1.2rem 2rem;border-top:.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--muted)}
+.footer-other{color:var(--green)}
+.footer-other:hover{text-decoration:underline}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:200;width:52px;height:52px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.35);animation:float 3s ease-in-out infinite;transition:transform .2s}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:26px;height:26px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .planes-group{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:600px){
+  .nav-links{display:none}
+  .btn-nav-ghost{display:none}
+  .garantia-inner{flex-direction:column}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:.5rem;text-align:center}
+}

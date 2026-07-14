@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banear número de WhatsApp — Reporta y bloquea | DesbanWA</title>
+<meta name="description" content="Reporta y banea números de WhatsApp que te acosan, hacen spam o estafan. Proceso anónimo, confidencial y efectivo. Resultados en 24-72 horas.">
+<meta property="og:title" content="Banear número de WhatsApp — DesbanWA">
+<meta property="og:description" content="Reporta números problemáticos de WhatsApp. Proceso anónimo y confidencial.">
+<meta property="og:image" content="../../../../modules/shared/assets/images/og/og-baneo.png">
+<link rel="icon" href="../../../../modules/shared/assets/images/favicons/favicon.ico">
+<link rel="stylesheet" href="../../../../modules/shared/styles/main.css">
+<link rel="stylesheet" href="landing.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="../../../../index.html" class="nav-logo">
+    Desban<span class="g">W</span><span class="r">A</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../proceso/index.html">Cómo funciona</a></li>
+    <li><a href="../planes/index.html">Precios</a></li>
+    <li><a href="../razones/index.html">Por qué banear</a></li>
+    <li><a href="../aviso-legal/index.html">Aviso legal</a></li>
+    <li><a href="../../../../modules/shared/pages/faq/index.html">FAQ</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="../../../../modules/desbaneo/pages/landing/" class="btn-nav-ghost">Desbanear número</a>
+    <a href="../solicitud/" class="btn-nav-red">Banear número →</a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge anim-1">
+      <span class="badge-dot"></span>
+      Proceso 100% anónimo · +1.200 números baneados
+    </div>
+    <h1 class="hero-title anim-2">
+      Un número te<br>
+      acosa o estafa.<br>
+      <span class="title-accent">Lo baneamos.</span>
+    </h1>
+    <p class="hero-sub anim-3">
+      Reportamos números problemáticos directamente ante Meta para que sean bloqueados de WhatsApp. Sin que sepan quién lo reportó. Sin complicaciones.
+    </p>
+    <div class="hero-actions anim-4">
+      <a href="../solicitud/" class="btn-red">
+        Reportar número ahora
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </a>
+      <a href="../proceso/" class="btn-ghost">Ver cómo funciona</a>
+    </div>
+    <div class="hero-trust anim-4">
+      <div class="trust-item">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        100% anónimo
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Sin acceso a tu teléfono
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Garantía de devolución
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual anim-3">
+    <div class="report-mockup">
+      <div class="report-header">
+        <div class="report-dot red"></div>
+        <div class="report-dot amber"></div>
+        <div class="report-dot green"></div>
+        <span class="report-title">Reporte en progreso</span>
+      </div>
+      <div class="report-body">
+        <div class="report-row">
+          <span class="report-label">Número</span>
+          <span class="report-val">+52 55 ···· 4782</span>
+        </div>
+        <div class="report-row">
+          <span class="report-label">Motivo</span>
+          <span class="report-val">Acoso y spam</span>
+        </div>
+        <div class="report-row">
+          <span class="report-label">Estado</span>
+          <span class="report-status" id="reportStatus">Procesando...</span>
+        </div>
+        <div class="report-progress-wrap">
+          <div class="report-progress-bar" id="reportProgress"></div>
+        </div>
+        <div class="report-log" id="reportLog">
+          <div class="log-item active" id="log1">✓ Solicitud recibida</div>
+          <div class="log-item" id="log2">○ Verificando datos...</div>
+          <div class="log-item" id="log3">○ Enviando a Meta</div>
+          <div class="log-item" id="log4">○ Número baneado</div>
+        </div>
+      </div>
+    </div>
+    <div class="stat-float stat-1">
+      <div class="stat-float-num">94%</div>
+      <div class="stat-float-lbl">Tasa de éxito</div>
+    </div>
+    <div class="stat-float stat-2">
+      <div class="stat-float-num">24h</div>
+      <div class="stat-float-lbl">Promedio</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num red" data-target="1200">0</div>
+      <div class="stat-lbl">Números baneados</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num red" data-target="94" data-suffix="%">0%</div>
+      <div class="stat-lbl">Tasa de éxito</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num red" data-target="24" data-suffix="h">0h</div>
+      <div class="stat-lbl">Tiempo promedio</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat-item">
+      <div class="stat-num red" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-lbl">Proceso anónimo</div>
+    </div>
+  </div>
+</div>
+
+<!-- RAZONES -->
+<section class="section razones-section" id="razones">
+  <div class="section-inner">
+    <div class="section-tag">Para qué sirve</div>
+    <h2 class="section-title">¿Cuándo deberías<br>banear un número?</h2>
+    <p class="section-sub">Este servicio existe para proteger a personas de números que violan los términos de WhatsApp.</p>
+    <div class="razones-grid">
+      <div class="razon-card reveal">
+        <div class="razon-icon">📵</div>
+        <h3>Acoso y amenazas</h3>
+        <p>Recibes mensajes intimidatorios, amenazas o contenido que te hace sentir en peligro.</p>
+      </div>
+      <div class="razon-card reveal">
+        <div class="razon-icon">📩</div>
+        <h3>Spam masivo</h3>
+        <p>Un número te envía publicidad no solicitada de forma masiva y repetitiva sin parar.</p>
+      </div>
+      <div class="razon-card reveal">
+        <div class="razon-icon">💸</div>
+        <h3>Estafas y fraudes</h3>
+        <p>El número intenta engañarte con ofertas falsas, phishing o solicitudes de dinero.</p>
+      </div>
+      <div class="razon-card reveal">
+        <div class="razon-icon">🎭</div>
+        <h3>Suplantación</h3>
+        <p>Alguien usa un número para hacerse pasar por otra persona o empresa de forma fraudulenta.</p>
+      </div>
+      <div class="razon-card reveal">
+        <div class="razon-icon">🔞</div>
+        <h3>Contenido ilegal</h3>
+        <p>El número distribuye material prohibido, ofensivo o que viola la ley.</p>
+      </div>
+      <div class="razon-card reveal">
+        <div class="razon-icon">🤖</div>
+        <h3>Bots abusivos</h3>
+        <p>Números automatizados que generan actividad masiva violando las políticas de Meta.</p>
+      </div>
+    </div>
+    <div class="razones-aviso">
+      <span class="aviso-icon">⚖</span>
+      <span>Este servicio es solo para reportes legítimos. Lee el <a href="../aviso-legal/">aviso legal</a> antes de continuar.</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section class="section proceso-section" id="proceso">
+  <div class="section-inner">
+    <div class="section-tag">Cómo funciona</div>
+    <h2 class="section-title">4 pasos.<br>Completamente anónimo.</h2>
+    <div class="proceso-steps">
+      <div class="proceso-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Describe el caso</h3>
+          <p>Indica el número a reportar y el motivo. No necesitas identificarte ni dar datos personales.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="proceso-step reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Revisión del caso</h3>
+          <p>Verificamos que el reporte cumple con los criterios de uso legítimo antes de proceder.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="proceso-step reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>Reporte ante Meta</h3>
+          <p>Enviamos el reporte formal a Meta con la documentación que respalda el caso.</p>
+        </div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="proceso-step reveal">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3>Número baneado</h3>
+          <p>Te confirmamos cuando Meta aplica el baneo. Si no lo logra, devolvemos el pago.</p>
+        </div>
+      </div>
+    </div>
+    <div class="proceso-cta">
+      <a href="../solicitud/" class="btn-red">Reportar ahora →</a>
+      <a href="../proceso/" class="btn-ghost">Ver proceso completo</a>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section class="section planes-section" id="planes">
+  <div class="section-inner">
+    <div class="section-tag">Precios</div>
+    <h2 class="section-title">Planes de baneo.<br>Sin costos ocultos.</h2>
+    <p class="section-sub">Pago único. Garantía de devolución en planes Pro y Enterprise.</p>
+    <div class="planes-grid">
+      <div class="plan-card reveal">
+        <div class="plan-name">Básico</div>
+        <div class="plan-price">$29 <span>USD</span></div>
+        <ul class="plan-features">
+          <li>1 número</li>
+          <li>Reporte estándar</li>
+          <li>Respuesta en 72h</li>
+          <li>Soporte por chat</li>
+        </ul>
+        <a href="../solicitud/?plan=basico" class="btn-plan">Seleccionar</a>
+      </div>
+      <div class="plan-card plan-popular reveal">
+        <div class="popular-badge">Más elegido</div>
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">$49 <span>USD</span></div>
+        <ul class="plan-features">
+          <li>1 número</li>
+          <li>Reporte prioritario</li>
+          <li>Respuesta en 24h</li>
+          <li>Especialista dedicado</li>
+          <li>Garantía de devolución</li>
+        </ul>
+        <a href="../solicitud/?plan=pro" class="btn-plan btn-plan-red">Seleccionar</a>
+      </div>
+      <div class="plan-card reveal">
+        <div class="plan-name">Enterprise</div>
+        <div class="plan-price">$89 <span>USD</span></div>
+        <ul class="plan-features">
+          <li>Hasta 5 números</li>
+          <li>Reporte express</li>
+          <li>Respuesta en 12h</li>
+          <li>Asesor dedicado 24/7</li>
+          <li>Garantía de devolución</li>
+        </ul>
+        <a href="../solicitud/?plan=enterprise" class="btn-plan">Seleccionar</a>
+      </div>
+    </div>
+    <div class="planes-cta">
+      <a href="../planes/" class="btn-ghost">Ver comparativa completa →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="section testimonios-section" id="testimonios">
+  <div class="section-inner">
+    <div class="section-tag">Testimonios</div>
+    <h2 class="section-title">Personas que ya<br>están protegidas.</h2>
+    <div class="testimonios-grid">
+      <div class="testimonio reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Llevaba meses recibiendo amenazas de un número desconocido. Usé el servicio y en 48 horas lo banearon. El proceso fue completamente anónimo."</p>
+        <div class="t-author">
+          <div class="t-avatar">AL</div>
+          <div><div class="t-name">Andrea L.</div><div class="t-role">Cliente particular · México</div></div>
+        </div>
+      </div>
+      <div class="testimonio reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Un número estaba haciéndose pasar por mi empresa y estafando a mis clientes. Lo reporté aquí y en menos de 24 horas fue baneado."</p>
+        <div class="t-author">
+          <div class="t-avatar">PR</div>
+          <div><div class="t-name">Pablo R.</div><div class="t-role">Empresario · Colombia</div></div>
+        </div>
+      </div>
+      <div class="testimonio reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Recibía spam constante de un número de publicidad. Lo baneé con el plan básico. Rápido, simple y sin que nadie supiera que fui yo."</p>
+        <div class="t-author">
+          <div class="t-avatar">KM</div>
+          <div><div class="t-name">Karla M.</div><div class="t-role">Cliente particular · España</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section" id="faq">
+  <div class="section-inner faq-inner">
+    <div class="faq-left">
+      <div class="section-tag">Preguntas frecuentes</div>
+      <h2 class="section-title">Lo que más<br>nos preguntan.</h2>
+      <a href="../../../../modules/shared/pages/faq/" class="btn-ghost">Ver todas →</a>
+    </div>
+    <div class="faq-right">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Es completamente anónimo?</button>
+        <div class="faq-a">Sí. El número reportado nunca sabrá quién hizo el reporte. No compartimos tu identidad con Meta ni con nadie.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Puedo banear cualquier número?</button>
+        <div class="faq-a">No. Solo aceptamos reportes legítimos de números que violan los términos de WhatsApp. Lee el aviso legal antes de solicitar.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Qué pasa si el número no es baneado?</button>
+        <div class="faq-a">Con los planes Pro y Enterprise devolvemos el 100% de tu pago si Meta no aplica el baneo. Sin preguntas.</div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">¿Cuánto tarda el proceso?</button>
+        <div class="faq-a">El promedio es 24 a 72 horas. Casos complejos o que requieren más documentación pueden tomar hasta 5 días.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVISO LEGAL CTA -->
+<section class="aviso-cta-section">
+  <div class="aviso-cta-inner">
+    <div class="aviso-cta-icon">⚖</div>
+    <div class="aviso-cta-body">
+      <h3>Antes de continuar</h3>
+      <p>Este servicio es exclusivamente para reportes legítimos. Usarlo para reportar personas sin causa válida viola nuestros términos y puede tener consecuencias legales.</p>
+      <a href="../aviso-legal/" class="aviso-cta-link">Leer aviso legal completo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-bg"></div>
+  <div class="cta-content">
+    <h2 class="cta-title">¿Tienes un número<br>problemático?</h2>
+    <p class="cta-sub">Repórtalo ahora. Proceso anónimo. Resultados en 24-72 horas.</p>
+    <a href="../solicitud/" class="btn-red btn-lg">Reportar número ahora →</a>
+    <div class="cta-trust">
+      <span>✓ 100% anónimo</span>
+      <span>✓ Sin acceso a tu teléfono</span>
+      <span>✓ Garantía de devolución</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Desban<span class="g">W</span><span class="r">A</span></div>
+      <p>Servicio profesional de desbaneo y baneo de números WhatsApp.</p>
+      <p class="footer-legal">Servicio independiente. No afiliado a Meta ni WhatsApp.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Baneo</div>
+      <a href="../landing/">Landing</a>
+      <a href="../solicitud/">Solicitud</a>
+      <a href="../planes/">Planes</a>
+      <a href="../proceso/">Proceso</a>
+      <a href="../aviso-legal/">Aviso legal</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Empresa</div>
+      <a href="../../../../modules/shared/pages/nosotros/">Nosotros</a>
+      <a href="../../../../modules/shared/pages/blog/">Blog</a>
+      <a href="../../../../modules/shared/pages/faq/">FAQ</a>
+      <a href="../../../../modules/shared/pages/contacto/">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <a href="../../../../modules/shared/pages/legal/privacidad.html">Privacidad</a>
+      <a href="../../../../modules/shared/pages/legal/terminos.html">Términos</a>
+      <a href="../aviso-legal/">Aviso baneo</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 DesbanWA</span>
+    <a href="../../../../modules/desbaneo/pages/landing/" class="footer-other">¿Tu número está baneado? Recupéralo →</a>
+  </div>
+</footer>
+
+<script src="../../../../modules/shared/js/main.js" defer></script>
+<script src="landing.js" defer></script>
+</body>
+</html>

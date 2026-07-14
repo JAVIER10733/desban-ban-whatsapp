@@ -1,0 +1,133 @@
+{
+  "module": "baneo",
+  "version": "1.0",
+  "updated": "2025-01-01",
+  "currency": "USD",
+  "grupos": [
+    {
+      "id": "personal",
+      "label": "Personal",
+      "planes": [
+        {
+          "id": "baneo-basico",
+          "slug": "basico",
+          "nombre": "Básico",
+          "precio": 29,
+          "descripcion": "Para reportes simples y directos.",
+          "tiempo_respuesta": "72h",
+          "numeros_incluidos": 1,
+          "incluye_garantia": false,
+          "es_popular": false,
+          "features": [
+            "1 número",
+            "Reporte estándar ante Meta",
+            "Respuesta en 72 horas",
+            "Soporte por chat",
+            "Seguimiento del caso"
+          ],
+          "no_incluye": [
+            "Garantía de devolución",
+            "Especialista dedicado",
+            "Prioridad express"
+          ]
+        },
+        {
+          "id": "baneo-pro",
+          "slug": "pro",
+          "nombre": "Pro",
+          "precio": 49,
+          "descripcion": "Para reportes urgentes con garantía.",
+          "tiempo_respuesta": "24h",
+          "numeros_incluidos": 1,
+          "incluye_garantia": true,
+          "es_popular": true,
+          "badge": "Más elegido",
+          "features": [
+            "1 número",
+            "Reporte prioritario ante Meta",
+            "Respuesta en 24 horas",
+            "Especialista dedicado",
+            "Garantía de devolución 100%",
+            "Seguimiento en tiempo real"
+          ],
+          "no_incluye": [
+            "Prioridad express",
+            "Múltiples números"
+          ]
+        },
+        {
+          "id": "baneo-enterprise",
+          "slug": "enterprise",
+          "nombre": "Enterprise",
+          "precio": 89,
+          "descripcion": "Para múltiples reportes o casos urgentes.",
+          "tiempo_respuesta": "12h",
+          "numeros_incluidos": 5,
+          "incluye_garantia": true,
+          "es_popular": false,
+          "features": [
+            "Hasta 5 números",
+            "Reporte express ante Meta",
+            "Respuesta en 12 horas",
+            "Asesor dedicado 24/7",
+            "Garantía de devolución 100%",
+            "Seguimiento en tiempo real",
+            "Prioridad máxima"
+          ],
+          "no_incluye": []
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "label": "Business / API",
+      "planes": [
+        {
+          "id": "baneo-business",
+          "slug": "business",
+          "nombre": "Business",
+          "precio": 69,
+          "descripcion": "Para reportar cuentas WhatsApp Business.",
+          "tiempo_respuesta": "24h",
+          "numeros_incluidos": 1,
+          "incluye_garantia": false,
+          "es_popular": false,
+          "features": [
+            "1 número Business",
+            "Reporte con documentación empresarial",
+            "Respuesta en 24 horas",
+            "Asesor de negocio",
+            "Seguimiento del caso"
+          ],
+          "no_incluye": [
+            "Garantía de devolución",
+            "Múltiples números"
+          ]
+        },
+        {
+          "id": "baneo-business-pro",
+          "slug": "business-pro",
+          "nombre": "Business Pro",
+          "precio": 109,
+          "descripcion": "Para negocios con múltiples cuentas Business.",
+          "tiempo_respuesta": "12h",
+          "numeros_incluidos": 3,
+          "incluye_garantia": true,
+          "es_popular": true,
+          "badge": "Recomendado",
+          "features": [
+            "Hasta 3 números Business",
+            "Reporte express",
+            "Respuesta en 12 horas",
+            "Asesor dedicado 24/7",
+            "Garantía de devolución 100%",
+            "Seguimiento en tiempo real"
+          ],
+          "no_incluye": [
+            "Integración API"
+          ]
+        }
+      ]
+    }
+  ]
+}

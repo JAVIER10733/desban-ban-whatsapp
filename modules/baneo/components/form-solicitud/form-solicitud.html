@@ -1,0 +1,319 @@
+<link rel="stylesheet" href="./form-solicitud.css">
+<form class="form-solicitud" id="formSolicitud" novalidate autocomplete="off">
+
+  <!-- PASO 1 — Número y motivo -->
+  <fieldset class="form-fieldset active" id="fs1" data-step="1">
+    <legend class="fs-legend">
+      <span class="fs-num">01</span>
+      Número a reportar
+    </legend>
+
+    <div class="field-group">
+      <label class="field-label" for="fs-numero">
+        Número de WhatsApp
+        <span class="required">*</span>
+      </label>
+      <div class="phone-wrap">
+        <div class="country-select-wrap">
+          <button type="button" class="country-btn" id="countryBtn" aria-haspopup="listbox">
+            <span class="country-flag" id="countryFlag">🇲🇽</span>
+            <span class="country-code" id="countryCode">+52</span>
+            <span class="country-arrow">↓</span>
+          </button>
+          <ul class="country-dropdown hidden" id="countryDropdown" role="listbox">
+            <li role="option" data-code="+52"  data-flag="🇲🇽">🇲🇽 México +52</li>
+            <li role="option" data-code="+57"  data-flag="🇨🇴">🇨🇴 Colombia +57</li>
+            <li role="option" data-code="+34"  data-flag="🇪🇸">🇪🇸 España +34</li>
+            <li role="option" data-code="+1"   data-flag="🇺🇸">🇺🇸 EE.UU. +1</li>
+            <li role="option" data-code="+54"  data-flag="🇦🇷">🇦🇷 Argentina +54</li>
+            <li role="option" data-code="+56"  data-flag="🇨🇱">🇨🇱 Chile +56</li>
+            <li role="option" data-code="+51"  data-flag="🇵🇪">🇵🇪 Perú +51</li>
+            <li role="option" data-code="+58"  data-flag="🇻🇪">🇻🇪 Venezuela +58</li>
+            <li role="option" data-code="+593" data-flag="🇪🇨">🇪🇨 Ecuador +593</li>
+            <li role="option" data-code="+595" data-flag="🇵🇾">🇵🇾 Paraguay +595</li>
+            <li role="option" data-code="+598" data-flag="🇺🇾">🇺🇾 Uruguay +598</li>
+            <li role="option" data-code="+502" data-flag="🇬🇹">🇬🇹 Guatemala +502</li>
+          </ul>
+        </div>
+        <input
+          type="tel"
+          id="fs-numero"
+          name="numero"
+          class="field-input phone-input"
+          placeholder="55 1234 5678"
+          maxlength="15"
+          inputmode="numeric"
+          aria-describedby="numero-hint numero-error"
+        >
+      </div>
+      <div class="field-hint" id="numero-hint">Ingresa solo los dígitos, sin el código de país.</div>
+      <div class="field-error hidden" id="numero-error" role="alert">Ingresa un número válido.</div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">
+        Motivo del reporte
+        <span class="required">*</span>
+      </label>
+      <div class="motivo-grid" id="motivoGrid" role="radiogroup" aria-label="Motivo del reporte">
+        <button type="button" class="motivo-btn" data-value="acoso"            role="radio" aria-checked="false">
+          <span class="motivo-icon">📵</span>
+          <span class="motivo-txt">Acoso o amenazas</span>
+        </button>
+        <button type="button" class="motivo-btn" data-value="spam"             role="radio" aria-checked="false">
+          <span class="motivo-icon">📩</span>
+          <span class="motivo-txt">Spam masivo</span>
+        </button>
+        <button type="button" class="motivo-btn" data-value="estafa"           role="radio" aria-checked="false">
+          <span class="motivo-icon">💸</span>
+          <span class="motivo-txt">Estafa o fraude</span>
+        </button>
+        <button type="button" class="motivo-btn" data-value="suplantacion"     role="radio" aria-checked="false">
+          <span class="motivo-icon">🎭</span>
+          <span class="motivo-txt">Suplantación</span>
+        </button>
+        <button type="button" class="motivo-btn" data-value="contenido-ilegal" role="radio" aria-checked="false">
+          <span class="motivo-icon">🔞</span>
+          <span class="motivo-txt">Contenido ilegal</span>
+        </button>
+        <button type="button" class="motivo-btn" data-value="otro"             role="radio" aria-checked="false">
+          <span class="motivo-icon">⚙</span>
+          <span class="motivo-txt">Otro motivo</span>
+        </button>
+      </div>
+      <div class="field-error hidden" id="motivo-error" role="alert">Selecciona el motivo del reporte.</div>
+    </div>
+
+    <div class="field-group hidden" id="otroMotivoGroup">
+      <label class="field-label" for="fs-otro-motivo">
+        Describe el motivo
+        <span class="required">*</span>
+      </label>
+      <input
+        type="text"
+        id="fs-otro-motivo"
+        name="otroMotivo"
+        class="field-input"
+        placeholder="Describe brevemente el motivo..."
+        maxlength="200"
+      >
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="fs-descripcion">
+        Describe el problema
+        <span class="required">*</span>
+      </label>
+      <textarea
+        id="fs-descripcion"
+        name="descripcion"
+        class="field-textarea"
+        placeholder="Describe con detalle qué ha hecho este número. Cuanta más información, mejor gestionamos el reporte..."
+        rows="4"
+        maxlength="600"
+        aria-describedby="desc-count desc-error"
+      ></textarea>
+      <div class="field-row-meta">
+        <div class="field-hint" id="desc-error-wrap">
+          <span class="field-error hidden" id="desc-error" role="alert">Describe el problema (mínimo 20 caracteres).</span>
+        </div>
+        <div class="char-count"><span id="descCount">0</span>/600</div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">
+        Evidencia
+        <span class="optional">(opcional)</span>
+      </label>
+      <div
+        class="upload-zone"
+        id="uploadZone"
+        role="button"
+        tabindex="0"
+        aria-label="Subir evidencia"
+      >
+        <div class="upload-icon">📎</div>
+        <div class="upload-label">Arrastra capturas de pantalla aquí</div>
+        <div class="upload-sub">PNG, JPG, PDF · Máx. 5MB por archivo</div>
+        <input
+          type="file"
+          id="evidenciaInput"
+          name="evidencia"
+          accept="image/*,.pdf"
+          multiple
+          style="display:none"
+          aria-hidden="true"
+        >
+      </div>
+      <div class="upload-files" id="uploadFilesList"></div>
+    </div>
+
+    <div class="aviso-legal-check">
+      <input type="checkbox" id="fs-acepta-aviso" name="aceptaAviso" class="check-input">
+      <label for="fs-acepta-aviso" class="check-label">
+        He leído y acepto el
+        <a href="../../pages/aviso-legal/" target="_blank" class="check-link">aviso legal</a>.
+        Confirmo que este reporte es legítimo.
+      </label>
+    </div>
+    <div class="field-error hidden" id="aviso-error" role="alert">Debes aceptar el aviso legal para continuar.</div>
+
+    <div class="fieldset-footer">
+      <div></div>
+      <button type="button" class="btn-next" id="btnNext1" aria-controls="fs2">
+        Continuar <span class="btn-arrow">→</span>
+      </button>
+    </div>
+  </fieldset>
+
+  <!-- PASO 2 — Datos de contacto -->
+  <fieldset class="form-fieldset hidden" id="fs2" data-step="2">
+    <legend class="fs-legend">
+      <span class="fs-num">02</span>
+      Tus datos de contacto
+    </legend>
+
+    <div class="fields-row">
+      <div class="field-group">
+        <label class="field-label" for="fs-nombre">
+          Nombre
+          <span class="required">*</span>
+        </label>
+        <input
+          type="text"
+          id="fs-nombre"
+          name="nombre"
+          class="field-input"
+          placeholder="Tu nombre"
+          autocomplete="given-name"
+          aria-describedby="nombre-error"
+        >
+        <div class="field-error hidden" id="nombre-error" role="alert">Ingresa tu nombre.</div>
+      </div>
+      <div class="field-group">
+        <label class="field-label" for="fs-apellido">
+          Apellido
+          <span class="optional">(opcional)</span>
+        </label>
+        <input
+          type="text"
+          id="fs-apellido"
+          name="apellido"
+          class="field-input"
+          placeholder="Tu apellido"
+          autocomplete="family-name"
+        >
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="fs-email">
+        Correo electrónico
+        <span class="required">*</span>
+      </label>
+      <input
+        type="email"
+        id="fs-email"
+        name="email"
+        class="field-input"
+        placeholder="tu@email.com"
+        autocomplete="email"
+        inputmode="email"
+        aria-describedby="email-hint email-error"
+      >
+      <div class="field-hint" id="email-hint">Aquí recibirás las actualizaciones de tu caso.</div>
+      <div class="field-error hidden" id="email-error" role="alert">Ingresa un correo válido.</div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label" for="fs-whatsapp">
+        Tu WhatsApp
+        <span class="optional">(opcional)</span>
+      </label>
+      <input
+        type="tel"
+        id="fs-whatsapp"
+        name="whatsapp"
+        class="field-input"
+        placeholder="+52 55 1234 5678"
+        autocomplete="tel"
+        inputmode="tel"
+        aria-describedby="wa-hint"
+      >
+      <div class="field-hint" id="wa-hint">Para contactarte directamente si necesitamos más información.</div>
+    </div>
+
+    <div class="field-group">
+      <label class="field-label">¿Cómo prefieres recibir actualizaciones?</label>
+      <div class="pref-group" role="radiogroup" id="prefGroup">
+        <button type="button" class="pref-btn active" data-value="email"    role="radio" aria-checked="true">📧 Email</button>
+        <button type="button" class="pref-btn"        data-value="whatsapp" role="radio" aria-checked="false">💬 WhatsApp</button>
+        <button type="button" class="pref-btn"        data-value="ambos"    role="radio" aria-checked="false">Ambos</button>
+      </div>
+    </div>
+
+    <div class="fieldset-footer">
+      <button type="button" class="btn-back" id="btnBack2">← Atrás</button>
+      <button type="button" class="btn-next" id="btnNext2" aria-controls="fs3">
+        Continuar <span class="btn-arrow">→</span>
+      </button>
+    </div>
+  </fieldset>
+
+  <!-- PASO 3 — Plan -->
+  <fieldset class="form-fieldset hidden" id="fs3" data-step="3">
+    <legend class="fs-legend">
+      <span class="fs-num">03</span>
+      Elige tu plan
+    </legend>
+
+    <div class="planes-list" id="planesList" role="radiogroup">
+      <div class="plan-row" data-plan="basico" data-price="29" role="radio" aria-checked="false" tabindex="0">
+        <div class="plan-radio-dot"></div>
+        <div class="plan-row-info">
+          <div class="plan-row-name">Básico</div>
+          <div class="plan-row-desc">1 número · 72h · Sin garantía</div>
+        </div>
+        <div class="plan-row-price">$29 <span>USD</span></div>
+      </div>
+      <div class="plan-row selected" data-plan="pro" data-price="49" role="radio" aria-checked="true" tabindex="0">
+        <div class="plan-popular-tag">Más elegido</div>
+        <div class="plan-radio-dot checked"></div>
+        <div class="plan-row-info">
+          <div class="plan-row-name">Pro</div>
+          <div class="plan-row-desc">1 número · 24h · Garantía de devolución</div>
+        </div>
+        <div class="plan-row-price">$49 <span>USD</span></div>
+      </div>
+      <div class="plan-row" data-plan="enterprise" data-price="89" role="radio" aria-checked="false" tabindex="0">
+        <div class="plan-radio-dot"></div>
+        <div class="plan-row-info">
+          <div class="plan-row-name">Enterprise</div>
+          <div class="plan-row-desc">Hasta 5 números · 12h · Garantía de devolución</div>
+        </div>
+        <div class="plan-row-price">$89 <span>USD</span></div>
+      </div>
+    </div>
+
+    <div class="order-summary" id="orderSummary">
+      <div class="os-title">Resumen</div>
+      <div class="os-row"><span>Plan</span><span id="osPlan">Pro</span></div>
+      <div class="os-row"><span>Número reportado</span><span id="osNumero">—</span></div>
+      <div class="os-row"><span>Motivo</span><span id="osMotivo">—</span></div>
+      <div class="os-divider"></div>
+      <div class="os-row os-total"><span>Total</span><span id="osTotal">$49 USD</span></div>
+      <div class="os-note">Pago único · Sin suscripción</div>
+    </div>
+
+    <div class="fieldset-footer">
+      <button type="button" class="btn-back" id="btnBack3">← Atrás</button>
+      <button type="submit" class="btn-submit" id="btnSubmit">
+        <span id="btnSubmitTxt">Ir al pago →</span>
+        <div class="submit-spinner hidden" id="submitSpinner"></div>
+      </button>
+    </div>
+  </fieldset>
+
+</form>
+<script src="./form-solicitud.js"></script>

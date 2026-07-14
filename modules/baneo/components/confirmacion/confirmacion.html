@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="./confirmacion.css">
+<div class="confirmacion" id="confirmacion" role="status" aria-live="polite">
+
+  <!-- ESTADO: PROCESANDO -->
+  <div class="conf-estado processing" id="confProcessing">
+    <div class="processing-ring">
+      <div class="ring-inner"></div>
+    </div>
+    <div class="conf-titulo">Procesando tu solicitud...</div>
+    <div class="conf-sub">Estamos registrando tu reporte. No cierres esta ventana.</div>
+    <div class="processing-steps" id="processingSteps">
+      <div class="ps-step active" id="pss1">
+        <div class="pss-dot"></div>
+        <span>Verificando pago</span>
+      </div>
+      <div class="ps-step" id="pss2">
+        <div class="pss-dot"></div>
+        <span>Registrando reporte</span>
+      </div>
+      <div class="ps-step" id="pss3">
+        <div class="pss-dot"></div>
+        <span>Asignando asesor</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESTADO: ÉXITO -->
+  <div class="conf-estado success hidden" id="confSuccess">
+    <div class="success-circle">
+      <div class="success-check" id="successCheck">✓</div>
+    </div>
+    <div class="conf-titulo">¡Reporte enviado!</div>
+    <div class="conf-sub">Tu solicitud fue registrada. Te contactaremos en las próximas horas.</div>
+
+    <div class="caso-card" id="casoCard">
+      <div class="caso-row">
+        <span class="caso-lbl">Número de caso</span>
+        <span class="caso-val caso-id" id="confCasoId">#BAN-0000</span>
+      </div>
+      <div class="caso-row">
+        <span class="caso-lbl">Número reportado</span>
+        <span class="caso-val" id="confNumero">—</span>
+      </div>
+      <div class="caso-row">
+        <span class="caso-lbl">Motivo</span>
+        <span class="caso-val" id="confMotivo">—</span>
+      </div>
+      <div class="caso-row">
+        <span class="caso-lbl">Plan</span>
+        <span class="caso-val" id="confPlan">—</span>
+      </div>
+      <div class="caso-row">
+        <span class="caso-lbl">Tiempo estimado</span>
+        <span class="caso-val red-val">24-72 horas</span>
+      </div>
+    </div>
+
+    <div class="conf-email-aviso" id="confEmailAviso">
+      Enviamos una confirmación a <strong id="confEmail">—</strong>
+    </div>
+
+    <div class="conf-proximos-pasos">
+      <div class="nps-titulo">¿Qué pasa ahora?</div>
+      <div class="nps-lista">
+        <div class="nps-item">
+          <div class="nps-num">1</div>
+          <div class="nps-txt">Revisamos tu reporte en las próximas horas.</div>
+        </div>
+        <div class="nps-item">
+          <div class="nps-num">2</div>
+          <div class="nps-txt">Enviamos el reporte formal a Meta con la documentación.</div>
+        </div>
+        <div class="nps-item">
+          <div class="nps-num">3</div>
+          <div class="nps-txt">Te notificamos cuando el número sea baneado.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-actions">
+      <a href="../../pages/estado-solicitud/" class="conf-btn-primary" id="confBtnEstado">
+        Ver estado de mi solicitud
+      </a>
+      <a href="../../pages/landing/" class="conf-btn-ghost">
+        Volver al inicio
+      </a>
+    </div>
+
+    <div class="conf-anonimo-badge">
+      <span>🔒</span>
+      Tu identidad es completamente anónima. El número reportado nunca sabrá quién hizo el reporte.
+    </div>
+  </div>
+
+  <!-- ESTADO: ERROR -->
+  <div class="conf-estado error hidden" id="confError">
+    <div class="error-icon">✕</div>
+    <div class="conf-titulo">Algo salió mal</div>
+    <div class="conf-sub" id="confErrorMsg">
+      Hubo un error al procesar tu solicitud. Tu pago no fue cobrado.
+    </div>
+    <div class="conf-actions">
+      <button class="conf-btn-primary" id="confBtnReintentar">
+        Intentar de nuevo
+      </button>
+      <a href="../../../../modules/shared/pages/contacto/" class="conf-btn-ghost">
+        Contactar soporte
+      </a>
+    </div>
+  </div>
+
+</div>
+<script src="./confirmacion.js"></script>

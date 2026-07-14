@@ -1,0 +1,69 @@
+{
+  "module": "baneo",
+  "version": "1.0",
+  "updated": "2025-01-01",
+  "pasos": [
+    {
+      "id": 1,
+      "numero": "01",
+      "titulo": "Describe el caso",
+      "descripcion": "Indica el número a reportar, el motivo y una descripción del problema. No necesitas identificarte. El proceso es completamente anónimo.",
+      "duracion_estimada": "2 minutos",
+      "icono": "📋",
+      "detalles": [
+        "Ingresa el número con código de país",
+        "Selecciona el motivo del reporte",
+        "Adjunta capturas como evidencia (opcional)",
+        "Acepta el aviso legal del servicio"
+      ]
+    },
+    {
+      "id": 2,
+      "numero": "02",
+      "titulo": "Revisión del caso",
+      "descripcion": "Verificamos que el reporte cumple con los criterios de uso legítimo antes de proceder. Esta verificación protege el servicio y garantiza resultados.",
+      "duracion_estimada": "1-4 horas",
+      "icono": "🔍",
+      "detalles": [
+        "Revisión manual de la solicitud",
+        "Verificación de legitimidad del reporte",
+        "Confirmación antes de realizar el cobro",
+        "Asignación a un asesor especializado"
+      ]
+    },
+    {
+      "id": 3,
+      "numero": "03",
+      "titulo": "Reporte ante Meta",
+      "descripcion": "Enviamos el reporte formal a Meta con la documentación correcta. Usamos los canales oficiales de reporte para maximizar la efectividad.",
+      "duracion_estimada": "Inmediato",
+      "icono": "📤",
+      "detalles": [
+        "Envío por canales oficiales de Meta",
+        "Documentación técnica del caso",
+        "Seguimiento continuo de la solicitud",
+        "Comunicación directa si se necesita más info"
+      ]
+    },
+    {
+      "id": 4,
+      "numero": "04",
+      "titulo": "Número baneado",
+      "descripcion": "Meta aplica el baneo y te notificamos inmediatamente. Si no lo logra dentro del plazo, aplicamos la garantía de devolución sin preguntas.",
+      "duracion_estimada": "24-72 horas",
+      "icono": "✓",
+      "detalles": [
+        "Notificación por correo al confirmar el baneo",
+        "Cierre del caso en el sistema",
+        "Devolución automática si no hay resultado",
+        "Historial disponible en tu área de seguimiento"
+      ]
+    }
+  ],
+  "tiempo_total": {
+    "minimo": "24 horas",
+    "promedio": "48 horas",
+    "maximo": "5 días hábiles"
+  },
+  "tasa_exito": "94%"
+}

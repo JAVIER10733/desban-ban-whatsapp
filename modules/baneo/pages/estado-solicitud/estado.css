@@ -1,0 +1,169 @@
+/* =============================================
+   estado.css — Módulo Shared / Estado solicitud
+============================================= */
+:root{
+  --green:#25D366;--red:#E24B4A;--amber:#EF9F27;--blue:#378ADD;
+  --bg:#0d0d0d;--bg2:#111;--bg3:#181818;
+  --text:#f5f5f5;--muted:#777;--border:rgba(255,255,255,0.07);
+  --radius:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+
+.anim-1{animation:fadeUp .6s .0s ease both}
+.anim-2{animation:fadeUp .6s .15s ease both}
+.anim-3{animation:fadeUp .6s .3s ease both}
+.hidden{display:none!important}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.9rem 2rem;background:rgba(13,13,13,.92);backdrop-filter:blur(14px);border-bottom:.5px solid var(--border)}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px}
+.nav-logo .g{color:var(--green)}.nav-logo .r{color:var(--red)}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{font-size:.84rem;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.btn-nav-green{background:var(--green);color:#fff;padding:.45rem 1.1rem;border-radius:6px;font-size:.82rem;font-weight:500;transition:opacity .2s}
+.btn-nav-green:hover{opacity:.85}
+
+/* HERO */
+.estado-hero{padding:8rem 2rem 4rem;text-align:center;border-bottom:.5px solid var(--border);position:relative;overflow:hidden;min-height:55vh;display:flex;align-items:center;justify-content:center}
+.estado-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 100%,rgba(37,211,102,.05),transparent);pointer-events:none}
+.estado-hero-content{max-width:620px;width:100%;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(37,211,102,.08);border:.5px solid rgba(37,211,102,.2);padding:.35rem 1rem;border-radius:100px;font-size:.75rem;color:var(--green);margin-bottom:1.5rem}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1;letter-spacing:1px;margin-bottom:1rem}
+.hero-sub{color:var(--muted);font-size:.95rem;font-weight:300;line-height:1.7;margin-bottom:2rem}
+
+/* BUSCADOR */
+.search-wrap{width:100%}
+.search-box{display:flex;background:var(--bg2);border:.5px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .2s}
+.search-box:focus-within{border-color:rgba(37,211,102,.4)}
+.search-prefix{display:flex;border-right:.5px solid var(--border);flex-shrink:0}
+.prefix-btn{background:none;border:none;color:var(--muted);padding:.7rem 1rem;font-size:.8rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;white-space:nowrap}
+.prefix-btn.active{background:rgba(37,211,102,.08);color:var(--green)}
+.case-input{flex:1;background:none;border:none;color:var(--text);padding:.75rem 1rem;font-size:.95rem;outline:none;font-family:'DM Sans',sans-serif;letter-spacing:1px}
+.case-input::placeholder{color:var(--muted);letter-spacing:0}
+.search-btn{background:var(--green);color:#fff;border:none;padding:.75rem 1.5rem;font-size:.88rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s;white-space:nowrap}
+.search-btn:hover{opacity:.88}
+.search-btn.loading{opacity:.7;cursor:not-allowed}
+.search-error{font-size:.78rem;color:var(--red);margin-top:.5rem;text-align:left}
+.search-hint{font-size:.75rem;color:var(--muted);margin-top:.6rem;text-align:left}
+
+/* RESULTADO */
+.resultado-section{padding:3rem 2rem 5rem;animation:slideDown .4s ease}
+.resultado-inner{max-width:800px;margin:0 auto}
+
+.caso-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:1rem}
+.caso-num{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:1px}
+.caso-tipo{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--muted);margin-top:.2rem}
+.tipo-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.tipo-dot.green{background:var(--green)}
+.tipo-dot.red{background:var(--red)}
+.caso-estado-badge{font-size:.78rem;font-weight:600;padding:.4rem 1rem;border-radius:100px}
+.badge-en-proceso{background:rgba(239,159,39,.12);color:var(--amber)}
+.badge-completado{background:rgba(37,211,102,.12);color:var(--green)}
+.badge-pendiente{background:rgba(255,255,255,.06);color:var(--muted)}
+.badge-fallido{background:rgba(226,75,74,.12);color:var(--red)}
+
+.caso-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:.5px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:1.5rem}
+.caso-data{background:var(--bg2);padding:1rem 1.2rem}
+.data-label{font-size:.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-weight:500;margin-bottom:.3rem}
+.data-val{font-size:.9rem;font-weight:500}
+.green-val{color:var(--green)}
+
+/* TIMELINE */
+.timeline-wrap{background:var(--bg2);border:.5px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem}
+.timeline-title{font-size:.7rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--muted);font-weight:500;margin-bottom:1.2rem}
+.timeline{display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:1rem;padding:.8rem 0;border-bottom:.5px solid var(--border);position:relative}
+.tl-item:last-child{border-bottom:none}
+.tl-dot-wrap{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:16px}
+.tl-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.tl-dot.done{background:var(--green)}
+.tl-dot.active{background:var(--amber);animation:pulse 1.5s infinite}
+.tl-dot.pending{background:var(--border);border:.5px solid var(--muted)}
+.tl-body{flex:1}
+.tl-title{font-size:.85rem;font-weight:500;margin-bottom:.15rem}
+.tl-desc{font-size:.78rem;color:var(--muted);font-weight:300;line-height:1.6}
+.tl-time{font-size:.7rem;color:var(--muted);margin-top:.2rem;flex-shrink:0}
+
+/* PROGRESO */
+.progreso-wrap{background:var(--bg2);border:.5px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem}
+.progreso-title{font-size:.7rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--muted);font-weight:500;margin-bottom:1.5rem}
+.progreso-steps{display:flex;align-items:center}
+.ps-item{display:flex;flex-direction:column;align-items:center;gap:.4rem;flex-shrink:0}
+.ps-dot{width:12px;height:12px;border-radius:50%;background:var(--bg3);border:.5px solid var(--border);transition:all .3s}
+.ps-item.done .ps-dot{background:var(--green);border-color:var(--green)}
+.ps-item.active .ps-dot{background:var(--amber);border-color:var(--amber);animation:pulse 1.5s infinite}
+.ps-label{font-size:.65rem;color:var(--muted);text-align:center;white-space:nowrap}
+.ps-item.done .ps-label,.ps-item.active .ps-label{color:var(--text)}
+.ps-line{flex:1;height:.5px;background:var(--border);margin-bottom:.8rem}
+
+/* ACCIONES */
+.caso-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn-contact{background:var(--green);color:#fff;border:none;padding:.8rem 1.5rem;border-radius:8px;font-size:.88rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s}
+.btn-contact:hover{opacity:.88}
+.btn-new-search{background:none;border:.5px solid var(--border);color:var(--muted);padding:.8rem 1.5rem;border-radius:8px;font-size:.88rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s}
+.btn-new-search:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+
+/* MIS CASOS */
+.mis-casos-section{padding:3rem 2rem 5rem;animation:slideDown .4s ease}
+.mis-casos-inner{max-width:800px;margin:0 auto}
+.mc-header{margin-bottom:1.5rem}
+.mc-title{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:1px;margin-bottom:.3rem}
+.mc-email{font-size:.82rem;color:var(--muted)}
+.mc-lista{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}
+.mc-item{display:flex;align-items:center;gap:1rem;background:var(--bg2);border:.5px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;cursor:pointer;transition:all .2s}
+.mc-item:hover{border-color:rgba(37,211,102,.25)}
+.mc-item-num{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:1px;flex-shrink:0}
+.mc-item-info{flex:1}
+.mc-item-tipo{font-size:.75rem;color:var(--muted)}
+.mc-item-fecha{font-size:.72rem;color:var(--muted);flex-shrink:0}
+.mc-item-badge{font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:100px;flex-shrink:0}
+
+/* EMPTY */
+.empty-section{padding:5rem 2rem;text-align:center;animation:slideDown .4s ease}
+.empty-inner{max-width:420px;margin:0 auto}
+.empty-icon{font-size:2.5rem;margin-bottom:1rem}
+.empty-inner h2{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:1px;margin-bottom:.8rem}
+.empty-inner p{font-size:.88rem;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:2rem}
+.empty-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.btn-primary-s{background:var(--green);color:#fff;border:none;padding:.75rem 1.5rem;border-radius:8px;font-size:.88rem;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity .2s}
+.btn-primary-s:hover{opacity:.88}
+.btn-ghost-s{color:var(--muted);border:.5px solid var(--border);padding:.75rem 1.5rem;border-radius:8px;font-size:.88rem;transition:all .2s}
+.btn-ghost-s:hover{color:var(--text);border-color:rgba(255,255,255,.2)}
+
+/* FOOTER */
+.footer{background:var(--bg2);border-top:.5px solid var(--border)}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding:3.5rem 2rem 2.5rem}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:2px;margin-bottom:.8rem}
+.footer-logo .g{color:var(--green)}.footer-logo .r{color:var(--red)}
+.footer-brand p{font-size:.82rem;color:var(--muted);line-height:1.6;font-weight:300;margin-bottom:.3rem}
+.footer-legal{font-size:.72rem!important;opacity:.6}
+.footer-col-title{font-size:.7rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:1rem;font-weight:500}
+.footer-col{display:flex;flex-direction:column;gap:.5rem}
+.footer-col a{font-size:.82rem;color:var(--muted);transition:color .2s}
+.footer-col a:hover{color:var(--text)}
+.footer-bottom{max-width:1100px;margin:0 auto;padding:1rem 2rem;border-top:.5px solid var(--border);font-size:.78rem;color:var(--muted)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .caso-grid{grid-template-columns:1fr 1fr}
+  .search-prefix{display:none}
+  .progreso-steps{gap:0}
+  .ps-label{font-size:.55rem}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:500px){
+  .caso-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .footer-bottom{text-align:center}
+}

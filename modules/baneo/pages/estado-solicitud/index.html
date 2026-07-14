@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estado de mi solicitud | DesbanWA</title>
+<meta name="description" content="Consulta el estado en tiempo real de tu solicitud de desbaneo o baneo de WhatsApp. Ingresa tu número de caso para ver las actualizaciones.">
+<link rel="icon" href="../../../../modules/shared/assets/images/favicons/favicon.ico">
+<link rel="stylesheet" href="../../../../modules/shared/styles/main.css">
+<link rel="stylesheet" href="estado.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="../../../../index.html" class="nav-logo">Desban<span class="g">W</span><span class="r">A</span></a>
+  <ul class="nav-links">
+    <li><a href="../../../../modules/desbaneo/pages/landing/">Desbaneo</a></li>
+    <li><a href="../../../../modules/baneo/pages/landing/">Baneo</a></li>
+    <li><a href="../../../../modules/shared/pages/contacto/">Contacto</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="../../../../modules/desbaneo/pages/solicitud/" class="btn-nav-green">Nueva solicitud →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="estado-hero">
+  <div class="estado-hero-content">
+    <div class="hero-badge anim-1">
+      <span class="badge-dot"></span>
+      Actualizaciones en tiempo real
+    </div>
+    <h1 class="hero-title anim-2">Estado de<br>tu solicitud</h1>
+    <p class="hero-sub anim-3">Ingresa tu número de caso para ver el estado actual y las últimas actualizaciones.</p>
+
+    <!-- BUSCADOR -->
+    <div class="search-wrap anim-3" id="searchWrap">
+      <div class="search-box">
+        <div class="search-prefix" id="searchPrefix">
+          <button class="prefix-btn active" data-type="desban" id="prefDesban">Desbaneo</button>
+          <button class="prefix-btn" data-type="ban" id="prefBan">Baneo</button>
+        </div>
+        <input
+          type="text"
+          id="caseInput"
+          class="case-input"
+          placeholder="Ej: DES-4821 o BAN-1203"
+          maxlength="12"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button class="search-btn" id="searchBtn">Consultar</button>
+      </div>
+      <div class="search-error hidden" id="searchError">Ingresa un número de caso válido.</div>
+      <div class="search-hint">También puedes ingresar tu correo para ver todos tus casos.</div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADO -->
+<section class="resultado-section hidden" id="resultadoSection">
+  <div class="resultado-inner">
+
+    <!-- HEADER DEL CASO -->
+    <div class="caso-header">
+      <div class="caso-info">
+        <div class="caso-num" id="casoNum">#DES-4821</div>
+        <div class="caso-tipo" id="casoTipo">
+          <span class="tipo-dot green"></span>
+          <span id="casoTipoTxt">Desbaneo</span>
+        </div>
+      </div>
+      <div class="caso-estado-badge" id="casoEstadoBadge">En proceso</div>
+    </div>
+
+    <!-- GRID DE DATOS -->
+    <div class="caso-grid">
+      <div class="caso-data">
+        <div class="data-label">Número</div>
+        <div class="data-val" id="casoNumero">+52 55 ···· 4782</div>
+      </div>
+      <div class="caso-data">
+        <div class="data-label">Plan</div>
+        <div class="data-val" id="casoPlan">Pro</div>
+      </div>
+      <div class="caso-data">
+        <div class="data-label">Fecha inicio</div>
+        <div class="data-val" id="casoFecha">—</div>
+      </div>
+      <div class="caso-data">
+        <div class="data-label">Tiempo estimado</div>
+        <div class="data-val green-val">24-72 horas</div>
+      </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline-wrap">
+      <div class="timeline-title">Historial de actualizaciones</div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+
+    <!-- PROGRESO VISUAL -->
+    <div class="progreso-wrap">
+      <div class="progreso-title">Progreso del caso</div>
+      <div class="progreso-steps" id="progresoSteps">
+        <div class="ps-item done" id="ps1">
+          <div class="ps-dot"></div>
+          <div class="ps-label">Solicitud recibida</div>
+        </div>
+        <div class="ps-line"></div>
+        <div class="ps-item done" id="ps2">
+          <div class="ps-dot"></div>
+          <div class="ps-label">Diagnóstico</div>
+        </div>
+        <div class="ps-line"></div>
+        <div class="ps-item active" id="ps3">
+          <div class="ps-dot"></div>
+          <div class="ps-label">Apelación enviada</div>
+        </div>
+        <div class="ps-line"></div>
+        <div class="ps-item" id="ps4">
+          <div class="ps-dot"></div>
+          <div class="ps-label">Esperando Meta</div>
+        </div>
+        <div class="ps-line"></div>
+        <div class="ps-item" id="ps5">
+          <div class="ps-dot"></div>
+          <div class="ps-label">Completado</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCIONES -->
+    <div class="caso-actions">
+      <button class="btn-contact" id="btnContact">
+        💬 Contactar a mi asesor
+      </button>
+      <button class="btn-new-search" id="btnNewSearch">
+        Consultar otro caso
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- MIS CASOS (email) -->
+<section class="mis-casos-section hidden" id="misCasosSection">
+  <div class="mis-casos-inner">
+    <div class="mc-header">
+      <h2 class="mc-title">Tus casos</h2>
+      <div class="mc-email" id="mcEmail">—</div>
+    </div>
+    <div class="mc-lista" id="mcLista"></div>
+    <button class="btn-new-search" id="btnNewSearch2">← Nueva consulta</button>
+  </div>
+</section>
+
+<!-- ESTADO VACÍO -->
+<section class="empty-section hidden" id="emptySection">
+  <div class="empty-inner">
+    <div class="empty-icon">🔍</div>
+    <h2>Caso no encontrado</h2>
+    <p>No encontramos ningún caso con ese número. Verifica que sea correcto o contáctanos.</p>
+    <div class="empty-actions">
+      <button class="btn-primary-s" id="btnRetry">Intentar de nuevo</button>
+      <a href="../../../../modules/shared/pages/contacto/" class="btn-ghost-s">Contactar soporte</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Desban<span class="g">W</span><span class="r">A</span></div>
+      <p>Servicio profesional de desbaneo y baneo de WhatsApp.</p>
+      <p class="footer-legal">Servicio independiente. No afiliado a Meta ni WhatsApp.</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Servicios</div>
+      <a href="../../../../modules/desbaneo/pages/landing/">Desbaneo</a>
+      <a href="../../../../modules/baneo/pages/landing/">Baneo</a>
+      <a href="../../../../modules/shared/pages/planes/">Planes</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Soporte</div>
+      <a href="../../../../modules/shared/pages/faq/">FAQ</a>
+      <a href="../../../../modules/shared/pages/contacto/">Contacto</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Legal</div>
+      <a href="../../../../modules/shared/pages/legal/privacidad.html">Privacidad</a>
+      <a href="../../../../modules/shared/pages/legal/terminos.html">Términos</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 DesbanWA</span>
+  </div>
+</footer>
+
+<script src="../../../../modules/shared/js/main.js" defer></script>
+<script src="../../services/baneo.api.js" defer></script>
+<script src="../../services/estado.service.js" defer></script>
+<script src="estado.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<link rel="stylesheet" href="razones-grid.css">
+<section class="razones-grid-section" id="razonesGrid" aria-label="Razones para banear un número">
+
+  <!-- HEADER -->
+  <div class="rg-header">
+    <div class="rg-tag">Para qué sirve</div>
+    <h2 class="rg-title">¿Cuándo deberías<br>banear un número?</h2>
+    <p class="rg-sub">Este servicio existe para proteger a personas de números que violan los términos de WhatsApp. Solo para reportes legítimos.</p>
+  </div>
+
+  <!-- GRID -->
+  <div class="rg-grid" id="rgGrid" role="list">
+
+    <div class="rg-card reveal" role="listitem" data-razon="acoso">
+      <div class="rg-card-top">
+        <div class="rg-icon-wrap">
+          <span class="rg-icon" aria-hidden="true">📵</span>
+        </div>
+        <div class="rg-badge">Más reportado</div>
+      </div>
+      <h3 class="rg-card-title">Acoso y amenazas</h3>
+      <p class="rg-card-desc">Recibes mensajes intimidatorios, amenazas o contenido que te hace sentir en peligro físico o emocional.</p>
+      <div class="rg-ejemplos">
+        <div class="rg-ejemplo-titulo">Ejemplos:</div>
+        <ul>
+          <li>Mensajes de amenaza directa</li>
+          <li>Insultos y hostigamiento repetido</li>
+          <li>Mensajes a horas inapropiadas</li>
+        </ul>
+      </div>
+      <a href="../../pages/solicitud/?motivo=acoso" class="rg-card-cta">Reportar este caso →</a>
+    </div>
+
+    <div class="rg-card reveal" role="listitem" data-razon="spam">
+      <div class="rg-card-top">
+        <div class="rg-icon-wrap">
+          <span class="rg-icon" aria-hidden="true">📩</span>
+        </div>
+      </div>
+      <h3 class="rg-card-title">Spam masivo</h3>
+      <p class="rg-card-desc">Un número te envía publicidad no solicitada de forma masiva, repetitiva y sin que hayas dado tu consentimiento.</p>
+      <div class="rg-ejemplos">
+        <div class="rg-ejemplo-titulo">Ejemplos:</div>
+        <ul>
+          <li>Cadenas de mensajes publicitarios</li>
+          <li>Listas de difusión sin permiso</li>
+          <li>Mensajes automatizados repetidos</li>
+        </ul>
+      </div>
+      <a href="../../pages/solicitud/?motivo=spam" class="rg-card-cta">Reportar este caso →</a>
+    </div>
+
+    <div class="rg-card reveal" role="listitem" data-razon="estafa">
+      <div class="rg-card-top">
+        <div class="rg-icon-wrap">
+          <span class="rg-icon" aria-hidden="true">💸</span>
+        </div>
+      </div>
+      <h3 class="rg-card-title">Estafas y fraudes</h3>
+      <p class="rg-card-desc">El número intenta engañarte con ofertas falsas, solicitudes de dinero o roba datos personales mediante phishing.</p>
+      <div class="rg-ejemplos">
+        <div class="rg-ejemplo-titulo">Ejemplos:</div>
+        <ul>
+          <li>Premios falsos o loterías</li>
+          <li>Solicitudes de transferencia</li>
+          <li>Links de phishing o malware</li>
+        </ul>
+      </div>
+      <a href="../../pages/solicitud/?motivo=estafa" class="rg-card-cta">Reportar este caso →</a>
+    </div>
+
+    <div class="rg-card reveal" role="listitem" data-razon="suplantacion">
+      <div class="rg-card-top">
+        <div class="rg-icon-wrap">
+          <span class="rg-icon" aria-hidden="true">🎭</span>
+        </div>
+      </div>
+      <h3 class="rg-card-title">Suplantación de identidad</h3>
+      <p class="rg-card-desc">Alguien usa un número para hacerse pasar por otra persona, empresa o institución de forma fraudulenta.</p>
+      <div class="rg-ejemplos">
+        <div class="rg-ejemplo-titulo">Ejemplos:</div>
+        <ul>
+          <li>Haciéndose pasar por un banco</li>
+          <li>Falso soporte técnico</li>
+          <li>Suplantando a un familiar</li>
+        </ul>
+      </div>
+      <a href="../../pages/solicitud/?motivo=suplantacion" class="rg-card-cta">Reportar este caso →</a>
+    </div>
+
+    <div class="rg-card reveal" role="listitem" data-razon="contenido-ilegal">
+      <div class="rg-card-top">
+        <div class="rg-icon-wrap">
+          <span class="rg-icon" aria-hidden="true">🔞</span>
+        </div>
+      </div>
+      <h3 class="rg-card-title">Contenido ilegal</h3>
+      <p class="rg-card-desc">El número distribuye material prohibido, imágenes ilegales o contenido que viola la ley y las políticas de WhatsApp.</p>
+      <div class="rg-ejemplos">
+        <div class="rg-ejemplo-titulo">Ejemplos:</div>
+        <ul>
+          <li>Material de abuso infantil</li>
+          <li>Contenido que incita al odio</li>
+          <li>Distribución de drogas</li>
+        </ul>
+      </div>
+      <a href="../../pages/solicitud/?motivo=contenido-ilegal" class="rg-card-cta">Reportar este caso →</a>
+    </div>
+
+    <div class="rg-card reveal" role="listitem" data-razon="bots">
+      <div class="rg-card-top">
+        <div class="rg-icon-wrap">
+          <span class="rg-icon" aria-hidden="true">🤖</span>
+        </div>
+      </div>
+      <h3 class="rg-card-title">Bots abusivos</h3>
+      <p class="rg-card-desc">Números automatizados que generan actividad masiva, violan las políticas de uso de Meta y saturan conversaciones.</p>
+      <div class="rg-ejemplos">
+        <div class="rg-ejemplo-titulo">Ejemplos:</div>
+        <ul>
+          <li>Bots de mensajería masiva</li>
+          <li>Números que usan WhatsApp mod</li>
+          <li>Scripts de envío automatizado</li>
+        </ul>
+      </div>
+      <a href="../../pages/solicitud/?motivo=otro" class="rg-card-cta">Reportar este caso →</a>
+    </div>
+
+  </div>
+
+  <!-- AVISO LEGAL -->
+  <div class="rg-aviso" id="rgAviso" role="note">
+    <span class="rg-aviso-icon" aria-hidden="true">⚖</span>
+    <span>
+      Este servicio es <strong>exclusivamente</strong> para reportes legítimos.
+      Usarlo con fines distintos viola nuestros términos y puede tener consecuencias legales.
+      <a href="../../pages/aviso-legal/" class="rg-aviso-link">Leer aviso legal →</a>
+    </span>
+  </div>
+
+</section>
+<script src="razones-grid.js"></script>

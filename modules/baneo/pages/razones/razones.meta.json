@@ -1,0 +1,53 @@
+{
+  "module": "baneo",
+  "page": "razones",
+  "route": "/baneo/razones",
+
+  "seo": {
+    "title": "Razones para banear un número de WhatsApp | DesbanWA",
+    "description": "Conoce los motivos válidos para reportar y banear un número: acoso, spam, estafas, suplantación, contenido ilegal y más. Solo reportes legítimos.",
+    "keywords": [
+      "banear numero whatsapp",
+      "razones baneo whatsapp",
+      "reportar acoso whatsapp",
+      "spam whatsapp denuncia"
+    ],
+    "canonical": "https://desbanwa.com/baneo/razones",
+    "robots": "index, follow"
+  },
+
+  "og": {
+    "title": "Razones para banear un número — DesbanWA",
+    "description": "Guía de motivos legítimos para el servicio de baneo. Protección ante acoso, spam y estafas.",
+    "image": "/modules/shared/assets/images/og/og-baneo.png",
+    "type": "article",
+    "url": "https://desbanwa.com/baneo/razones"
+  },
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Razones para banear un número de WhatsApp",
+    "description": "Listado de motivos legítimos para reportar números ante Meta mediante el servicio de baneo DesbanWA.",
+    "isPartOf": { "@type": "WebSite", "name": "DesbanWA" }
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Baneo", "url": "/baneo" },
+    { "label": "Razones", "url": "/baneo/razones" }
+  ],
+
+  "analytics": {
+    "page_name": "baneo_razones",
+    "page_category": "baneo",
+    "conversion_goal": "solicitud_baneo",
+    "content_type": "guide"
+  },
+
+  "settings": {
+    "show_whatsapp_btn": true,
+    "theme": "red",
+    "last_updated": "2025-01-01"
+  }
+}

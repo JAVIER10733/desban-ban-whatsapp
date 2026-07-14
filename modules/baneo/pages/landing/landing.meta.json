@@ -1,0 +1,100 @@
+{
+  "module": "baneo",
+  "page": "landing",
+  "route": "/baneo",
+
+  "seo": {
+    "title": "Banear número de WhatsApp — Reporta y bloquea | DesbanWA",
+    "description": "Reporta y banea números de WhatsApp que te acosan, hacen spam o estafan. Proceso 100% anónimo y confidencial. Resultados en 24-72 horas.",
+    "keywords": [
+      "banear numero whatsapp",
+      "reportar numero whatsapp",
+      "como banear whatsapp",
+      "bloquear numero whatsapp permanentemente",
+      "reportar acoso whatsapp",
+      "banear numero spam whatsapp"
+    ],
+    "canonical": "https://desbanwa.com/baneo",
+    "robots": "index, follow"
+  },
+
+  "og": {
+    "title": "Banear número de WhatsApp — DesbanWA",
+    "description": "Reporta números que te acosan o estafan. Proceso anónimo. Resultados en 24-72h.",
+    "image": "/modules/shared/assets/images/og/og-baneo.png",
+    "image_width": 1200,
+    "image_height": 630,
+    "type": "website",
+    "url": "https://desbanwa.com/baneo",
+    "locale": "es_ES",
+    "site_name": "DesbanWA"
+  },
+
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Banear número de WhatsApp — DesbanWA",
+    "description": "Reporta números que te acosan o estafan. Proceso anónimo.",
+    "image": "/modules/shared/assets/images/og/og-baneo.png"
+  },
+
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Servicio de Baneo de WhatsApp",
+    "description": "Reportamos números problemáticos de WhatsApp ante Meta para que sean bloqueados.",
+    "provider": {
+      "@type": "Organization",
+      "name": "DesbanWA",
+      "url": "https://desbanwa.com"
+    },
+    "areaServed": "Worldwide",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://desbanwa.com/baneo/solicitud"
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Plan Básico Baneo",
+        "price": "29",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Pro Baneo",
+        "price": "49",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Plan Enterprise Baneo",
+        "price": "89",
+        "priceCurrency": "USD"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1200",
+      "bestRating": "5"
+    }
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Baneo",  "url": "/baneo" }
+  ],
+
+  "analytics": {
+    "page_name": "baneo_landing",
+    "page_category": "baneo",
+    "conversion_goal": "solicitud_baneo"
+  },
+
+  "settings": {
+    "show_whatsapp_btn": true,
+    "show_cookie_banner": true,
+    "theme": "red",
+    "last_updated": "2025-01-01"
+  }
+}

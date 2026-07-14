@@ -1,0 +1,44 @@
+{
+  "module": "baneo",
+  "page": "aviso-legal",
+  "route": "/baneo/aviso-legal",
+
+  "seo": {
+    "title": "Aviso Legal — Servicio de Baneo de WhatsApp | DesbanWA",
+    "description": "Lee el aviso legal del servicio de baneo de números WhatsApp. Términos, condiciones, responsabilidades y garantías antes de contratar.",
+    "keywords": [
+      "aviso legal baneo whatsapp",
+      "terminos servicio baneo",
+      "condiciones baneo numero whatsapp"
+    ],
+    "canonical": "https://desbanwa.com/baneo/aviso-legal",
+    "robots": "index, follow"
+  },
+
+  "og": {
+    "title": "Aviso Legal — Baneo de WhatsApp | DesbanWA",
+    "description": "Términos y condiciones del servicio de baneo de números WhatsApp.",
+    "image": "/modules/shared/assets/images/og/og-baneo.png",
+    "type": "website",
+    "url": "https://desbanwa.com/baneo/aviso-legal"
+  },
+
+  "breadcrumbs": [
+    { "label": "Inicio", "url": "/" },
+    { "label": "Baneo",  "url": "/baneo" },
+    { "label": "Aviso legal", "url": "/baneo/aviso-legal" }
+  ],
+
+  "analytics": {
+    "page_name": "baneo_aviso_legal",
+    "page_category": "baneo",
+    "conversion_goal": null
+  },
+
+  "settings": {
+    "show_whatsapp_btn": false,
+    "theme": "red",
+    "last_updated": "2025-01-01",
+    "version": "2.1"
+  }
+}
