@@ -1,0 +1,88 @@
+# ============================================================
+#  ROBOTS.TXT — DesbanWA
+#  https://desbanwa.com/robots.txt
+# ============================================================
+
+# Todos los bots — acceso general permitido
+User-agent: *
+Allow: /
+
+# Bloquear panel de administración
+Disallow: /panel.html
+Disallow: /admin
+Disallow: /admin/
+
+# Bloquear carpetas internas
+Disallow: /config/
+Disallow: /netlify/
+Disallow: /database/
+Disallow: /tests/
+Disallow: /docs/
+Disallow: /dist/
+Disallow: /.github/
+Disallow: /node_modules/
+
+# Bloquear assets directos (no tienen valor SEO)
+Disallow: /modules/shared/assets/
+Disallow: /modules/shared/js/
+Disallow: /modules/shared/styles/
+Disallow: /modules/shared/data/
+
+# Bloquear APIs
+Disallow: /api/
+Disallow: /.netlify/
+
+# Permitir explícitamente páginas públicas importantes
+Allow: /index.html
+Allow: /sitemap.html
+Allow: /404.html
+Allow: /modules/desbaneo/pages/
+Allow: /modules/baneo/pages/
+Allow: /modules/shared/pages/
+
+# Tiempo de espera entre solicitudes (en segundos)
+Crawl-delay: 1
+
+# ============================================================
+#  GOOGLEBOT — configuración específica
+# ============================================================
+User-agent: Googlebot
+Allow: /
+Disallow: /panel.html
+Disallow: /config/
+Disallow: /netlify/
+Disallow: /api/
+Crawl-delay: 0
+
+# ============================================================
+#  BINGBOT
+# ============================================================
+User-agent: Bingbot
+Allow: /
+Disallow: /panel.html
+Disallow: /config/
+Disallow: /api/
+Crawl-delay: 1
+
+# ============================================================
+#  BLOQUEAR BOTS MALICIOSOS CONOCIDOS
+# ============================================================
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# ============================================================
+#  SITEMAP
+# ============================================================
+Sitemap: https://desbanwa.com/sitemap.xml

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa del sitio | DesbanWA</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#25D366;--green-dark:#075E54;--red:#E24B4A;--bg:#0d0d0d;--bg2:#111;--bg3:#181818;--text:#f5f5f5;--muted:#666;--border:rgba(255,255,255,0.07)}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;padding-bottom:4rem}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* NAV */
+nav{background:var(--bg2);border-bottom:0.5px solid var(--border);padding:0.9rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;backdrop-filter:blur(12px)}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:2px;text-decoration:none;color:var(--text)}
+.nav-logo .g{color:var(--green)}.nav-logo .r{color:var(--red)}
+.nav-back{font-size:0.8rem;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-back:hover{color:var(--text)}
+
+/* HERO */
+.hero{padding:3rem 2rem 2rem;max-width:1100px;margin:0 auto;animation:fadeUp 0.5s ease both}
+.hero-tag{font-size:0.68rem;text-transform:uppercase;letter-spacing:3px;color:var(--muted);margin-bottom:0.6rem}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:1px;margin-bottom:0.5rem}
+.hero p{color:var(--muted);font-size:0.85rem;font-weight:300}
+
+/* GRID */
+.sitemap-grid{max-width:1100px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+
+/* MODULE CARD */
+.module{background:var(--bg2);border:0.5px solid var(--border);border-radius:12px;overflow:hidden;animation:fadeUp 0.5s ease both}
+.module-header{padding:1rem 1.2rem;border-bottom:0.5px solid var(--border);display:flex;align-items:center;gap:10px}
+.module-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;flex-shrink:0}
+.module-icon.g{background:rgba(37,211,102,0.12)}
+.module-icon.r{background:rgba(226,75,74,0.12)}
+.module-icon.b{background:rgba(255,255,255,0.06)}
+.module-name{font-size:0.82rem;font-weight:500}
+.module-tag{font-size:0.6rem;text-transform:uppercase;letter-spacing:1.5px;margin-left:auto;padding:2px 6px;border-radius:100px;font-weight:600}
+.tag-g{background:rgba(37,211,102,0.1);color:var(--green)}
+.tag-r{background:rgba(226,75,74,0.1);color:var(--red)}
+.tag-b{background:rgba(255,255,255,0.06);color:var(--muted)}
+.module-links{padding:0.5rem 0}
+.site-link{display:flex;align-items:center;gap:8px;padding:0.5rem 1.2rem;color:var(--muted);text-decoration:none;font-size:0.78rem;transition:all 0.15s;border-left:2px solid transparent}
+.site-link:hover{color:var(--text);background:rgba(255,255,255,0.03)}
+.site-link.g:hover{border-left-color:var(--green)}
+.site-link.r:hover{border-left-color:var(--red)}
+.link-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+.link-dot.g{background:rgba(37,211,102,0.4)}
+.link-dot.r{background:rgba(226,75,74,0.4)}
+.link-dot.b{background:rgba(255,255,255,0.15)}
+.link-path{margin-left:auto;font-size:0.65rem;color:rgba(255,255,255,0.15);font-family:monospace}
+
+/* RAIZ */
+.root-section{max-width:1100px;margin:0 auto 1.5rem;padding:0 2rem;animation:fadeUp 0.4s ease both}
+.root-title{font-size:0.68rem;text-transform:uppercase;letter-spacing:3px;color:var(--muted);margin-bottom:0.8rem}
+.root-files{display:flex;flex-wrap:wrap;gap:8px}
+.root-file{display:flex;align-items:center;gap:6px;background:var(--bg2);border:0.5px solid var(--border);padding:0.4rem 0.9rem;border-radius:6px;font-size:0.75rem;color:var(--muted);text-decoration:none;transition:all 0.15s}
+.root-file:hover{color:var(--text);border-color:rgba(255,255,255,0.15)}
+.root-file .ext{font-size:0.6rem;padding:1px 5px;border-radius:3px;font-weight:600;margin-left:4px}
+.ext-html{background:rgba(56,138,221,0.15);color:#85B7EB}
+.ext-json{background:rgba(255,255,255,0.06);color:var(--muted)}
+.ext-conf{background:rgba(255,255,255,0.04);color:rgba(255,255,255,0.25)}
+
+/* SECTION TITLE */
+.section-title{max-width:1100px;margin:2rem auto 1rem;padding:0 2rem;font-size:0.68rem;text-transform:uppercase;letter-spacing:3px;color:var(--muted);display:flex;align-items:center;gap:12px}
+.section-title::after{content:'';flex:1;height:0.5px;background:var(--border)}
+
+@media(max-width:600px){.sitemap-grid{grid-template-columns:1fr}.hero{padding:2rem 1.2rem 1.5rem}.root-section,.section-title{padding:0 1.2rem}.sitemap-grid{padding:0 1.2rem}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Desban<span class="g">W</span><span class="r">A</span></a>
+  <a href="index.html" class="nav-back">← Volver al inicio</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Navegación</div>
+  <h1>Mapa del sitio</h1>
+  <p>Todas las páginas y secciones del proyecto organizadas por módulo.</p>
+</div>
+
+<!-- RAÍZ -->
+<div class="root-section">
+  <div class="root-title">Archivos raíz</div>
+  <div class="root-files">
+    <a href="index.html"   class="root-file">index<span class="ext ext-html">HTML</span></a>
+    <a href="panel.html"   class="root-file">panel<span class="ext ext-html">HTML</span></a>
+    <a href="404.html"     class="root-file">404<span class="ext ext-html">HTML</span></a>
+    <a href="500.html"     class="root-file">500<span class="ext ext-html">HTML</span></a>
+    <a href="sitemap.html" class="root-file">sitemap<span class="ext ext-html">HTML</span></a>
+    <a href="sitemap.xml"  class="root-file">sitemap<span class="ext ext-conf">XML</span></a>
+    <a href="robots.txt"   class="root-file">robots<span class="ext ext-conf">TXT</span></a>
+    <a href="manifest.json" class="root-file">manifest<span class="ext ext-json">JSON</span></a>
+  </div>
+</div>
+
+<div class="section-title">Módulo desbaneo</div>
+<div class="sitemap-grid">
+  <div class="module" style="animation-delay:0.05s">
+    <div class="module-header">
+      <div class="module-icon g">📄</div>
+      <div class="module-name">Páginas</div>
+      <span class="module-tag tag-g">Desbaneo</span>
+    </div>
+    <div class="module-links">
+      <a href="modules/desbaneo/pages/landing/" class="site-link g"><span class="link-dot g"></span>Landing desbaneo<span class="link-path">/desbaneo/</span></a>
+      <a href="modules/desbaneo/pages/solicitud/" class="site-link g"><span class="link-dot g"></span>Solicitud<span class="link-path">/desbaneo/solicitud/</span></a>
+      <a href="modules/desbaneo/pages/planes/" class="site-link g"><span class="link-dot g"></span>Planes<span class="link-path">/desbaneo/planes/</span></a>
+      <a href="modules/desbaneo/pages/proceso/" class="site-link g"><span class="link-dot g"></span>Proceso<span class="link-path">/desbaneo/proceso/</span></a>
+      <a href="modules/desbaneo/pages/tipos-baneo/" class="site-link g"><span class="link-dot g"></span>Tipos de baneo<span class="link-path">/desbaneo/tipos/</span></a>
+      <a href="modules/desbaneo/pages/garantia/" class="site-link g"><span class="link-dot g"></span>Garantía<span class="link-path">/desbaneo/garantia/</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">Módulo baneo</div>
+<div class="sitemap-grid">
+  <div class="module" style="animation-delay:0.1s">
+    <div class="module-header">
+      <div class="module-icon r">📄</div>
+      <div class="module-name">Páginas</div>
+      <span class="module-tag tag-r">Baneo</span>
+    </div>
+    <div class="module-links">
+      <a href="modules/baneo/pages/landing/" class="site-link r"><span class="link-dot r"></span>Landing baneo<span class="link-path">/baneo/</span></a>
+      <a href="modules/baneo/pages/solicitud/" class="site-link r"><span class="link-dot r"></span>Solicitud<span class="link-path">/baneo/solicitud/</span></a>
+      <a href="modules/baneo/pages/planes/" class="site-link r"><span class="link-dot r"></span>Planes<span class="link-path">/baneo/planes/</span></a>
+      <a href="modules/baneo/pages/proceso/" class="site-link r"><span class="link-dot r"></span>Proceso<span class="link-path">/baneo/proceso/</span></a>
+      <a href="modules/baneo/pages/razones/" class="site-link r"><span class="link-dot r"></span>Razones para banear<span class="link-path">/baneo/razones/</span></a>
+      <a href="modules/baneo/pages/aviso-legal/" class="site-link r"><span class="link-dot r"></span>Aviso legal<span class="link-path">/baneo/aviso/</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="section-title">Módulo compartido</div>
+<div class="sitemap-grid">
+  <div class="module" style="animation-delay:0.15s">
+    <div class="module-header">
+      <div class="module-icon b">🏠</div>
+      <div class="module-name">Páginas generales</div>
+      <span class="module-tag tag-b">Shared</span>
+    </div>
+    <div class="module-links">
+      <a href="modules/shared/pages/home/" class="site-link"><span class="link-dot b"></span>Home<span class="link-path">/home/</span></a>
+      <a href="modules/shared/pages/nosotros/" class="site-link"><span class="link-dot b"></span>Nosotros<span class="link-path">/nosotros/</span></a>
+      <a href="modules/shared/pages/contacto/" class="site-link"><span class="link-dot b"></span>Contacto<span class="link-path">/contacto/</span></a>
+      <a href="modules/shared/pages/faq/" class="site-link"><span class="link-dot b"></span>FAQ<span class="link-path">/faq/</span></a>
+      <a href="modules/shared/pages/pago/" class="site-link"><span class="link-dot b"></span>Pago<span class="link-path">/pago/</span></a>
+      <a href="modules/shared/pages/gracias/" class="site-link"><span class="link-dot b"></span>Gracias<span class="link-path">/gracias/</span></a>
+      <a href="modules/shared/pages/estado-solicitud/" class="site-link"><span class="link-dot b"></span>Estado solicitud<span class="link-path">/estado/</span></a>
+    </div>
+  </div>
+  <div class="module" style="animation-delay:0.2s">
+    <div class="module-header">
+      <div class="module-icon b">✍️</div>
+      <div class="module-name">Blog</div>
+      <span class="module-tag tag-b">Shared</span>
+    </div>
+    <div class="module-links">
+      <a href="modules/shared/pages/blog/" class="site-link"><span class="link-dot b"></span>Listado artículos<span class="link-path">/blog/</span></a>
+      <a href="modules/shared/pages/blog/articulos/como-desbanear-whatsapp/" class="site-link"><span class="link-dot g"></span>Cómo desbanear WA<span class="link-path">/blog/desbanear/</span></a>
+      <a href="modules/shared/pages/blog/articulos/como-banear-numero/" class="site-link"><span class="link-dot r"></span>Cómo banear número<span class="link-path">/blog/banear/</span></a>
+      <a href="modules/shared/pages/blog/articulos/tipos-de-baneo/" class="site-link"><span class="link-dot b"></span>Tipos de baneo<span class="link-path">/blog/tipos/</span></a>
+      <a href="modules/shared/pages/blog/articulos/recuperar-whatsapp-business/" class="site-link"><span class="link-dot g"></span>Recuperar WA Business<span class="link-path">/blog/business/</span></a>
+      <a href="modules/shared/pages/blog/articulos/cuando-reportar-numero/" class="site-link"><span class="link-dot r"></span>Cuándo reportar<span class="link-path">/blog/reportar/</span></a>
+    </div>
+  </div>
+  <div class="module" style="animation-delay:0.25s">
+    <div class="module-header">
+      <div class="module-icon b">⚖️</div>
+      <div class="module-name">Legal</div>
+      <span class="module-tag tag-b">Shared</span>
+    </div>
+    <div class="module-links">
+      <a href="modules/shared/pages/legal/terminos.html" class="site-link"><span class="link-dot b"></span>Términos y condiciones</a>
+      <a href="modules/shared/pages/legal/privacidad.html" class="site-link"><span class="link-dot b"></span>Política de privacidad</a>
+      <a href="modules/shared/pages/legal/cookies.html" class="site-link"><span class="link-dot b"></span>Política de cookies</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

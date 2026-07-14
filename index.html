@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DesbanWA — Recupera o banea números de WhatsApp</title>
+<meta name="description" content="Servicio profesional de desbaneo y baneo de números WhatsApp. Resultados en 24-72 horas. Garantía de devolución.">
+<meta property="og:title" content="DesbanWA — Desbaneo y Baneo de WhatsApp">
+<meta property="og:description" content="Recupera tu número baneado o reporta uno en 24-72 horas.">
+<meta property="og:image" content="modules/shared/assets/images/og/og-home.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="modules/shared/assets/images/favicons/favicon.ico">
+<link rel="apple-touch-icon" href="modules/shared/assets/images/favicons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* =============================================
+   VARIABLES
+============================================= */
+:root {
+  --green:      #25D366;
+  --green-dark: #075E54;
+  --green-mid:  #128C7E;
+  --red:        #E24B4A;
+  --red-dark:   #A32D2D;
+  --red-mid:    #C43B3A;
+  --bg:         #0d0d0d;
+  --bg2:        #141414;
+  --bg3:        #1a1a1a;
+  --text:       #f5f5f5;
+  --muted:      #888;
+  --border:     rgba(255,255,255,0.07);
+  --radius:     12px;
+}
+
+/* =============================================
+   RESET
+============================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* =============================================
+   ANIMACIONES DE ENTRADA
+============================================= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes scrollLine {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  51%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+.anim-1 { animation: fadeUp 0.7s ease both; }
+.anim-2 { animation: fadeUp 0.7s 0.15s ease both; }
+.anim-3 { animation: fadeUp 0.7s 0.3s ease both; }
+.anim-4 { animation: fadeUp 0.7s 0.45s ease both; }
+
+/* =============================================
+   NAV
+============================================= */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(13,13,13,0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
+  animation: fadeIn 0.5s ease both;
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.nav-logo .dot-g { color: var(--green); }
+.nav-logo .dot-r { color: var(--red); }
+.nav-links {
+  display: flex; gap: 2rem; list-style: none;
+}
+.nav-links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: color 0.2s;
+  font-weight: 400;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-actions { display: flex; gap: 0.6rem; }
+.btn-nav-g {
+  background: var(--green);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-nav-g:hover { opacity: 0.85; }
+.btn-nav-r {
+  background: var(--red);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.btn-nav-r:hover { opacity: 0.85; }
+
+/* =============================================
+   HERO
+============================================= */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse 60% 50% at 30% 50%, rgba(37,211,102,0.08) 0%, transparent 70%),
+              radial-gradient(ellipse 60% 50% at 70% 50%, rgba(226,75,74,0.08) 0%, transparent 70%);
+}
+.hero-grid {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
+}
+.hero-content { position: relative; z-index: 1; max-width: 800px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 0.5px solid var(--border);
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+.hero-badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green);
+  animation: pulse 1.8s infinite;
+}
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+.hero-title .t-green { color: var(--green); }
+.hero-title .t-red   { color: var(--red); }
+.hero-title .t-slash {
+  color: var(--muted);
+  font-size: 0.6em;
+  opacity: 0.4;
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.hero-actions {
+  display: flex; gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.btn-hero-g {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--green);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.btn-hero-g:hover { opacity: 0.88; transform: translateY(-2px); }
+.btn-hero-r {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--red);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.btn-hero-r:hover { opacity: 0.88; transform: translateY(-2px); }
+.hero-stats {
+  display: flex; gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero-stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+.hero-stat-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.scroll-hint {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: var(--muted); font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
+  z-index: 1;
+}
+.scroll-line {
+  width: 1px; height: 40px;
+  background: var(--green);
+  animation: scrollLine 2s infinite;
+}
+
+/* =============================================
+   SPLIT — DOS SERVICIOS
+============================================= */
+.split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--border);
+  border-top: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--border);
+}
+.split-panel {
+  padding: 5rem 3rem;
+  position: relative; overflow: hidden;
+  transition: background 0.3s;
+}
+.split-panel.green-panel { background: var(--bg2); }
+.split-panel.red-panel   { background: var(--bg2); }
+.split-panel.green-panel:hover { background: rgba(37,211,102,0.04); }
+.split-panel.red-panel:hover   { background: rgba(226,75,74,0.04); }
+.split-tag {
+  font-size: 0.7rem; text-transform: uppercase;
+  letter-spacing: 3px; font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.split-tag.g { color: var(--green); }
+.split-tag.r { color: var(--red); }
+.split-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  line-height: 1.05;
+}
+.split-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  max-width: 360px;
+}
+.split-list {
+  list-style: none; margin-bottom: 2.5rem;
+}
+.split-list li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.85rem; color: var(--muted);
+  padding: 5px 0;
+}
+.split-list li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%; flex-shrink: 0;
+}
+.split-panel.green-panel .split-list li::before { background: var(--green); }
+.split-panel.red-panel   .split-list li::before { background: var(--red); }
+.btn-split {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  font-size: 0.9rem; font-weight: 500;
+  border: none; cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.btn-split:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-split.g { background: var(--green); color: #fff; }
+.btn-split.r { background: var(--red); color: #fff; }
+.split-num {
+  position: absolute; bottom: 2rem; right: 2.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 6rem; font-weight: 700;
+  line-height: 1; opacity: 0.04;
+  letter-spacing: -2px;
+}
+
+/* =============================================
+   STATS STRIP
+============================================= */
+.stats-strip {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-bottom: 0.5px solid var(--border);
+  background: var(--bg2);
+}
+.stats-strip-item {
+  padding: 2.5rem 2rem;
+  border-right: 0.5px solid var(--border);
+  text-align: center;
+}
+.stats-strip-item:last-child { border-right: none; }
+.stat-big {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem; letter-spacing: 1px;
+}
+.stat-big.g { color: var(--green); }
+.stat-big.r { color: var(--red); }
+.stat-lbl { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+
+/* =============================================
+   PROCESO
+============================================= */
+.section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+.section-tag {
+  font-size: 0.7rem; text-transform: uppercase;
+  letter-spacing: 3px; font-weight: 500;
+  color: var(--muted); margin-bottom: 0.8rem;
+}
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+.process-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--border);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.process-step {
+  background: var(--bg2); padding: 2rem 1.5rem;
+  transition: background 0.2s;
+}
+.process-step:hover { background: var(--bg3); }
+.step-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem; opacity: 0.15;
+  margin-bottom: 1rem; line-height: 1;
+}
+.step-icon {
+  width: 36px; height: 36px;
+  border-radius: 8px; margin-bottom: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+}
+.step-icon.g { background: rgba(37,211,102,0.12); }
+.step-icon.r { background: rgba(226,75,74,0.12); }
+.step-title { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.5rem; }
+.step-desc  { font-size: 0.8rem; color: var(--muted); line-height: 1.6; font-weight: 300; }
+
+/* =============================================
+   TESTIMONIOS
+============================================= */
+.testimonios-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.testimonio {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.testimonio-text {
+  font-size: 0.85rem; color: var(--muted);
+  line-height: 1.7; font-weight: 300;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+}
+.testimonio-author {
+  display: flex; align-items: center; gap: 10px;
+}
+.author-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 500;
+}
+.author-avatar.g { background: rgba(37,211,102,0.15); color: var(--green); }
+.author-avatar.r { background: rgba(226,75,74,0.15);  color: var(--red); }
+.author-name  { font-size: 0.82rem; font-weight: 500; }
+.author-label { font-size: 0.72rem; color: var(--muted); }
+.stars { color: #f5c518; font-size: 0.7rem; margin-bottom: 0.8rem; }
+
+/* =============================================
+   CTA FINAL
+============================================= */
+.cta-section {
+  padding: 6rem 2rem;
+  text-align: center;
+  border-top: 0.5px solid var(--border);
+  position: relative; overflow: hidden;
+}
+.cta-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse 50% 80% at 50% 100%, rgba(37,211,102,0.06) 0%, transparent 70%);
+}
+.cta-content { position: relative; z-index: 1; }
+.cta-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.cta-sub { color: var(--muted); font-size: 1rem; margin-bottom: 2.5rem; font-weight: 300; }
+.cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* =============================================
+   FOOTER
+============================================= */
+footer {
+  border-top: 0.5px solid var(--border);
+  padding: 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+  background: var(--bg2);
+}
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem; letter-spacing: 2px;
+}
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.8rem; color: var(--muted); transition: color 0.2s; }
+.footer-links a:hover { color: var(--text); }
+.footer-copy { font-size: 0.78rem; color: var(--muted); }
+
+/* =============================================
+   WHATSAPP BTN FLOTANTE
+============================================= */
+.wa-float {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.2s;
+}
+.wa-float:hover { transform: scale(1.1); }
+.wa-float svg { width: 26px; height: 26px; fill: #fff; }
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  nav { padding: 0.9rem 1.2rem; }
+  .split { grid-template-columns: 1fr; }
+  .stats-strip { grid-template-columns: 1fr 1fr; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .testimonios-grid { grid-template-columns: 1fr; }
+  .split-panel { padding: 3rem 1.5rem; }
+  .section { padding: 4rem 1.2rem; }
+  footer { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .stats-strip { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
+  .hero-stats { gap: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Desban<span class="dot-g">W</span><span class="dot-r">A</span></div>
+  <ul class="nav-links">
+    <li><a href="modules/desbaneo/pages/landing/index.html">Desbaneo</a></li>
+    <li><a href="modules/baneo/pages/landing/index.html">Baneo</a></li>
+    <li><a href="modules/shared/pages/blog/index.html">Blog</a></li>
+    <li><a href="modules/shared/pages/contacto/index.html">Contacto</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="modules/desbaneo/pages/solicitud/index.html" class="btn-nav-g">Desbanear</a>
+    <a href="modules/baneo/pages/solicitud/index.html"    class="btn-nav-r">Banear</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge anim-1">
+      <span class="hero-badge-dot"></span>
+      Servicio activo 24 / 7
+    </div>
+    <h1 class="hero-title anim-2">
+      <span class="t-green">DESBANEA</span><br>
+      <span class="t-slash">&amp;</span><br>
+      <span class="t-red">BANEA</span>
+    </h1>
+    <p class="hero-sub anim-3">
+      Recupera tu número baneado de WhatsApp o reporta uno problemático. Resultados en 24 a 72 horas con garantía de devolución.
+    </p>
+    <div class="hero-actions anim-4">
+      <a href="modules/desbaneo/pages/solicitud/index.html" class="btn-hero-g">
+        Recuperar mi número →
+      </a>
+      <a href="modules/baneo/pages/solicitud/index.html" class="btn-hero-r">
+        Banear un número →
+      </a>
+    </div>
+    <div class="hero-stats anim-4">
+      <div>
+        <div class="hero-stat-num">+4.800</div>
+        <div class="hero-stat-label">Números recuperados</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">89%</div>
+        <div class="hero-stat-label">Tasa de éxito</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">48h</div>
+        <div class="hero-stat-label">Tiempo promedio</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- SPLIT DOS SERVICIOS -->
+<div class="split">
+  <div class="split-panel green-panel">
+    <div class="split-tag g">Servicio 01</div>
+    <h2 class="split-title">Desbaneo de<br>WhatsApp</h2>
+    <p class="split-desc">Tu número fue bloqueado por Meta. Gestionamos la apelación directamente ante WhatsApp para recuperarlo.</p>
+    <ul class="split-list">
+      <li>Baneo temporal o permanente</li>
+      <li>WhatsApp Personal y Business</li>
+      <li>Números de API</li>
+      <li>Garantía de devolución</li>
+      <li>Resultados en 24-72 horas</li>
+    </ul>
+    <a href="modules/desbaneo/pages/landing/index.html" class="btn-split g">Ver servicio →</a>
+    <div class="split-num">01</div>
+  </div>
+  <div class="split-panel red-panel">
+    <div class="split-tag r">Servicio 02</div>
+    <h2 class="split-title">Baneo de<br>números</h2>
+    <p class="split-desc">¿Recibes acoso, spam o mensajes peligrosos? Reportamos el número ante Meta para que sea bloqueado definitivamente.</p>
+    <ul class="split-list">
+      <li>Reporte por acoso o spam</li>
+      <li>Números de estafadores</li>
+      <li>Proceso 100% anónimo</li>
+      <li>Resultados verificables</li>
+      <li>Soporte dedicado</li>
+    </ul>
+    <a href="modules/baneo/pages/landing/index.html" class="btn-split r">Ver servicio →</a>
+    <div class="split-num">02</div>
+  </div>
+</div>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-strip-item">
+    <div class="stat-big g">+4.800</div>
+    <div class="stat-lbl">Números recuperados</div>
+  </div>
+  <div class="stats-strip-item">
+    <div class="stat-big g">89%</div>
+    <div class="stat-lbl">Tasa de éxito desbaneo</div>
+  </div>
+  <div class="stats-strip-item">
+    <div class="stat-big r">+1.200</div>
+    <div class="stat-lbl">Números baneados</div>
+  </div>
+  <div class="stats-strip-item">
+    <div class="stat-big r">94%</div>
+    <div class="stat-lbl">Tasa de éxito baneo</div>
+  </div>
+</div>
+
+<!-- PROCESO -->
+<div style="border-bottom: 0.5px solid var(--border);">
+  <div class="section">
+    <div class="section-tag">Cómo funciona</div>
+    <h2 class="section-title">4 pasos. Sin complicaciones.</h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-icon g">📋</div>
+        <div class="step-title">Cuéntanos tu caso</div>
+        <div class="step-desc">Completa el formulario con tu número y el tipo de problema. Tarda menos de 2 minutos.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-icon g">🔍</div>
+        <div class="step-title">Diagnóstico gratuito</div>
+        <div class="step-desc">Analizamos tu caso antes de que pagues. Confirmamos si es posible resolverlo.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-icon g">⚡</div>
+        <div class="step-title">Gestionamos ante Meta</div>
+        <div class="step-desc">Enviamos la solicitud formal con la documentación correcta para tu caso específico.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-icon g">✅</div>
+        <div class="step-title">Resultado confirmado</div>
+        <div class="step-desc">Te notificamos el resultado. Si no lo logramos, devolvemos tu pago al instante.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIOS -->
+<div style="border-bottom: 0.5px solid var(--border);">
+  <div class="section">
+    <div class="section-tag">Testimonios</div>
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <div class="testimonios-grid">
+      <div class="testimonio">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text">"Mi número llevaba 3 días baneado y perdía clientes. En menos de 48 horas lo recuperaron. Increíble servicio."</p>
+        <div class="testimonio-author">
+          <div class="author-avatar g">MR</div>
+          <div>
+            <div class="author-name">Miguel R.</div>
+            <div class="author-label">Vendedor online · Colombia</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text">"Usé el servicio de baneo para un número que me estaba acosando. Funcionó y el proceso fue completamente anónimo."</p>
+        <div class="testimonio-author">
+          <div class="author-avatar r">AL</div>
+          <div>
+            <div class="author-name">Andrea L.</div>
+            <div class="author-label">Cliente particular · México</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonio">
+        <div class="stars">★★★★★</div>
+        <p class="testimonio-text">"Teníamos el número de WhatsApp Business de nuestra empresa baneado. Lo resolvieron en 36 horas. 100% recomendados."</p>
+        <div class="testimonio-author">
+          <div class="author-avatar g">JC</div>
+          <div>
+            <div class="author-name">Juan C.</div>
+            <div class="author-label">Dueño de negocio · España</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-content">
+    <h2 class="cta-title">¿Listo para resolver<br>tu problema hoy?</h2>
+    <p class="cta-sub">Elige el servicio que necesitas. Respondemos en menos de 1 hora.</p>
+    <div class="cta-actions">
+      <a href="modules/desbaneo/pages/solicitud/index.html" class="btn-hero-g">Recuperar mi número</a>
+      <a href="modules/baneo/pages/solicitud/index.html"    class="btn-hero-r">Banear un número</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Desban<span style="color:var(--green)">W</span><span style="color:var(--red)">A</span></div>
+  <div class="footer-links">
+    <a href="modules/shared/pages/legal/privacidad.html">Privacidad</a>
+    <a href="modules/shared/pages/legal/terminos.html">Términos</a>
+    <a href="modules/shared/pages/contacto/index.html">Contacto</a>
+    <a href="sitemap.html">Mapa del sitio</a>
+  </div>
+  <div class="footer-copy">© 2025 DesbanWA. Servicio independiente, no afiliado a Meta.</div>
+</footer>
+
+<!-- BOTÓN FLOTANTE WHATSAPP -->
+<a href="https://wa.me/1234567890" class="wa-float" title="Contactar por WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<!-- JS: scroll reveal -->
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.process-step, .testimonio, .stats-strip-item, .split-panel').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

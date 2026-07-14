@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ============================================================
+       RAÍZ
+  ============================================================ -->
+  <url>
+    <loc>https://desbanwa.com/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://desbanwa.com/modules/shared/assets/images/og/og-home.png</image:loc>
+      <image:title>DesbanWA — Desbaneo y Baneo de WhatsApp</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/sitemap.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ============================================================
+       MÓDULO DESBANEO
+  ============================================================ -->
+  <url>
+    <loc>https://desbanwa.com/desbaneo</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://desbanwa.com/modules/shared/assets/images/og/og-desbaneo.png</image:loc>
+      <image:title>Servicio de Desbaneo de WhatsApp</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/desbaneo/solicitud</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/desbaneo/planes</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/desbaneo/proceso</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================================
+       MÓDULO BANEO
+  ============================================================ -->
+  <url>
+    <loc>https://desbanwa.com/baneo</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://desbanwa.com/modules/shared/assets/images/og/og-baneo.png</image:loc>
+      <image:title>Servicio de Baneo de números WhatsApp</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/baneo/solicitud</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/baneo/planes</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/baneo/proceso</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/baneo/razones</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- ============================================================
+       PÁGINAS COMPARTIDAS
+  ============================================================ -->
+  <url>
+    <loc>https://desbanwa.com/nosotros</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/contacto</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/faq</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/estado</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================================
+       BLOG
+  ============================================================ -->
+  <url>
+    <loc>https://desbanwa.com/blog</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://desbanwa.com/modules/shared/assets/images/og/og-blog.png</image:loc>
+      <image:title>Blog DesbanWA</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/blog/como-desbanear-whatsapp</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/blog/como-banear-numero</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/blog/tipos-de-baneo</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/blog/recuperar-whatsapp-business</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/blog/cuando-reportar-numero</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- ============================================================
+       LEGAL
+  ============================================================ -->
+  <url>
+    <loc>https://desbanwa.com/privacidad</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/terminos</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://desbanwa.com/cookies</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

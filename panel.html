@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Administración | DesbanWA</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#25D366;--green-dark:#075E54;--red:#E24B4A;--amber:#EF9F27;--bg:#0d0d0d;--bg2:#111;--bg3:#181818;--text:#f5f5f5;--muted:#666;--border:rgba(255,255,255,0.07);--sidebar:200px}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.5;display:flex;min-height:100vh}
+
+/* SIDEBAR */
+.sidebar{width:var(--sidebar);background:var(--bg2);border-right:0.5px solid var(--border);display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;z-index:50}
+.sidebar-logo{padding:1.2rem 1.2rem 1rem;border-bottom:0.5px solid var(--border);font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:2px}
+.sidebar-logo .g{color:var(--green)}.sidebar-logo .r{color:var(--red)}
+.sidebar-logo small{display:block;font-family:'DM Sans',sans-serif;font-size:0.6rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-weight:400;margin-top:2px}
+.sidebar-nav{flex:1;padding:0.8rem 0;overflow-y:auto}
+.nav-section{padding:0.8rem 1rem 0.3rem;font-size:0.6rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);font-weight:500}
+.nav-item{display:flex;align-items:center;gap:8px;padding:0.6rem 1rem;color:var(--muted);cursor:pointer;transition:all 0.15s;font-size:0.8rem;border-left:2px solid transparent;text-decoration:none}
+.nav-item:hover{color:var(--text);background:rgba(255,255,255,0.03)}
+.nav-item.active{color:var(--text);border-left-color:var(--green);background:rgba(37,211,102,0.05)}
+.nav-item.active-r{color:var(--text);border-left-color:var(--red);background:rgba(226,75,74,0.05)}
+.nav-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.nav-dot.g{background:var(--green)}.nav-dot.r{background:var(--red)}.nav-dot.a{background:var(--amber)}
+.nav-badge{margin-left:auto;background:var(--red);color:#fff;font-size:0.6rem;padding:1px 5px;border-radius:100px;font-weight:600}
+.sidebar-user{padding:1rem;border-top:0.5px solid var(--border);display:flex;align-items:center;gap:8px}
+.user-avatar{width:28px;height:28px;border-radius:50%;background:rgba(37,211,102,0.15);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:500;flex-shrink:0}
+.user-name{font-size:0.78rem;font-weight:500}
+.user-role{font-size:0.65rem;color:var(--muted)}
+
+/* MAIN */
+.main{margin-left:var(--sidebar);flex:1;display:flex;flex-direction:column;min-height:100vh}
+.topbar{background:var(--bg2);border-bottom:0.5px solid var(--border);padding:0.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:40}
+.topbar-title{font-size:0.85rem;font-weight:500}
+.topbar-actions{display:flex;align-items:center;gap:0.8rem}
+.topbar-search{background:var(--bg3);border:0.5px solid var(--border);color:var(--text);padding:0.4rem 0.8rem;border-radius:6px;font-size:0.78rem;font-family:'DM Sans',sans-serif;outline:none;width:180px}
+.topbar-search::placeholder{color:var(--muted)}
+.topbar-btn{background:var(--green);color:#fff;border:none;padding:0.4rem 0.9rem;border-radius:6px;font-size:0.78rem;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500}
+.notif{width:28px;height:28px;border-radius:6px;background:var(--bg3);border:0.5px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;position:relative;font-size:0.8rem}
+.notif-dot{position:absolute;top:5px;right:5px;width:5px;height:5px;border-radius:50%;background:var(--red)}
+
+/* CONTENT */
+.content{padding:1.5rem;flex:1}
+.page-header{margin-bottom:1.5rem}
+.page-header h1{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:1px;margin-bottom:0.2rem}
+.page-header p{color:var(--muted);font-size:0.8rem}
+
+/* STATS */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:1.5rem}
+.stat-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:10px;padding:1rem 1.2rem}
+.stat-card-label{font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.5rem}
+.stat-card-num{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:1px;line-height:1;margin-bottom:0.3rem}
+.stat-card-sub{font-size:0.7rem;color:var(--muted)}
+.stat-card-sub span{font-weight:500}
+.stat-card-sub .up{color:var(--green)}.stat-card-sub .down{color:var(--red)}
+
+/* GRID */
+.grid-2{display:grid;grid-template-columns:1.6fr 1fr;gap:12px;margin-bottom:1.5rem}
+.card{background:var(--bg2);border:0.5px solid var(--border);border-radius:10px;overflow:hidden}
+.card-header{padding:0.9rem 1.2rem;border-bottom:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.card-title{font-size:0.8rem;font-weight:500}
+.card-action{font-size:0.72rem;color:var(--green);cursor:pointer}
+
+/* TABLE */
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th{font-size:0.67rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);padding:0.7rem 1.2rem;text-align:left;border-bottom:0.5px solid var(--border);font-weight:500}
+td{font-size:0.78rem;padding:0.7rem 1.2rem;border-bottom:0.5px solid rgba(255,255,255,0.04);color:var(--text)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,0.02)}
+.status-pill{display:inline-flex;align-items:center;gap:5px;padding:2px 8px;border-radius:100px;font-size:0.65rem;font-weight:600}
+.pill-green{background:rgba(37,211,102,0.12);color:var(--green)}
+.pill-red{background:rgba(226,75,74,0.12);color:var(--red)}
+.pill-amber{background:rgba(239,159,39,0.12);color:var(--amber)}
+.pill-gray{background:rgba(255,255,255,0.06);color:var(--muted)}
+.pill-dot{width:4px;height:4px;border-radius:50%;background:currentColor}
+.service-tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:0.65rem;font-weight:600}
+.tag-g{background:rgba(37,211,102,0.1);color:var(--green)}
+.tag-r{background:rgba(226,75,74,0.1);color:var(--red)}
+.action-btn{background:var(--bg3);border:0.5px solid var(--border);color:var(--muted);padding:3px 8px;border-radius:5px;font-size:0.68rem;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all 0.15s}
+.action-btn:hover{color:var(--text);border-color:rgba(255,255,255,0.15)}
+
+/* MINI CHART (CSS bars) */
+.mini-chart{padding:1rem 1.2rem}
+.chart-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.chart-bar-label{font-size:0.72rem;color:var(--muted);width:60px;flex-shrink:0}
+.chart-bar-track{flex:1;height:6px;background:var(--bg3);border-radius:3px;overflow:hidden}
+.chart-bar-fill{height:100%;border-radius:3px;transition:width 0.8s ease}
+.chart-bar-val{font-size:0.72rem;color:var(--text);width:32px;text-align:right;flex-shrink:0}
+
+/* ACTIVIDAD */
+.activity-list{padding:0.5rem 0}
+.activity-item{display:flex;align-items:flex-start;gap:10px;padding:0.7rem 1.2rem;border-bottom:0.5px solid rgba(255,255,255,0.04)}
+.activity-item:last-child{border-bottom:none}
+.act-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.75rem}
+.act-icon.g{background:rgba(37,211,102,0.1)}
+.act-icon.r{background:rgba(226,75,74,0.1)}
+.act-icon.a{background:rgba(239,159,39,0.1)}
+.act-text{font-size:0.78rem;color:var(--text);flex:1}
+.act-text small{display:block;color:var(--muted);font-size:0.68rem;margin-top:1px}
+.act-time{font-size:0.68rem;color:var(--muted);flex-shrink:0}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    Desban<span class="g">W</span><span class="r">A</span>
+    <small>Panel Admin</small>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">General</div>
+    <a href="#" class="nav-item active"><span class="nav-dot g"></span> Dashboard</a>
+    <a href="#" class="nav-item"><span class="nav-dot"></span> Solicitudes <span class="nav-badge">12</span></a>
+    <a href="#" class="nav-item"><span class="nav-dot"></span> Clientes</a>
+    <a href="#" class="nav-item"><span class="nav-dot"></span> Pagos</a>
+
+    <div class="nav-section">Módulos</div>
+    <a href="#" class="nav-item"><span class="nav-dot g"></span> Desbaneo</a>
+    <a href="#" class="nav-item active-r"><span class="nav-dot r"></span> Baneo</a>
+
+    <div class="nav-section">Contenido</div>
+    <a href="#" class="nav-item"><span class="nav-dot"></span> Blog</a>
+    <a href="#" class="nav-item"><span class="nav-dot"></span> FAQ</a>
+    <a href="#" class="nav-item"><span class="nav-dot"></span> Planes</a>
+
+    <div class="nav-section">Sistema</div>
+    <a href="#" class="nav-item"><span class="nav-dot a"></span> Logs <span class="nav-badge">3</span></a>
+    <a href="#" class="nav-item"><span class="nav-dot"></span> Configuración</a>
+    <a href="index.html" class="nav-item"><span class="nav-dot"></span> Ver sitio →</a>
+  </nav>
+  <div class="sidebar-user">
+    <div class="user-avatar">AD</div>
+    <div><div class="user-name">Admin</div><div class="user-role">Superadmin</div></div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+  <div class="topbar">
+    <div class="topbar-title">Dashboard</div>
+    <div class="topbar-actions">
+      <input class="topbar-search" type="text" placeholder="Buscar solicitud, cliente...">
+      <div class="notif">🔔<div class="notif-dot"></div></div>
+      <button class="topbar-btn">+ Nueva solicitud</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="page-header">
+      <h1>Panel de control</h1>
+      <p>Jueves 19 de marzo, 2026 · Última actualización hace 3 minutos</p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-card-label">Solicitudes hoy</div>
+        <div class="stat-card-num" style="color:var(--text)">47</div>
+        <div class="stat-card-sub"><span class="up">+12%</span> vs ayer</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Desbaneos activos</div>
+        <div class="stat-card-num" style="color:var(--green)">28</div>
+        <div class="stat-card-sub"><span class="up">+8</span> nuevos hoy</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Baneos activos</div>
+        <div class="stat-card-num" style="color:var(--red)">19</div>
+        <div class="stat-card-sub"><span class="up">+4</span> nuevos hoy</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-label">Ingresos hoy</div>
+        <div class="stat-card-num" style="color:var(--amber)">$1,840</div>
+        <div class="stat-card-sub"><span class="up">+23%</span> vs ayer</div>
+      </div>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid-2">
+      <!-- TABLA SOLICITUDES -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Solicitudes recientes</div>
+          <div class="card-action">Ver todas →</div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Número</th>
+                <th>Servicio</th>
+                <th>Estado</th>
+                <th>Monto</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color:var(--muted)">#4821</td>
+                <td>+52 55 ···· 4782</td>
+                <td><span class="service-tag tag-g">Desbaneo</span></td>
+                <td><span class="status-pill pill-green"><span class="pill-dot"></span>Completado</span></td>
+                <td>$39</td>
+                <td><button class="action-btn">Ver</button></td>
+              </tr>
+              <tr>
+                <td style="color:var(--muted)">#4820</td>
+                <td>+57 31 ···· 9901</td>
+                <td><span class="service-tag tag-r">Baneo</span></td>
+                <td><span class="status-pill pill-amber"><span class="pill-dot"></span>En proceso</span></td>
+                <td>$29</td>
+                <td><button class="action-btn">Ver</button></td>
+              </tr>
+              <tr>
+                <td style="color:var(--muted)">#4819</td>
+                <td>+34 61 ···· 3344</td>
+                <td><span class="service-tag tag-g">Desbaneo</span></td>
+                <td><span class="status-pill pill-amber"><span class="pill-dot"></span>En proceso</span></td>
+                <td>$69</td>
+                <td><button class="action-btn">Ver</button></td>
+              </tr>
+              <tr>
+                <td style="color:var(--muted)">#4818</td>
+                <td>+1 415 ···· 8820</td>
+                <td><span class="service-tag tag-r">Baneo</span></td>
+                <td><span class="status-pill pill-red"><span class="pill-dot"></span>Fallido</span></td>
+                <td>$29</td>
+                <td><button class="action-btn">Ver</button></td>
+              </tr>
+              <tr>
+                <td style="color:var(--muted)">#4817</td>
+                <td>+52 33 ···· 1123</td>
+                <td><span class="service-tag tag-g">Desbaneo</span></td>
+                <td><span class="status-pill pill-green"><span class="pill-dot"></span>Completado</span></td>
+                <td>$39</td>
+                <td><button class="action-btn">Ver</button></td>
+              </tr>
+              <tr>
+                <td style="color:var(--muted)">#4816</td>
+                <td>+56 9 ···· 7765</td>
+                <td><span class="service-tag tag-g">Desbaneo</span></td>
+                <td><span class="status-pill pill-gray"><span class="pill-dot"></span>Pendiente</span></td>
+                <td>$19</td>
+                <td><button class="action-btn">Ver</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SIDEBAR CARDS -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+
+        <!-- TASA DE ÉXITO -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Tasa de éxito</div>
+            <div class="card-action">Este mes</div>
+          </div>
+          <div class="mini-chart">
+            <div class="chart-bar-row">
+              <div class="chart-bar-label">Desbaneo</div>
+              <div class="chart-bar-track"><div class="chart-bar-fill" style="width:89%;background:var(--green)"></div></div>
+              <div class="chart-bar-val">89%</div>
+            </div>
+            <div class="chart-bar-row">
+              <div class="chart-bar-label">Baneo</div>
+              <div class="chart-bar-track"><div class="chart-bar-fill" style="width:94%;background:var(--red)"></div></div>
+              <div class="chart-bar-val">94%</div>
+            </div>
+            <div class="chart-bar-row">
+              <div class="chart-bar-label">Pagos OK</div>
+              <div class="chart-bar-track"><div class="chart-bar-fill" style="width:98%;background:var(--amber)"></div></div>
+              <div class="chart-bar-val">98%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVIDAD RECIENTE -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Actividad reciente</div>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="act-icon g">✓</div>
+              <div class="act-text">Desbaneo #4821 completado<small>+52 55 ···· 4782</small></div>
+              <div class="act-time">hace 8m</div>
+            </div>
+            <div class="activity-item">
+              <div class="act-icon r">!</div>
+              <div class="act-text">Pago rechazado #4818<small>Tarjeta declinada</small></div>
+              <div class="act-time">hace 22m</div>
+            </div>
+            <div class="activity-item">
+              <div class="act-icon g">$</div>
+              <div class="act-text">Nuevo pago recibido $69<small>Plan Business · #4819</small></div>
+              <div class="act-time">hace 35m</div>
+            </div>
+            <div class="activity-item">
+              <div class="act-icon a">⚠</div>
+              <div class="act-text">3 solicitudes sin atender<small>Requieren revisión manual</small></div>
+              <div class="act-time">hace 1h</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>
