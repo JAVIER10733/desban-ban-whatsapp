@@ -1,0 +1,196 @@
+<link rel="stylesheet" href="form-contacto.css">
+<form id="form-contacto" class="form-contacto" novalidate>
+  
+  <!-- Header -->
+  <div class="form-contacto-header">
+    <h3 class="form-title">Contáctanos</h3>
+    <p class="form-subtitle">¿Tienes preguntas? Estamos aquí para ayudarte.</p>
+  </div>
+
+  <!-- Campo: Nombre -->
+  <div class="form-group">
+    <label for="contacto-nombre" class="form-label">
+      Nombre completo
+      <span class="required">*</span>
+    </label>
+    <div class="input-wrapper">
+      <span class="input-icon" aria-hidden="true">👤</span>
+      <input 
+        type="text" 
+        id="contacto-nombre" 
+        name="nombre" 
+        class="form-input"
+        placeholder="Tu nombre completo"
+        required
+        minlength="2"
+        maxlength="100"
+        autocomplete="name"
+      >
+    </div>
+    <span class="form-error" data-field="nombre"></span>
+    <span class="form-hint">Mínimo 2 caracteres</span>
+  </div>
+
+  <!-- Campo: Email -->
+  <div class="form-group">
+    <label for="contacto-email" class="form-label">
+      Correo electrónico
+      <span class="required">*</span>
+    </label>
+    <div class="input-wrapper">
+      <span class="input-icon" aria-hidden="true">✉️</span>
+      <input 
+        type="email" 
+        id="contacto-email" 
+        name="email" 
+        class="form-input"
+        placeholder="tu@email.com"
+        required
+        autocomplete="email"
+      >
+    </div>
+    <span class="form-error" data-field="email"></span>
+  </div>
+
+  <!-- Campo: Teléfono (opcional) -->
+  <div class="form-group">
+    <label for="contacto-telefono" class="form-label">
+      Teléfono <span class="optional">(opcional)</span>
+    </label>
+    <div class="input-wrapper">
+      <span class="input-icon" aria-hidden="true">📱</span>
+      <input 
+        type="tel" 
+        id="contacto-telefono" 
+        name="telefono" 
+        class="form-input"
+        placeholder="+593 99 123 4567"
+        autocomplete="tel"
+      >
+    </div>
+    <span class="form-error" data-field="telefono"></span>
+  </div>
+
+  <!-- Campo: Categoría -->
+  <div class="form-group">
+    <label for="contacto-categoria" class="form-label">
+      Categoría
+      <span class="required">*</span>
+    </label>
+    <div class="input-wrapper">
+      <span class="input-icon" aria-hidden="true">📋</span>
+      <select 
+        id="contacto-categoria" 
+        name="categoria" 
+        class="form-select"
+        required
+      >
+        <option value="">Selecciona una categoría</option>
+        <option value="general">Consulta General</option>
+        <option value="soporte">Soporte Técnico</option>
+        <option value="ventas">Ventas</option>
+        <option value="urgente">Urgente</option>
+        <option value="empresas">Empresas</option>
+      </select>
+    </div>
+    <span class="form-error" data-field="categoria"></span>
+  </div>
+
+  <!-- Campo: Asunto -->
+  <div class="form-group">
+    <label for="contacto-asunto" class="form-label">
+      Asunto
+      <span class="required">*</span>
+    </label>
+    <div class="input-wrapper">
+      <span class="input-icon" aria-hidden="true">📝</span>
+      <input 
+        type="text" 
+        id="contacto-asunto" 
+        name="asunto" 
+        class="form-input"
+        placeholder="¿Sobre qué quieres consultar?"
+        required
+        minlength="5"
+        maxlength="200"
+      >
+    </div>
+    <span class="form-error" data-field="asunto"></span>
+    <span class="form-hint">Entre 5 y 200 caracteres</span>
+  </div>
+
+  <!-- Campo: Mensaje -->
+  <div class="form-group">
+    <label for="contacto-mensaje" class="form-label">
+      Mensaje
+      <span class="required">*</span>
+    </label>
+    <div class="textarea-wrapper">
+      <textarea 
+        id="contacto-mensaje" 
+        name="mensaje" 
+        class="form-textarea"
+        placeholder="Escribe tu mensaje aquí..."
+        required
+        minlength="10"
+        maxlength="2000"
+        rows="5"
+      ></textarea>
+      <span class="char-counter">
+        <span id="char-count">0</span>/2000
+      </span>
+    </div>
+    <span class="form-error" data-field="mensaje"></span>
+    <span class="form-hint">Mínimo 10 caracteres</span>
+  </div>
+
+  <!-- Checkbox: Acepto políticas -->
+  <div class="form-group checkbox-group">
+    <label class="checkbox-label" for="contacto-privacidad">
+      <input 
+        type="checkbox" 
+        id="contacto-privacidad" 
+        name="privacidad"
+        required
+      >
+      <span class="checkbox-custom"></span>
+      <span class="checkbox-text">
+        Acepto la 
+        <a href="/legal/privacidad" target="_blank" class="link">política de privacidad</a>
+        y el tratamiento de mis datos
+        <span class="required">*</span>
+      </span>
+    </label>
+    <span class="form-error" data-field="privacidad"></span>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit" class="btn-submit" id="btn-submit">
+    <span class="btn-text">Enviar mensaje</span>
+    <span class="btn-icon" aria-hidden="true">➤</span>
+    <span class="btn-loader" hidden>
+      <span class="spinner"></span>
+      <span>Enviando...</span>
+    </span>
+  </button>
+
+  <!-- Success Message -->
+  <div class="form-success" id="form-success" hidden>
+    <div class="success-icon" aria-hidden="true">✓</div>
+    <h4 class="success-title">¡Mensaje enviado!</h4>
+    <p class="success-message">
+      Gracias por contactarnos. Te responderemos en menos de 24 horas.
+    </p>
+    <button type="button" class="btn-reset" id="btn-reset">
+      Enviar otro mensaje
+    </button>
+  </div>
+
+  <!-- Error Message -->
+  <div class="form-error-global" id="form-error-global" hidden>
+    <span class="error-icon" aria-hidden="true">⚠️</span>
+    <span class="error-message">Error al enviar el mensaje. Inténtalo de nuevo.</span>
+  </div>
+
+</form>
+<script src="form-contacto.js"></script>
