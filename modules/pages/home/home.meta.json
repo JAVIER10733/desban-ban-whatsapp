@@ -1,0 +1,70 @@
+{
+  "page": {
+    "title": "DESBANWA — Recupera tu número de WhatsApp",
+    "description": "Servicio profesional de desbaneo de WhatsApp. Recupera tu número en 24-72 horas con garantía de devolución. También reportamos números problemáticos.",
+    "keywords": [
+      "desbaneo whatsapp",
+      "recuperar whatsapp",
+      "desbanear numero",
+      "whatsapp baneado",
+      "recuperar cuenta whatsapp",
+      "servicio desbaneo"
+    ],
+    "author": "DESBANWA",
+    "robots": "index, follow",
+    "canonical": "https://desbanwa.com",
+    "lastUpdated": "2026-03-24"
+  },
+  
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DESBANWA",
+    "description": "Servicio profesional de desbaneo de WhatsApp",
+    "url": "https://desbanwa.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://desbanwa.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+  
+  "services": [
+    {
+      "name": "Desbaneo de WhatsApp",
+      "description": "Recuperación de números baneados",
+      "price": "$29",
+      "duration": "24-72 horas"
+    },
+    {
+      "name": "Reporte de Números",
+      "description": "Denuncia de números problemáticos",
+      "price": "$19",
+      "duration": "48-72 horas"
+    }
+  ],
+  
+  "stats": {
+    "successRate": "99%",
+    "casesResolved": 2847,
+    "support": "24/7",
+    "guarantee": "72h"
+  },
+  
+  "seo": {
+    "openGraph": {
+      "title": "DESBANWA — Recupera tu WhatsApp",
+      "description": "Servicio profesional de desbaneo. 99% éxito, garantía 72h.",
+      "type": "website",
+      "url": "https://desbanwa.com",
+      "image": "https://desbanwa.com/assets/og-home.jpg",
+      "locale": "es_ES"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "DESBANWA — Recupera tu WhatsApp",
+      "description": "Recupera tu número baneado en 24-72 horas",
+      "image": "https://desbanwa.com/assets/twitter-home.jpg"
+    }
+  }
+}

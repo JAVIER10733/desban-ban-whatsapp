@@ -1,0 +1,282 @@
+{
+  "page": {
+    "title": "Preguntas Frecuentes — DESBANWA",
+    "description": "Resolvemos tus dudas sobre nuestro servicio de desbaneo y reporte de WhatsApp. Tiempo de respuesta 24-72 horas con garantía.",
+    "keywords": [
+      "faq",
+      "preguntas frecuentes",
+      "desbaneo whatsapp",
+      "recuperar cuenta whatsapp",
+      "banear whatsapp",
+      "soporte",
+      "ayuda"
+    ],
+    "author": "DESBANWA",
+    "robots": "index, follow",
+    "canonical": "https://desbanwa.com/faq",
+    "lastUpdated": "2026-03-24"
+  },
+  
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es el desbaneo de WhatsApp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El desbaneo es el proceso de recuperar un número de WhatsApp que ha sido suspendido o baneado por la plataforma. Analizamos tu caso, identificamos la causa del baneo y trabajamos para restaurar el acceso a tu cuenta de forma segura y legítima."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo tarda el proceso?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El tiempo promedio es de 24 a 72 horas. Sin embargo, casos complejos pueden tomar hasta 5 días. Ofrecemos garantía de devolución si no logramos resultados en el plazo prometido."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es 100% seguro y legal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, operamos dentro del marco legal. Solo ayudamos a usuarios legítimos a recuperar sus cuentas. No utilizamos métodos fraudulentos ni violamos los términos de WhatsApp. Tu privacidad y seguridad son nuestra prioridad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo reportar un número problemático?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutamente. Nuestro servicio de baneo te permite reportar números que estén realizando actividades ilegales, spam, estafas o acoso. Proporcionamos evidencia y seguimos los protocolos oficiales de WhatsApp."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué información necesito proporcionar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Necesitamos: tu número de WhatsApp baneado, correo electrónico asociado (si lo tienes), detalles sobre cuándo y por qué fue baneado, y comprobante de propiedad del número."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Ofrecen garantía de devolución?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Si no logramos recuperar tu número en el plazo de 72 horas, te devolvemos el 100% de tu dinero. Sin preguntas ni complicaciones."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Mis datos están protegidos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Totalmente. Usamos encriptación SSL, no compartimos tu información con terceros y eliminamos tus datos después de 12 meses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo cancelar en cualquier momento?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, puedes cancelar antes de que iniciemos el trabajo y recibir un reembolso completo. Una vez iniciado el proceso, la garantía aplica solo si no logramos resultados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué métodos de pago aceptan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aceptamos tarjetas de crédito/débito, PayPal, transferencias bancarias y criptomonedas (Bitcoin, USDT). Todos los pagos son procesados de forma segura."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Perderé mis chats y contactos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del tipo de baneo. En la mayoría de casos, recuperas todo intacto. Sin embargo, no podemos garantizar la recuperación de datos si WhatsApp los eliminó durante el baneo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Funciona para WhatsApp Business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, trabajamos tanto con WhatsApp personal como WhatsApp Business. El proceso es el mismo y la tasa de éxito es similar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo me mantendré informado del progreso?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Te enviaremos actualizaciones por email cada 24 horas. También puedes contactarnos en cualquier momento a través de nuestro chat de soporte o WhatsApp."
+        }
+      }
+    ]
+  },
+  
+  "faqData": [
+    {
+      "id": 1,
+      "category": "general",
+      "question": "¿Qué es el desbaneo de WhatsApp?",
+      "answer": "El desbaneo es el proceso de recuperar un número de WhatsApp que ha sido suspendido o baneado por la plataforma. Analizamos tu caso, identificamos la causa del baneo y trabajamos para restaurar el acceso a tu cuenta de forma segura y legítima.",
+      "keywords": ["desbaneo", "recuperar", "cuenta", "ban"]
+    },
+    {
+      "id": 2,
+      "category": "tiempo",
+      "question": "¿Cuánto tiempo tarda el proceso?",
+      "answer": "El tiempo promedio es de 24 a 72 horas. Sin embargo, casos complejos pueden tomar hasta 5 días. Ofrecemos garantía de devolución si no logramos resultados en el plazo prometido.",
+      "keywords": ["tiempo", "duración", "horas", "días"]
+    },
+    {
+      "id": 3,
+      "category": "seguridad",
+      "question": "¿Es 100% seguro y legal?",
+      "answer": "Sí, operamos dentro del marco legal. Solo ayudamos a usuarios legítimos a recuperar sus cuentas. No utilizamos métodos fraudulentos ni violamos los términos de WhatsApp. Tu privacidad y seguridad son nuestra prioridad.",
+      "keywords": ["seguro", "legal", "privacidad", "protección"]
+    },
+    {
+      "id": 4,
+      "category": "baneo",
+      "question": "¿Puedo reportar un número problemático?",
+      "answer": "Absolutamente. Nuestro servicio de baneo te permite reportar números que estén realizando actividades ilegales, spam, estafas o acoso. Proporcionamos evidencia y seguimos los protocolos oficiales de WhatsApp.",
+      "keywords": ["reportar", "banear", "spam", "estafa"]
+    },
+    {
+      "id": 5,
+      "category": "proceso",
+      "question": "¿Qué información necesito proporcionar?",
+      "answer": "Necesitamos: tu número de WhatsApp baneado, correo electrónico asociado (si lo tienes), detalles sobre cuándo y por qué fue baneado, y comprobante de propiedad del número.",
+      "keywords": ["información", "datos", "requisitos", "documentos"]
+    },
+    {
+      "id": 6,
+      "category": "garantia",
+      "question": "¿Ofrecen garantía de devolución?",
+      "answer": "Sí. Si no logramos recuperar tu número en el plazo de 72 horas, te devolvemos el 100% de tu dinero. Sin preguntas ni complicaciones.",
+      "keywords": ["garantía", "reembolso", "devolución", "dinero"]
+    },
+    {
+      "id": 7,
+      "category": "seguridad",
+      "question": "¿Mis datos están protegidos?",
+      "answer": "Totalmente. Usamos encriptación SSL, no compartimos tu información con terceros y eliminamos tus datos después de 12 meses.",
+      "keywords": ["datos", "privacidad", "protección", "ssl"]
+    },
+    {
+      "id": 8,
+      "category": "pago",
+      "question": "¿Puedo cancelar en cualquier momento?",
+      "answer": "Sí, puedes cancelar antes de que iniciemos el trabajo y recibir un reembolso completo. Una vez iniciado el proceso, la garantía aplica solo si no logramos resultados.",
+      "keywords": ["cancelar", "reembolso", "política"]
+    },
+    {
+      "id": 9,
+      "category": "pago",
+      "question": "¿Qué métodos de pago aceptan?",
+      "answer": "Aceptamos tarjetas de crédito/débito, PayPal, transferencias bancarias y criptomonedas (Bitcoin, USDT). Todos los pagos son procesados de forma segura.",
+      "keywords": ["pago", "tarjeta", "paypal", "cripto", "bitcoin"]
+    },
+    {
+      "id": 10,
+      "category": "general",
+      "question": "¿Perderé mis chats y contactos?",
+      "answer": "Depende del tipo de baneo. En la mayoría de casos, recuperas todo intacto. Sin embargo, no podemos garantizar la recuperación de datos si WhatsApp los eliminó durante el baneo.",
+      "keywords": ["chats", "contactos", "datos", "backup"]
+    },
+    {
+      "id": 11,
+      "category": "general",
+      "question": "¿Funciona para WhatsApp Business?",
+      "answer": "Sí, trabajamos tanto con WhatsApp personal como WhatsApp Business. El proceso es el mismo y la tasa de éxito es similar.",
+      "keywords": ["business", "empresa", "cuenta business"]
+    },
+    {
+      "id": 12,
+      "category": "proceso",
+      "question": "¿Cómo me mantendré informado del progreso?",
+      "answer": "Te enviaremos actualizaciones por email cada 24 horas. También puedes contactarnos en cualquier momento a través de nuestro chat de soporte o WhatsApp.",
+      "keywords": ["seguimiento", "progreso", "actualizaciones", "estado"]
+    }
+  ],
+  
+  "stats": {
+    "totalQuestions": 12,
+    "categories": [
+      {
+        "name": "general",
+        "count": 4,
+        "label": "General"
+      },
+      {
+        "name": "proceso",
+        "count": 2,
+        "label": "Proceso"
+      },
+      {
+        "name": "seguridad",
+        "count": 2,
+        "label": "Seguridad"
+      },
+      {
+        "name": "pago",
+        "count": 2,
+        "label": "Pagos"
+      },
+      {
+        "name": "tiempo",
+        "count": 1,
+        "label": "Tiempos"
+      },
+      {
+        "name": "garantia",
+        "count": 1,
+        "label": "Garantía"
+      },
+      {
+        "name": "baneo",
+        "count": 1,
+        "label": "Baneo"
+      }
+    ]
+  },
+  
+  "seo": {
+    "openGraph": {
+      "title": "Preguntas Frecuentes — DESBANWA",
+      "description": "Resolvemos tus dudas sobre desbaneo y baneo de WhatsApp. Respuestas rápidas y garantía de devolución.",
+      "type": "website",
+      "url": "https://desbanwa.com/faq",
+      "image": "https://desbanwa.com/assets/faq-og.jpg",
+      "locale": "es_ES"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Preguntas Frecuentes — DESBANWA",
+      "description": "Resolvemos tus dudas sobre desbaneo y baneo de WhatsApp.",
+      "image": "https://desbanwa.com/assets/faq-twitter.jpg"
+    }
+  },
+  
+  "breadcrumbs": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://desbanwa.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQ",
+      "item": "https://desbanwa.com/faq"
+    }
+  ]
+}

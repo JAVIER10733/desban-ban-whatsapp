@@ -1,0 +1,149 @@
+{
+  "article": {
+    "id": "como-banear-numero",
+    "title": "Cómo banear un número de WhatsApp — Guía completa 2026",
+    "slug": "como-banear-numero",
+    "description": "Aprende paso a paso cómo banear un número de WhatsApp de forma legal y segura. Guía completa con métodos efectivos y consejos profesionales.",
+    "author": "Equipo DESBANWA",
+    "publishedDate": "2026-03-24",
+    "updatedDate": "2026-03-24",
+    "category": "Tutoriales",
+    "tags": [
+      "banear whatsapp",
+      "reportar número",
+      "spam",
+      "estafas",
+      "tutorial",
+      "guía"
+    ],
+    "readingTime": "15 min",
+    "difficulty": "Intermedio",
+    "status": "published",
+    "featured": true
+  },
+  
+  "seo": {
+    "metaTitle": "Cómo banear un número de WhatsApp | Guía 2026 | DESBANWA",
+    "metaDescription": "Aprende a banear números problemáticos de WhatsApp. Métodos legales, paso a paso y consejos profesionales. Resultados garantizados.",
+    "keywords": [
+      "como banear numero whatsapp",
+      "reportar whatsapp",
+      "banear spam whatsapp",
+      "como denunciar whatsapp",
+      "bloquear numero whatsapp"
+    ],
+    "canonical": "https://desbanwa.com/blog/articulos/como-banear-numero",
+    "robots": "index, follow",
+    "openGraph": {
+      "title": "Cómo banear un número de WhatsApp — Guía completa",
+      "description": "Métodos efectivos para banear números problemáticos. Paso a paso detallado.",
+      "type": "article",
+      "url": "https://desbanwa.com/blog/articulos/como-banear-numero",
+      "image": "https://desbanwa.com/assets/blog/como-banear-numero-og.jpg",
+      "locale": "es_ES",
+      "article": {
+        "publishedTime": "2026-03-24T00:00:00Z",
+        "modifiedTime": "2026-03-24T00:00:00Z",
+        "author": "Equipo DESBANWA",
+        "section": "Tutoriales",
+        "tags": ["banear", "whatsapp", "tutorial"]
+      }
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Cómo banear un número de WhatsApp",
+      "description": "Guía completa con métodos efectivos y legales",
+      "image": "https://desbanwa.com/assets/blog/como-banear-numero-twitter.jpg"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Cómo banear un número de WhatsApp — Guía completa 2026",
+      "description": "Aprende paso a paso cómo banear un número de WhatsApp de forma legal y segura.",
+      "image": "https://desbanwa.com/assets/blog/como-banear-numero.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "DESBANWA"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DESBANWA",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://desbanwa.com/assets/logo.png"
+        }
+      },
+      "datePublished": "2026-03-24",
+      "dateModified": "2026-03-24"
+    }
+  },
+  
+  "content": {
+    "sections": [
+      {
+        "id": "intro",
+        "title": "Introducción",
+        "order": 1
+      },
+      {
+        "id": "cuando-banear",
+        "title": "¿Cuándo es válido banear un número?",
+        "order": 2
+      },
+      {
+        "id": "metodos",
+        "title": "Métodos para banear un número",
+        "order": 3
+      },
+      {
+        "id": "paso-a-paso",
+        "title": "Paso a paso: Reportar desde WhatsApp",
+        "order": 4
+      },
+      {
+        "id": "consejos",
+        "title": "Consejos para aumentar la efectividad",
+        "order": 5
+      },
+      {
+        "id": "faq",
+        "title": "Preguntas frecuentes",
+        "order": 6
+      }
+    ],
+    "wordCount": 2847,
+    "hasVideo": false,
+    "hasImages": true,
+    "imageCount": 0
+  },
+  
+  "relatedArticles": [
+    {
+      "slug": "como-desbanear-numero",
+      "title": "Cómo desbanear un número de WhatsApp"
+    },
+    {
+      "slug": "senales-cuenta-baneada",
+      "title": "Señales de que tu cuenta fue baneada"
+    },
+    {
+      "slug": "proteger-cuenta-whatsapp",
+      "title": "Cómo proteger tu cuenta de WhatsApp"
+    },
+    {
+      "slug": "tipos-baneo-whatsapp",
+      "title": "Tipos de baneo en WhatsApp"
+    }
+  ],
+  
+  "analytics": {
+    "targetAudience": [
+      "Usuarios víctimas de spam",
+      "Personas estafadas por WhatsApp",
+      "Padres preocupados por seguridad",
+      "Empresas con cuentas falsas"
+    ],
+    "intent": "informational",
+    "conversionGoal": "Contratar servicio de baneo profesional"
+  }
+}

@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DESBANWA — Recupera tu número de WhatsApp</title>
+    <meta name="description" content="Servicio profesional de desbaneo de WhatsApp. Recupera tu número en 24-72 horas con garantía de devolución. También reportamos números problemáticos." />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+    
+    <!-- NAV -->
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">
+        <span class="g">DES</span><span>BAN</span><span class="r">WA</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="baneo.html">Baneo</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="desbanear.html" class="btn-nav-ghost">Desbanear</a>
+        <a href="banear.html" class="btn-nav-red">Banear</a>
+        <button class="nav-toggle" aria-label="Menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+      
+      <div class="hero-content">
+        <div class="hero-badge anim-1">
+          <span class="badge-dot"></span>
+          Servicio activo 24/7
+        </div>
+        
+        <h1 class="hero-title anim-2">
+          Recupera tu <span class="title-accent">WhatsApp</span>
+        </h1>
+        
+        <p class="hero-sub anim-3">
+          Servicio profesional de desbaneo de WhatsApp. Recuperamos tu número en 24-72 horas con garantía de devolución. También reportamos números problemáticos.
+        </p>
+        
+        <div class="hero-actions anim-4">
+          <a href="desbanear.html" class="btn-red btn-lg">
+            Desbanear mi número
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="banear.html" class="btn-ghost">
+            Reportar número
+          </a>
+        </div>
+        
+        <div class="hero-trust anim-4">
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>99% éxito</span>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>Garantía 72h</span>
+          </div>
+          <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            <span>100% seguro</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual anim-4">
+        <div class="report-mockup">
+          <div class="report-header">
+            <div class="report-dot red"></div>
+            <div class="report-dot amber"></div>
+            <div class="report-dot green"></div>
+            <div class="report-title">Proceso de Desbaneo</div>
+          </div>
+          <div class="report-body">
+            <div class="report-row">
+              <span class="report-label">Número:</span>
+              <span class="report-val">+1 234 *** **89</span>
+            </div>
+            <div class="report-row">
+              <span class="report-label">Estado:</span>
+              <span class="report-status" id="status-text">Analizando...</span>
+            </div>
+            <div class="report-progress-wrap">
+              <div class="report-progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="report-log">
+              <div class="log-item active">✓ Verificando número</div>
+              <div class="log-item">✓ Analizando caso</div>
+              <div class="log-item">○ Enviando solicitud</div>
+              <div class="log-item">○ Esperando respuesta</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="stat-float stat-1">
+          <div class="stat-float-num">2,847</div>
+          <div class="stat-float-lbl">Números recuperados</div>
+        </div>
+        
+        <div class="stat-float stat-2">
+          <div class="stat-float-num">24h</div>
+          <div class="stat-float-lbl">Tiempo promedio</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <div class="stat-num red">99%</div>
+          <div class="stat-lbl">Tasa de Éxito</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">2,847</div>
+          <div class="stat-lbl">Casos Resueltos</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num red">24/7</div>
+          <div class="stat-lbl">Soporte Activo</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">72h</div>
+          <div class="stat-lbl">Garantía</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RAZONES -->
+    <section class="section razones-section" id="servicios">
+      <div class="section-inner">
+        <div class="section-tag anim-fade">¿Por qué elegirnos?</div>
+        <h2 class="section-title anim-fade">Servicios Profesionales de WhatsApp</h2>
+        <p class="section-sub anim-fade">
+          Somos expertos en recuperación de cuentas y reporte de números problemáticos.
+        </p>
+        
+        <div class="razones-grid">
+          <div class="razon-card reveal">
+            <div class="razon-icon">🟢</div>
+            <h3>Desbaneo Rápido</h3>
+            <p>Recuperamos tu número de WhatsApp en 24-72 horas con métodos 100% legales y seguros.</p>
+          </div>
+          <div class="razon-card reveal">
+            <div class="razon-icon">🔴</div>
+            <h3>Reporte de Números</h3>
+            <p>Denunciamos números que realizan spam, estafas o actividades ilegales en WhatsApp.</p>
+          </div>
+          <div class="razon-card reveal">
+            <div class="razon-icon">🛡️</div>
+            <h3>Garantía Total</h3>
+            <p>Si no recuperamos tu número en 72 horas, te devolvemos el 100% de tu dinero.</p>
+          </div>
+          <div class="razon-card reveal">
+            <div class="razon-icon">🔒</div>
+            <h3>100% Seguro</h3>
+            <p>Tus datos están protegidos con encriptación SSL. No compartimos información con terceros.</p>
+          </div>
+          <div class="razon-card reveal">
+            <div class="razon-icon">⚡</div>
+            <h3>Soporte 24/7</h3>
+            <p>Estamos disponibles todo el día, todos los días para resolver tus dudas y ayudarte.</p>
+          </div>
+          <div class="razon-card reveal">
+            <div class="razon-icon">💯</div>
+            <h3>Experiencia</h3>
+            <p>Más de 2,800 casos exitosos nos respaldan. Somos los expertos en desbaneo de WhatsApp.</p>
+          </div>
+        </div>
+        
+        <div class="razones-aviso reveal">
+          <span class="aviso-icon">⚠️</span>
+          <p>
+            <strong>Importante:</strong> Solo trabajamos con casos legítimos. No realizamos actividades ilegales ni violamos los términos de WhatsApp. 
+            <a href="legal/terminos.html">Ver términos →</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="section proceso-section">
+      <div class="section-inner">
+        <div class="section-tag anim-fade">¿Cómo funciona?</div>
+        <h2 class="section-title anim-fade">Proceso Simple y Rápido</h2>
+        <p class="section-sub anim-fade">
+          Recuperar tu número es más fácil de lo que piensas.
+        </p>
+        
+        <div class="proceso-steps">
+          <div class="proceso-step reveal">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <h3>Envía tu solicitud</h3>
+              <p>Completa el formulario con tu número y detalles del baneo.</p>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="proceso-step reveal">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <h3>Analizamos tu caso</h3>
+              <p>Evaluamos la situación y determinamos la mejor estrategia.</p>
+            </div>
+          </div>
+          <div class="step-connector"></div>
+          <div class="proceso-step reveal">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <h3>Recuperamos tu cuenta</h3>
+              <p>Trabajamos para recuperar tu número en 24-72 horas.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="proceso-cta reveal">
+          <a href="desbanear.html" class="btn-red">
+            Comenzar ahora
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="faq.html" class="btn-ghost">Ver preguntas frecuentes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANES -->
+    <section class="section planes-section">
+      <div class="section-inner">
+        <div class="section-tag anim-fade">Precios</div>
+        <h2 class="section-title anim-fade">Elige tu Plan</h2>
+        <p class="section-sub anim-fade">
+          Precios transparentes sin costos ocultos.
+        </p>
+        
+        <div class="planes-grid">
+          <div class="plan-card reveal">
+            <div class="plan-name">Básico</div>
+            <div class="plan-price">$29<span>/único</span></div>
+            <ul class="plan-features">
+              <li>Análisis del caso</li>
+              <li>Intento de recuperación</li>
+              <li>Soporte por email</li>
+              <li>Tiempo: 48-72h</li>
+            </ul>
+            <a href="desbanear.html?plan=basico" class="btn-plan">Elegir plan</a>
+          </div>
+          
+          <div class="plan-card plan-popular reveal">
+            <div class="popular-badge">MÁS POPULAR</div>
+            <div class="plan-name">Pro</div>
+            <div class="plan-price">$49<span>/único</span></div>
+            <ul class="plan-features">
+              <li>Análisis prioritario</li>
+              <li>Recuperación express</li>
+              <li>Soporte 24/7</li>
+              <li>Tiempo: 24-48h</li>
+              <li>Garantía extendida</li>
+            </ul>
+            <a href="desbanear.html?plan=pro" class="btn-plan btn-plan-red">Elegir plan</a>
+          </div>
+          
+          <div class="plan-card reveal">
+            <div class="plan-name">Enterprise</div>
+            <div class="plan-price">$99<span>/único</span></div>
+            <ul class="plan-features">
+              <li>Casos complejos</li>
+              <li>Recuperación urgente</li>
+              <li>Soporte VIP</li>
+              <li>Tiempo: 12-24h</li>
+              <li>Garantía total</li>
+            </ul>
+            <a href="desbanear.html?plan=enterprise" class="btn-plan">Elegir plan</a>
+          </div>
+        </div>
+        
+        <div class="planes-cta reveal">
+          <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem;">
+            ¿No estás seguro? <a href="contacto.html" style="color: var(--green);">Contáctanos</a> para una evaluación gratuita.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section testimonios-section">
+      <div class="section-inner">
+        <div class="section-tag anim-fade">Testimonios</div>
+        <h2 class="section-title anim-fade">Lo que dicen nuestros clientes</h2>
+        <p class="section-sub anim-fade">
+          Historias reales de números recuperados.
+        </p>
+        
+        <div class="testimonios-grid">
+          <div class="testimonio reveal">
+            <div class="stars">★★★★★</div>
+            <p>"Pensé que había perdido mi número para siempre. En menos de 24 horas lo recuperaron. ¡Increíble servicio!"</p>
+            <div class="t-author">
+              <div class="t-avatar">CM</div>
+              <div>
+                <div class="t-name">Carlos M.</div>
+                <div class="t-role">México</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonio reveal">
+            <div class="stars">★★★★★</div>
+            <p>"Reporté un número que me estaba estafando y lo banearon en 48 horas. Muy profesionales y rápidos."</p>
+            <div class="t-author">
+              <div class="t-avatar">AR</div>
+              <div>
+                <div class="t-name">Ana R.</div>
+                <div class="t-role">España</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonio reveal">
+            <div class="stars">★★★★★</div>
+            <p>"Excelente atención al cliente. Me mantuvieron informado todo el tiempo. 100% recomendados."</p>
+            <div class="t-author">
+              <div class="t-avatar">JL</div>
+              <div>
+                <div class="t-name">Juan L.</div>
+                <div class="t-role">Argentina</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ PREVIEW -->
+    <section class="section faq-section">
+      <div class="faq-inner">
+        <div class="faq-left">
+          <div class="section-tag anim-fade">FAQ</div>
+          <h2 class="section-title anim-fade">Preguntas Frecuentes</h2>
+          <p style="color: var(--muted); margin-bottom: 2rem;">
+            Resolvemos tus dudas más comunes sobre nuestro servicio.
+          </p>
+          <a href="faq.html" class="btn-red">
+            Ver todas las preguntas
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+        
+        <div class="faq-right">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>¿Cuánto tiempo tarda el desbaneo?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>El tiempo promedio es de 24 a 72 horas dependiendo de la complejidad del caso. Ofrecemos garantía de devolución si no cumplimos.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>¿Es seguro y legal?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Sí, operamos dentro del marco legal. Solo ayudamos a usuarios legítimos a recuperar sus cuentas de forma segura.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>¿Ofrecen garantía?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-a">
+              <p>Sí. Si no recuperamos tu número en 72 horas, te devolvemos el 100% de tu dinero sin preguntas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <h2 class="cta-title anim-fade">¿Listo para recuperar tu WhatsApp?</h2>
+        <p class="cta-sub anim-fade">
+          Únete a más de 2,800 clientes satisfechos. Comienza ahora.
+        </p>
+        <div class="hero-actions anim-fade">
+          <a href="desbanear.html" class="btn-red btn-lg">
+            Desbanear mi número
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="contacto.html" class="btn-ghost">Contactar soporte</a>
+        </div>
+        <div class="cta-trust anim-fade">
+          <span>✓ Sin riesgos</span>
+          <span>✓ Garantía 72h</span>
+          <span>✓ Soporte 24/7</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="g">DES</span><span>BAN</span><span class="r">WA</span>
+          </div>
+          <p>Recupera tu número baneado de WhatsApp o reporta uno problemático.</p>
+          <p class="footer-legal">© <span class="current-year">2026</span> DESBANWA. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Servicios</h4>
+          <a href="#desbaneo">Desbaneo</a>
+          <a href="baneo.html">Baneo</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Legal</h4>
+          <a href="legal/cookies.html">Cookies</a>
+          <a href="legal/privacidad.html">Privacidad</a>
+          <a href="legal/terminos.html">Términos</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Soporte</h4>
+          <a href="contacto.html">Contacto</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Hecho con 🔴 y 🟢 para WhatsApp</span>
+        <a href="#" class="footer-other">↑ Volver arriba</a>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="home.js"></script>
+  </body>
+</html>
